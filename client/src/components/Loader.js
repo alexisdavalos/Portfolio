@@ -13,14 +13,12 @@ const LoaderSection = () => {
         HTMLbody.style.overflowY = "hidden";
         //declares 1 second timer
         const timer = setTimeout(() => {
-            console.log('timer going off!')
             loader.classList.toggle("hidden")
             HTMLbody.style.overflowY = "visible"
         }, 1000)
 
         // cleaup function - removes timer reference from memory
         return () => {
-            console.log('timer clearing!!!')
             clearTimeout(timer);
         }
     }, [])
@@ -28,7 +26,7 @@ const LoaderSection = () => {
 
     return (
         <div id="loader" className='loaderWrapper'>
-            <img src={Logo} style={{width: '300px'}}></img>
+            <img src={Logo} alt='Alexis Davalos Developer/Programmer'style={{width: '300px'}}></img>
             <Loader
                 type="ThreeDots"
                 color="#333"
