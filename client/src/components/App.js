@@ -9,13 +9,13 @@ import Nav from './Nav.js'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
+    <>
+      <div className="Container">
         <Loader/>
         <Nav/>
         <Component/>
-      </header>
-    </div>
+      </div>
+    </>
   );
 }
 

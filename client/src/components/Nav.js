@@ -1,18 +1,22 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useDarkMode } from '../hooks/useDarkMode';
 import navLogoDark from '../assetts/images/nav-logo.png'
 import navLogoLight from '../assetts/images/nav-logo-light.png'
 
 
 const Nav = () => {
-    const [darkMode, setDarkMode] = useDarkMode('darkmode', true)
+    const [darkMode, setDarkMode] = useDarkMode('light', false);
     console.log(darkMode);
+    useEffect(()=>{
+        setDarkMode(false)
+    }, [])
+
 
     return (
         <nav className="navbar" role="navigation" aria-label="main navigation">
             <div className="navbar-brand">
                 <a href='/' className="navbar-item">
-                    <img src={((darkMode === true) || (window.localStorage.getItem('darkmode') === true)) ? navLogoLight : navLogoDark} alt='logo' />
+                    <img src={(darkMode ? navLogoDark : navLogoLight)} alt='logo' />
                 </a>
 
                 <a href='#top' role="button" className="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
