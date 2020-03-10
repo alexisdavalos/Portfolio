@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import Loader from 'react-loader-spinner'
-import Logo from '../assetts/images/logo.png'
+import Logo from '../../assetts/images/logo.png'
 
 const LoaderSection = () => {
 

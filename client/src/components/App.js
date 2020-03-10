@@ -1,18 +1,20 @@
 import React from 'react';
-import './App.scss';
+import './Styling/App.scss';
 
 //Components
-import Loader from './Loader'
-import Component from './Component';
-import Nav from './Nav.js'
+import Loader from './Loader/Loader.js'
+import Component from './Component.js';
+import Nav from './Nav/Nav.js'
+import Home from './Home/Home.js'
 
 
 function App() {
   return (
     <>
-      <div className="Container">
+      <div className="Container is-dark">
         <Loader/>
         <Nav/>
+        <Home/>
         <Component/>
       </div>
     </>

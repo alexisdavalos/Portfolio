@@ -1,6 +1,7 @@
 @import 'bulma';
-@import '../../node_modules/bulma-extensions/bulma-switch/src/sass/index.sass';
+@import '../../../node_modules/bulma-extensions/bulma-switch/src/sass/index.sass';
 
+//main app container
 .Container {
   background-color: white;
   min-height: 100vh;
@@ -9,6 +10,7 @@
   align-items: center;
   justify-content: flex-start;
   color: white;
+  transition: background-color 0.15s;
 }
 
 .field{
@@ -61,7 +63,16 @@
 
 //Navigation
 nav{
+  transition: background-color 0.15s;
   width:100%;
+  .buttons{
+    align-items: baseline;
+    .switch-wrapper{
+      label{
+        padding-right:25px;
+      }
+    }
+  }
 }
 
 //Loader
