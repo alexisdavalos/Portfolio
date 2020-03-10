@@ -1,11 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { useDarkMode } from '../hooks/useDarkMode';
 import navlogo from '../assetts/images/nav-logo.png'
+
+
 const Nav = () => {
+    const [darkMode, setDarkMode] = useDarkMode('darkmode', true)
+
     return (
         <nav className="navbar" role="navigation" aria-label="main navigation">
             <div className="navbar-brand">
                 <a href='/' className="navbar-item">
-                    <img src={navlogo} alt= 'logo'/>
+                    <img src={navlogo} alt='logo' />
                 </a>
 
                 <a href='#top' role="button" className="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
@@ -37,10 +42,17 @@ const Nav = () => {
                 <div className="navbar-end">
                     <div className="navbar-item">
                         <div className="buttons">
-                            <a href='#top' className="button is-primary">
-                                <strong>Sign up</strong>
-                            </a>
-                            <a href='#top' className="button is-light">Log in</a>
+                        <a href='#top' className="button is-primary"><strong>Sign up</strong></a>
+                        <a href='#top' className="button is-light">Log in</a>
+                            <div class="field">
+                                {
+                                    (darkMode) ? 
+                                    <input onClick={() => setDarkMode(!darkMode)} id="switchThinColorDefault" type="checkbox" name="switchThinColorDefault" class="switch"/> :
+                                    <input onClick={() => setDarkMode(!darkMode)} id="switchThinColorDefault" type="checkbox" name="switchThinColorDefault" class="switch" checked="checked"/> 
+
+                                }
+                                <label for="switchThinColorDefault"><b>Dark Mode</b></label>
+                            </div>
                         </div>
                     </div>
                 </div>

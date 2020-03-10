@@ -1,3 +1,17 @@
+@import 'bulma';
+@import '../../node_modules/bulma-extensions/bulma-switch/src/sass/index.sass';
+
+
+.field{
+  .switch{
+    &[type="checkbox"] + label{
+      padding-top: 0 !important;
+    }
+  }
+}
+.dark-mode-off{
+  color: white;
+}
 .App {
   text-align: center;
 }
