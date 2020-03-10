@@ -1,6 +1,15 @@
 @import 'bulma';
 @import '../../node_modules/bulma-extensions/bulma-switch/src/sass/index.sass';
 
+.Container {
+  background-color: white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  color: white;
+}
 
 .field{
   .switch{
@@ -28,15 +37,6 @@
   }
 }
 
-.Container {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  color: white;
-}
 
 .App-link {
   color: #61dafb;

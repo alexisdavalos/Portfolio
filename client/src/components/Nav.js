@@ -5,18 +5,23 @@ import navLogoLight from '../assetts/images/nav-logo-light.png'
 
 
 const Nav = () => {
-    const [darkMode, setDarkMode] = useDarkMode('light', false);
+    const [darkMode, setDarkMode] = useDarkMode('darkmode', false);
+    const toggleMode = e => {
+        e.preventDefault();
+        setDarkMode(!darkMode);
+      };
     console.log(darkMode);
-    useEffect(()=>{
+
+    if(window.localStorage.getItem('darkmode') === null){
         setDarkMode(false)
-    }, [])
+    }
 
 
     return (
-        <nav className="navbar" role="navigation" aria-label="main navigation">
+        <nav className={(darkMode === true) ? "navbar is-dark" : "navbar is-light"} role="navigation" aria-label="main navigation">
             <div className="navbar-brand">
                 <a href='/' className="navbar-item">
-                    <img src={(darkMode ? navLogoDark : navLogoLight)} alt='logo' />
+                    <img src={(!darkMode) ? navLogoDark : navLogoLight} alt='logo' />
                 </a>
 
                 <a href='#top' role="button" className="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
@@ -51,12 +56,11 @@ const Nav = () => {
                         <a href='#top' className="button is-black"><strong>Sign up</strong></a>
                         <a href='#top' className="button is-light">Log in</a>
                             <div className="field">
-                                {
-                                    (darkMode) ? 
-                                    <input onClick={() => setDarkMode(!darkMode)} id="switchThinColorDefault" type="checkbox" name="switchThinColorDefault" className="switch is-black" defaultChecked/> :
-                                    <input onClick={() => setDarkMode(!darkMode)} id="switchThinColorDefault" type="checkbox" name="switchThinColorDefault" className="switch" /> 
+                            
+            
+                                    <input onClick={() => setDarkMode(!darkMode)} id="switchThinColorDefault" type="checkbox" className="switch is-black" defaultChecked={(darkMode) ? true : false}/> 
 
-                                }
+        
                                 <label htmlFor="switchThinColorDefault"><b>Dark Mode</b></label>
                             </div>
                         </div>
