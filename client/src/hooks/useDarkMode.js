@@ -8,7 +8,7 @@ export const useDarkMode = (key, initialValue) => {
         const nav = document.querySelector('nav');
 
         //toggles dark-mode class
-        nav.classList.toggle('dark-mode');
+        nav.classList.toggle('is-dark');
         body.classList.toggle('dark-mode');
 
     },[darkMode])
