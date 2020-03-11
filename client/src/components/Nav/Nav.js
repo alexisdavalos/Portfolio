@@ -1,22 +1,8 @@
-import React, { useState, useEffect } from 'react';
-import { useDarkMode } from '../../hooks/useDarkMode';
+import React from 'react';
 import navLogoDark from '../../assetts/images/nav-logo.png'
 import navLogoLight from '../../assetts/images/nav-logo-light.png'
 
-
-const Nav = () => {
-    const [darkMode, setDarkMode] = useDarkMode('darkmode', false);
-    const toggleMode = e => {
-        e.preventDefault();
-        setDarkMode(!darkMode);
-      };
-    console.log(darkMode);
-
-    if(window.localStorage.getItem('darkmode') === null){
-        setDarkMode(false)
-    }
-
-
+const Nav = ({darkMode, setDarkMode}) => {
     return (
         <nav className={(darkMode === true) ? "navbar is-dark" : "navbar is-light"} role="navigation" aria-label="main navigation">
             <div className="navbar-brand">

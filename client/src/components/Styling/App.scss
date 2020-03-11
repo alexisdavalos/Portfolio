@@ -1,7 +1,7 @@
 @import 'bulma';
 @import '../../../node_modules/bulma-extensions/bulma-switch/src/sass/index.sass';
 
-//main app container
+//App Wrapper
 .Container {
   background-color: white;
   min-height: 100vh;
@@ -11,55 +11,28 @@
   justify-content: flex-start;
   color: white;
   transition: background-color 0.15s;
-}
-
-.field{
-  .switch{
-    &[type="checkbox"] + label{
-      padding-top: 0 !important;
+  .Wrapper{
+    width: 100%;
+    height: 100vh;
+    .Particles{
+      width:100%;
+      height:100%;
+    }
+    .Section_1{
+      display:flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      height:100%;
+      width:100%;
+      z-index:1;
+      position:absolute;
+      img{
+        width:400px;
+      }
     }
   }
-}
-.dark-mode{
-  color: white;
-  background:#333;
-}
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-
-.App-link {
-  color: #61dafb;
-}
-.App-Redux{
-  background: #ffffff1a;
-  border-radius: 25px;
-  margin-top: 25px;
-  padding: 2%;
-}
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-
-//Custom Styles Start
+}//end container
 
 //Navigation
 nav{
@@ -68,6 +41,11 @@ nav{
   .buttons{
     align-items: baseline;
     .switch-wrapper{
+      .switch{
+        &[type="checkbox"] + label{
+          padding-top: 0 !important;
+        }
+      }
       label{
         padding-right:25px;
       }
@@ -98,4 +76,26 @@ nav{
 .hidden{
   opacity: 0;
   visibility:hidden !important; 
+}
+.dark-mode{
+  h1{
+    color: #333;
+  }
+  background:#333;
+}
+
+//Transitions
+@media (prefers-reduced-motion: no-preference) {
+  App-logo {
+    animation: App-logo-spin infinite 5s linear;
+  }
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
 }
