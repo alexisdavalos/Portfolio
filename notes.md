@@ -1,0 +1,1 @@
+- To Do Next: Update Loader animation to scale out Container first, transition and then play;
