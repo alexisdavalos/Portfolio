@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react';
 //images
 import logo from '../../assetts/images/logo.png'
 import lightLogo from '../../assetts/images/logo-light.png'
-import svgLogo from './deer.svg'
+import svgLogo from './logo.svg'
 import backdrop from '../../assetts/images/abstract.jpg'
 //components
 import Particles from 'react-particles-js'
