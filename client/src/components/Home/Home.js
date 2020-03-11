@@ -1,9 +1,7 @@
-import React, {useState, useEffect} from 'react';
+import React from 'react';
 //images
 import logo from '../../assetts/images/logo.png'
 import lightLogo from '../../assetts/images/logo-light.png'
-import svgLogo from './logo.svg'
-import backdrop from '../../assetts/images/abstract.jpg'
 //components
 import Particles from 'react-particles-js'
 import Typed from 'react-typed';
@@ -22,8 +20,15 @@ const Home = (props) =>{
         <div className="Wrapper">
             <div className={(props.darkMode ? "Home_Section dark" : "Home_Section light")}>
                 <img src={(props.darkMode) ? lightLogo : logo} alt='logo'/>
+                <h2 className="is-family-monospace is-size-3">{'<'}
+                    <Typed
+                        strings={[`Alexis_Davalos Type={DEV}/>`]}
+                        typeSpeed={120}
+                        backSpeed={80}
+                    />
+                </h2>
                 <h1 className="is-size-1 has-text-weight-medium is-family-monospace ">I am a Full Stack Developer</h1>
-                <h3 className="is-family-monospace">with a passion for constantly learning and pushing the boundaries of my understanding.</h3>
+                <h3 className="is-family-monospace is-size-4">with a passion for constantly learning and pushing the boundaries of my understanding.</h3>
             </div>
            {(props.darkMode) ? <Particles className="Particles isDark" params={configDark}/> : <Particles className="Particles isLight" params={configLight}/>}
         </div>
