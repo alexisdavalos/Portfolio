@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import Loader from 'react-loader-spinner'
 import Logo from '../../assetts/images/logo.png'
-
 import LoaderToggle from '../../utils/LoaderTimer.js'
 const LoaderSection = () => {
 
