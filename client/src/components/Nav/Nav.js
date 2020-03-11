@@ -33,8 +33,8 @@ const Nav = ({darkMode, setDarkMode}) => {
                         <a href='#top' className="navbar-link">More</a>
 
                         <div className="navbar-dropdown" >
-                            <a href='#top' className="navbar-item">About</a>
-                            <a href='#top' className="navbar-item">Jobs</a>
+                            <a href='#top' className="navbar-item">Blog</a>
+                            <a href='#top' className="navbar-item">Social Media</a>
                             <a href='#top' className="navbar-item">Contact</a>
                             <hr className="navbar-divider" />
                             <a href='#top' className="navbar-item">Report an issue</a>
