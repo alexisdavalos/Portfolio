@@ -15,12 +15,11 @@ const Home = (props) =>{
 
     return(
         <div className="Wrapper">
-            <div className="Section_1">
-                {/* <h1>Full Stack Developer</h1>
-                <h3>I design and code beautifully simple things, and I love what I do.</h3> */}
+            <div className={(props.darkMode ? "Home_Section dark" : "Home_Section light")}>
+                <h1 className="is-size-1 has-text-weight-medium is-family-monospace ">Full Stack Developer</h1>
+                <h3 className="is-family-monospace">I design and code beautifully simple things, and I love what I do.</h3>
                 <img src={logo} alt='logo'/>
             </div>
-
            {(props.darkMode) ? <Particles className="Particles isDark" params={configDark}/> : <Particles className="Particles isLight" params={configLight}/>}
         </div>
     )

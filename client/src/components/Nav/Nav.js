@@ -17,7 +17,7 @@ const Nav = ({darkMode, setDarkMode}) => {
                 </a>
             </div>
 
-            <div id="navbarBasicExample" className="navbar-menu">
+            <div className="navbar-menu">
                 <div className="navbar-start">
                     <a href='#top' className="navbar-item" >Home</a>
                     <a href='#top' className="navbar-item">About Me</a>
@@ -26,7 +26,7 @@ const Nav = ({darkMode, setDarkMode}) => {
                     <div className="navbar-item has-dropdown is-hoverable">
                         <a href='#top' className="navbar-link">More</a>
 
-                        <div className="navbar-dropdown">
+                        <div className="navbar-dropdown" >
                             <a href='#top' className="navbar-item">About</a>
                             <a href='#top' className="navbar-item">Jobs</a>
                             <a href='#top' className="navbar-item">Contact</a>
@@ -40,11 +40,11 @@ const Nav = ({darkMode, setDarkMode}) => {
                     <div className="navbar-item">
                         <div className="buttons">
                         <div className="field switch-wrapper">
-                            <input onClick={() => setDarkMode(!darkMode)} id="switchThinColorDefault" type="checkbox" className="switch is-black" defaultChecked={(darkMode) ? true : false}/> 
+                            <input onClick={() => setDarkMode(!darkMode)} id="switchThinColorDefault" type="checkbox" className="switch is-black is-rounded" defaultChecked={(darkMode) ? true : false}/> 
                             <label htmlFor="switchThinColorDefault"><b>Dark Mode: {(darkMode) ? "ON " : "OFF"}</b></label>
                         </div>
-                        <a href='#top' className="button is-black"><strong>Resume</strong></a>
-                        <a href='#top' className="button is-light">Contact</a>
+                        <a href='#top' className="button is-black is-rounded"><strong>Resume</strong></a>
+                        <a href='#top' className="button is-light is-rounded">Contact</a>
                         </div>
                     </div>
                 </div>
