@@ -1,6 +1,12 @@
 import React from 'react';
 import navLogoDark from '../../assetts/images/nav-logo.png'
 import navLogoLight from '../../assetts/images/nav-logo-light.png'
+// Icons
+import {
+    FaGrav,
+    FaGreaterThanEqual,
+    FaHome
+} from 'react-icons/fa/'
 
 const Nav = ({darkMode, setDarkMode}) => {
     return (
@@ -17,11 +23,11 @@ const Nav = ({darkMode, setDarkMode}) => {
                 </a>
             </div>
 
-            <div className="navbar-menu">
+            <div className="navbar-menu is-family-monospace">
                 <div className="navbar-start">
-                    <a href='#top' className="navbar-item" >Home</a>
-                    <a href='#top' className="navbar-item">About Me</a>
-                    <a href='#top' className="navbar-item">Projects</a>
+                    <a href='#top' className="navbar-item" ><FaHome size="2em"/><span>Home</span></a>
+                    <a href='#top' className="navbar-item"><FaGrav  size="2em"/><span>About</span></a>
+                    <a href='#top' className="navbar-item"><FaGreaterThanEqual size="2em"/><span>Projects</span></a>
 
                     <div className="navbar-item has-dropdown is-hoverable">
                         <a href='#top' className="navbar-link">More</a>
