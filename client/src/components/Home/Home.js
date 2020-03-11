@@ -24,7 +24,7 @@ const Home = (props) =>{
                     <Typed
                         strings={[`Alexis_Davalos Type={DEV}/>`]}
                         typeSpeed={120}
-                        backSpeed={80}
+                        backSpeed={75}
                     />
                 </h2>
                 <h1 className="is-size-1 has-text-weight-medium is-family-monospace ">I am a Full Stack Developer</h1>
