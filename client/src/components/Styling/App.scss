@@ -166,7 +166,7 @@ nav{
 
 @keyframes hue-filter {
   from {
-    filter: hue-rotate(-90deg)  /* Same as 270deg rotation */
+    filter: hue-rotate(-360deg)  /* Same as 270deg rotation */
   }
   to {
     filter: hue-rotate(360deg);
