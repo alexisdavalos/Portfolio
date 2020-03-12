@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 //images
 import logo from '../../assetts/images/logo.png'
 import lightLogo from '../../assetts/images/logo-light.png'
@@ -10,10 +10,10 @@ import setUpConfig from './particleConfig.js'
 
 const Home = (props) =>{
      //Dynamically change color of particles
-    const configDark = setUpConfig("#ffffff");
+    const [configDark, setConfigDark] = useState(setUpConfig("#ffffff"));
     console.log('Dark', configDark)
 
-    const configLight = setUpConfig("#000000");
+    const configLight = {...configDark.particles.color, value: "#000000"}
     console.log('Light', configLight)
 
     return(
