@@ -5,7 +5,9 @@ import navLogoLight from '../../assetts/images/nav-logo-light.png'
 import {
     FaGrav,
     FaGreaterThanEqual,
-    FaHome
+    FaHome,
+    FaSun,
+    FaMoon
 } from 'react-icons/fa/'
 
 const Nav = ({darkMode, setDarkMode}) => {
@@ -47,7 +49,7 @@ const Nav = ({darkMode, setDarkMode}) => {
                         <div className="buttons">
                         <div className="field switch-wrapper">
                             <input onClick={() => setDarkMode(!darkMode)} id="switchThinColorDefault" type="checkbox" className="switch is-black is-rounded" defaultChecked={(darkMode) ? true : false}/> 
-                            <label htmlFor="switchThinColorDefault"><b>Dark Mode: {(darkMode) ? "ON " : "OFF"}</b></label>
+                            <label htmlFor="switchThinColorDefault"><b>{(darkMode) ? <FaMoon size="1em"/> : <FaSun size="1em"/>}</b></label>
                         </div>
                         <a href='#top' className={darkMode ? "button is-white is-rounded" : "button is-black is-rounded"}><strong>Resume</strong></a>
                         <a href='#top' className={darkMode ? "button is-light is-rounded is-outlined" : "button is-dark is-rounded is-outlined"}>Contact</a>
