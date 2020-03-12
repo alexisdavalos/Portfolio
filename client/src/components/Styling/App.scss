@@ -64,6 +64,7 @@ svg{
         padding-bottom:25px;
         padding-top: 56px;
         width:400px;
+        transition: img 5s;
         @media (max-width: 1024px){
           width:250px;
         }
@@ -166,7 +167,7 @@ nav{
 
 @keyframes hue-filter {
   from {
-    filter: hue-rotate(-360deg)  /* Same as 270deg rotation */
+    filter: hue-rotate(-360deg)  
   }
   to {
     filter: hue-rotate(360deg);

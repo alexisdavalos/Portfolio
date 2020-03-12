@@ -27,12 +27,12 @@ const Nav = ({darkMode, setDarkMode}) => {
 
             <div className="navbar-menu is-family-monospace">
                 <div className="navbar-start">
-                    <a href='#top' className="navbar-item" ><FaHome size="2em"/><span>Home</span></a>
-                    <a href='#top' className="navbar-item"><FaGrav  size="2em"/><span>About</span></a>
-                    <a href='#top' className="navbar-item"><FaGreaterThanEqual size="2em"/><span>Projects</span></a>
+                    <a href='#top' className="navbar-item" ><FaHome size="2em"/><span class="typed-cursor typed-cursor--blink">|</span><span>Home</span></a>
+                    <a href='#top' className="navbar-item"><FaGrav  size="2em"/><span class="typed-cursor typed-cursor--blink">|</span><span>About</span></a>
+                    <a href='#top' className="navbar-item"><FaGreaterThanEqual size="2em"/><span class="typed-cursor typed-cursor--blink">|</span><span>Projects</span></a>
 
                     <div className="navbar-item has-dropdown is-hoverable">
-                        <a href='#top' className="navbar-link">More</a>
+                        <a href='#top' className="navbar-link"><span class="typed-cursor typed-cursor--blink">|</span>More</a>
 
                         <div className="navbar-dropdown" >
                             <a href='#top' className="navbar-item">Blog</a>
