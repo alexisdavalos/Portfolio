@@ -47,6 +47,10 @@ svg{
       }
       h1{
         margin-top: 1%;
+        background: linear-gradient(to right, rgba(74, 18, 18, 0.35), rgba(35, 47, 28, 0.35) 150%);
+        filter: hue-rotate(180deg);
+        opacity: .95;
+        color: white;
         @media (max-width: 768px){
           font-size: 1.75rem !important;
         }
