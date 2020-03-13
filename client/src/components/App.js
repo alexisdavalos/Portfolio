@@ -20,7 +20,8 @@ function App() {
   };
   return (
 
-        <div className="Container is-dark">
+     
+          <Switch className="Container is-dark">
           <Route path="/home">
             <Loader/>
             <Nav darkMode={darkMode} setDarkMode={setDarkMode}/>
@@ -37,7 +38,8 @@ function App() {
             <Loader/>
             <Nav darkMode={darkMode} setDarkMode={setDarkMode}/>
           </Route>
-        </div>
+          </Switch>
+  
 
   );
 }
