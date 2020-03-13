@@ -17,3 +17,4 @@ browser router will have rendered new components during Loader play
 To Do:
 
 Switch menu items to icons, display words for active elements
+Import Browser Router
