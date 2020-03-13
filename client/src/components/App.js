@@ -1,12 +1,13 @@
 import React, {useState} from 'react';
 import './Styling/App.scss';
 import {useDarkMode} from '../hooks/useDarkMode'
-
+import {Switch, Route} from 'react-router-dom';
 //Components
 import Loader from './Loader/Loader.js'
 import Component from './Component.js';
 import Nav from './Nav/Nav.js'
-import Home from './Home/Home.js'
+import Home from './Main Components/Home/Home.js'
+import Projects from './Main Components/Projects/Projects.js'
 
 //images
 
@@ -18,13 +19,26 @@ function App() {
       setDarkMode(false)
   };
   return (
-    <>
-      <div className="Container is-dark">
-        <Loader/>
-        <Nav darkMode={darkMode} setDarkMode={setDarkMode}/>
-        <Home darkMode={darkMode}/>
-      </div>
-    </>
+
+        <div className="Container is-dark">
+          <Route path="/home">
+            <Loader/>
+            <Nav darkMode={darkMode} setDarkMode={setDarkMode}/>
+            <Home darkMode={darkMode}/>
+          </Route>
+
+          <Route path="/projects">
+            <Loader/>
+            <Nav darkMode={darkMode} setDarkMode={setDarkMode}/>
+            <Projects darkMode={darkMode}/>
+          </Route>
+
+          <Route exact path="/">
+            <Loader/>
+            <Nav darkMode={darkMode} setDarkMode={setDarkMode}/>
+          </Route>
+        </div>
+
   );
 }
 

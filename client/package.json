@@ -18,12 +18,12 @@
     "react-loader-spinner": "^3.1.5",
     "react-particles-js": "^2.7.1",
     "react-redux": "^7.x.x",
+    "react-router-dom": "^5.1.2",
     "react-scripts": "3.x.x",
     "react-typed": "^1.2.0",
     "redux": "^4.x.x",
     "redux-logger": "^3.x.x",
-    "redux-thunk": "^2.x.x",
-    "turn.js": "^1.0.5"
+    "redux-thunk": "^2.x.x"
   },
   "scripts": {
     "start": "react-scripts start",

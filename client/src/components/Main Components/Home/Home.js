@@ -1,12 +1,12 @@
 import React from 'react';
 //images
-import logo from '../../assetts/images/logo.png'
-import lightLogo from '../../assetts/images/logo-light.png'
+import logo from '../../../assetts/images/logo.png'
+import lightLogo from '../../../assetts/images/logo-light.png'
 //components
 import Particles from 'react-particles-js'
 import Typed from 'react-typed';
 //configs
-import setUpConfig from './particleConfig.js'
+import setUpConfig from '../config/particleConfig.js'
 
 const Home = (props) =>{
      //Dynamically change color of particles
@@ -18,7 +18,7 @@ const Home = (props) =>{
 
     return(
         <div className="Wrapper">
-            <div className={(props.darkMode ? "Home_Section dark" : "Home_Section light")}>
+            <div className={(props.darkMode ? "Center_Section dark" : "Center_Section light")}>
                 <img src={(props.darkMode) ? lightLogo : logo} alt='logo'/>
                 <h2 className="is-family-monospace is-size-3">{'<'}
                     <Typed

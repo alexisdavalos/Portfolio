@@ -27,16 +27,16 @@ const Nav = ({darkMode, setDarkMode}) => {
 
             <div className="navbar-menu is-family-monospace">
                 <div className="navbar-start">
-                    <a href='#top' className="navbar-item" ><FaHome size="2em"/><span class="typed-cursor typed-cursor--blink">|</span><span>Home</span></a>
-                    <a href='#top' className="navbar-item"><FaGrav  size="2em"/><span class="typed-cursor typed-cursor--blink">|</span><span>About</span></a>
-                    <a href='#top' className="navbar-item"><FaGreaterThanEqual size="2em"/><span class="typed-cursor typed-cursor--blink">|</span><span>Projects</span></a>
+                    <a href='/home' className="navbar-item" ><FaHome size="2em"/><span className="typed-cursor typed-cursor--blink">|</span><span>Home</span></a>
+                    <a href='/about' className="navbar-item"><FaGrav  size="2em"/><span className="typed-cursor typed-cursor--blink">|</span><span>About</span></a>
+                    <a href='/projects' className="navbar-item"><FaGreaterThanEqual size="2em"/><span className="typed-cursor typed-cursor--blink">|</span><span>Projects</span></a>
 
                     <div className="navbar-item has-dropdown is-hoverable">
-                        <a href='#top' className="navbar-link"><span class="typed-cursor typed-cursor--blink">|</span>More</a>
+                        <a href='#top' className="navbar-link"><span className="typed-cursor typed-cursor--blink">|</span>More</a>
 
                         <div className="navbar-dropdown" >
-                            <a href='#top' className="navbar-item">Blog</a>
-                            <a href='#top' className="navbar-item">Social Media</a>
+                            <a href='/blog' className="navbar-item">Blog</a>
+                            <a href='/' className="navbar-item">Social Media</a>
                             <a href='#top' className="navbar-item">Contact</a>
                             <hr className="navbar-divider" />
                             <a href='#top' className="navbar-item">Report an issue</a>
