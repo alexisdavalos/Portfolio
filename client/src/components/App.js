@@ -25,12 +25,13 @@ function App() {
         <Route exact path="/">
           <Loader/>
           <Nav darkMode={darkMode} setDarkMode={setDarkMode}/>
+          <Home darkMode={darkMode}/>
         </Route>
 
         <Route path="/home">
           <Loader/>
           <Nav darkMode={darkMode} setDarkMode={setDarkMode}/>
-          <Home darkMode={darkMode}/>
+        
         </Route>
 
         <Route path="/projects">

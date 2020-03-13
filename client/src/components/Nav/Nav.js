@@ -28,7 +28,7 @@ const Nav = ({darkMode, setDarkMode}) => {
 
             <div className="navbar-menu is-family-monospace">
                 <div className="navbar-start">
-                    <Link to='/home' className="navbar-item" ><FaHome size="2em"/><span className="typed-cursor typed-cursor--blink">|</span><span>Home</span></Link>
+                    <Link to='/' className="navbar-item" ><FaHome size="2em"/><span className="typed-cursor typed-cursor--blink">|</span><span>Home</span></Link>
                     <Link to='/about' className="navbar-item"><FaGrav  size="2em"/><span className="typed-cursor typed-cursor--blink">|</span><span>About</span></Link>
                     <Link to='/projects' className="navbar-item"><FaGreaterThanEqual size="2em"/><span className="typed-cursor typed-cursor--blink">|</span><span>Projects</span></Link>
 

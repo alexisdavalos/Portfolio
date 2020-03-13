@@ -1,18 +1,15 @@
 import React from 'react';
 import Card from './Card.js';
-import projectsData from './data/projectsData.js'
+import {projectsData} from './data/projectsData.js'
 
 const Projects = () =>{
-    console.log('inside blog.js')
+    console.log('data in projects.js:', projectsData)
     
     return(
-    <div className="Wrapper">
-        <div className="columns is-desktop">
-            <Card/>
-        <div className="column highlight-full">
-    
-        </div>
-        </div>
+    <div className="Wrapper Projects is-desktop">
+        {projectsData.map((project, index) =>(
+            <Card project={project} key={project.id}/>   
+        ))}
     </div>
     )
 }
