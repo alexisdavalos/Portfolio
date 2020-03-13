@@ -1,10 +1,9 @@
-import React, {useState} from 'react';
+import React from 'react';
 import './Styling/App.scss';
 import {useDarkMode} from '../hooks/useDarkMode'
 import {Switch, Route} from 'react-router-dom';
 //Components
 import Loader from './Loader/Loader.js'
-import Component from './Component.js';
 import Nav from './Nav/Nav.js'
 import Home from './Main Components/Home/Home.js'
 import Projects from './Main Components/Projects/Projects.js'
@@ -33,7 +32,7 @@ function App() {
           <Nav darkMode={darkMode} setDarkMode={setDarkMode}/>
           <Projects darkMode={darkMode}/>
         </Route>
-        
+
         <Route path="/home">
           <Loader/>
           <Nav darkMode={darkMode} setDarkMode={setDarkMode}/>
