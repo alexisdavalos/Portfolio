@@ -1,6 +1,7 @@
 import React from 'react';
 import navLogoDark from '../../assetts/images/nav-logo.png'
 import navLogoLight from '../../assetts/images/nav-logo-light.png'
+import {Link} from 'react-router-dom';
 // Icons
 import {
     FaGrav,
@@ -14,32 +15,32 @@ const Nav = ({darkMode, setDarkMode}) => {
     return (
         <nav className={(darkMode === true) ? "navbar is-dark" : "navbar is-light"} role="navigation" aria-label="main navigation">
             <div className="navbar-brand">
-                <a href='/' className="navbar-item">
+                <Link to='/' className="navbar-item">
                     <img src={(!darkMode) ? navLogoDark : navLogoLight} alt='logo' />
-                </a>
+                </Link>
 
-                <a href='#top' role="button" className="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                <Link to='#top' role="button" className="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
                     <span aria-hidden="true"></span>
                     <span aria-hidden="true"></span>
                     <span aria-hidden="true"></span>
-                </a>
+                </Link>
             </div>
 
             <div className="navbar-menu is-family-monospace">
                 <div className="navbar-start">
-                    <a href='/home' className="navbar-item" ><FaHome size="2em"/><span className="typed-cursor typed-cursor--blink">|</span><span>Home</span></a>
-                    <a href='/about' className="navbar-item"><FaGrav  size="2em"/><span className="typed-cursor typed-cursor--blink">|</span><span>About</span></a>
-                    <a href='/projects' className="navbar-item"><FaGreaterThanEqual size="2em"/><span className="typed-cursor typed-cursor--blink">|</span><span>Projects</span></a>
+                    <Link to='/home' className="navbar-item" ><FaHome size="2em"/><span className="typed-cursor typed-cursor--blink">|</span><span>Home</span></Link>
+                    <Link to='/about' className="navbar-item"><FaGrav  size="2em"/><span className="typed-cursor typed-cursor--blink">|</span><span>About</span></Link>
+                    <Link to='/projects' className="navbar-item"><FaGreaterThanEqual size="2em"/><span className="typed-cursor typed-cursor--blink">|</span><span>Projects</span></Link>
 
                     <div className="navbar-item has-dropdown is-hoverable">
-                        <a href='#top' className="navbar-link"><span className="typed-cursor typed-cursor--blink">|</span>More</a>
+                        <Link to='#top' className="navbar-link"><span className="typed-cursor typed-cursor--blink">|</span>More</Link>
 
                         <div className="navbar-dropdown" >
-                            <a href='/blog' className="navbar-item">Blog</a>
-                            <a href='/' className="navbar-item">Social Media</a>
-                            <a href='#top' className="navbar-item">Contact</a>
+                            <Link to='/blog' className="navbar-item">Blog</Link>
+                            <Link to='/' className="navbar-item">Social Media</Link>
+                            <Link to='#top' className="navbar-item">Contact</Link>
                             <hr className="navbar-divider" />
-                            <a href='#top' className="navbar-item">Report an issue</a>
+                            <Link to='#top' className="navbar-item">Report an issue</Link>
                         </div>
                     </div>
                 </div>
@@ -51,8 +52,8 @@ const Nav = ({darkMode, setDarkMode}) => {
                             <input onClick={() => setDarkMode(!darkMode)} id="switchThinColorDefault" type="checkbox" className="switch is-black is-rounded" defaultChecked={(darkMode) ? true : false}/> 
                             <label htmlFor="switchThinColorDefault"><b>{(darkMode) ? <FaMoon size="1em"/> : <FaSun size="1em"/>}</b></label>
                         </div>
-                        <a href='#top' className={darkMode ? "button is-white is-rounded" : "button is-black is-rounded"}><strong>Resume</strong></a>
-                        <a href='#top' className={darkMode ? "button is-light is-rounded is-outlined" : "button is-dark is-rounded is-outlined"}>Contact</a>
+                        <Link to='#top' className={darkMode ? "button is-white is-rounded" : "button is-black is-rounded"}><strong>Resume</strong></Link>
+                        <Link to='#top' className={darkMode ? "button is-light is-rounded is-outlined" : "button is-dark is-rounded is-outlined"}>Contact</Link>
                         </div>
                     </div>
                 </div>
