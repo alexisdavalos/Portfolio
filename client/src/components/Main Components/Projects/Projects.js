@@ -7,9 +7,9 @@ const Projects = () =>{
     
     return(
     <div className="Wrapper">
-        <div class="columns is-desktop">
+        <div className="columns is-desktop">
             <Card/>
-        <div class="column highlight-full">
+        <div className="column highlight-full">
     
         </div>
         </div>
