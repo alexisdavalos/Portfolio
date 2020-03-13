@@ -7,7 +7,7 @@ const LoaderSection = () => {
     useEffect(() => {
         LoaderToggle();
     }, [])
-    //renders the loader component
+    //Renders the loader component
     return (
         <div id="loader" className='loaderWrapper'>
             <img src={Logo} alt='Alexis Davalos Developer/Programmer'style={{width: '300px'}}></img>

@@ -8,7 +8,7 @@ export const setUpConfig = (color) =>{
             }
         },
         "color": {
-            "value": color,
+            "value": color, 
           },
           "shape": {
             "type": "circle",

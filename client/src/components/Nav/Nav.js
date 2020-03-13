@@ -1,8 +1,6 @@
 import React from 'react';
-import navLogoDark from '../../assetts/images/nav-logo.png'
-import navLogoLight from '../../assetts/images/nav-logo-light.png'
 import {Link} from 'react-router-dom';
-// Icons
+// Import Icons From Library
 import {
     FaGrav,
     FaGreaterThanEqual,
@@ -10,6 +8,9 @@ import {
     FaSun,
     FaMoon
 } from 'react-icons/fa/'
+// Import Images from assetts
+import navLogoDark from '../../assetts/images/nav-logo.png'
+import navLogoLight from '../../assetts/images/nav-logo-light.png'
 
 const Nav = ({darkMode, setDarkMode}) => {
     return (
