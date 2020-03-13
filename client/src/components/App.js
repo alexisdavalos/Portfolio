@@ -19,8 +19,6 @@ function App() {
       setDarkMode(false)
   };
   return (
-
-     
           <Switch className="Container is-dark">
           <Route path="/home">
             <Loader/>
@@ -39,8 +37,6 @@ function App() {
             <Nav darkMode={darkMode} setDarkMode={setDarkMode}/>
           </Route>
           </Switch>
-  
-
   );
 }
 
