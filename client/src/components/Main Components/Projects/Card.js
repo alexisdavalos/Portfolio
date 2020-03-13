@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Card = ({project}) =>{
+const Card = ({project, darkMode}) =>{
     return(
         <div className="column is-one-third">
         <div className="card">
@@ -9,7 +9,7 @@ const Card = ({project}) =>{
                 <img src="https://bulma.io/images/placeholders/1280x960.png" alt="project"/>
                 </figure>
             </div>
-            <div className="card-content has-background-dark has-text-white-ter">
+            <div className={darkMode ? "card-content has-background-dark has-text-white-ter" : "card-content has-background-light has-text-dark-ter"}>
                 <div className="content">
                 {project.description}
                 <br/>

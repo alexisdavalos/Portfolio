@@ -28,17 +28,18 @@ function App() {
           <Home darkMode={darkMode}/>
         </Route>
 
+        <Route path="/projects">
+          <Loader/>
+          <Nav darkMode={darkMode} setDarkMode={setDarkMode}/>
+          <Projects darkMode={darkMode}/>
+        </Route>
+        
         <Route path="/home">
           <Loader/>
           <Nav darkMode={darkMode} setDarkMode={setDarkMode}/>
         
         </Route>
 
-        <Route path="/projects">
-          <Loader/>
-          <Nav darkMode={darkMode} setDarkMode={setDarkMode}/>
-          <Projects darkMode={darkMode}/>
-        </Route>
 
       </Switch>
     </div>
