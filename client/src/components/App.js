@@ -19,24 +19,29 @@ function App() {
       setDarkMode(false)
   };
   return (
-          <Switch className="Container is-dark">
-          <Route path="/home">
-            <Loader/>
-            <Nav darkMode={darkMode} setDarkMode={setDarkMode}/>
-            <Home darkMode={darkMode}/>
-          </Route>
+    <div className="Container is-dark">
+      <Switch>
 
-          <Route path="/projects">
-            <Loader/>
-            <Nav darkMode={darkMode} setDarkMode={setDarkMode}/>
-            <Projects darkMode={darkMode}/>
-          </Route>
+        <Route exact path="/">
+          <Loader/>
+          <Nav darkMode={darkMode} setDarkMode={setDarkMode}/>
+          <Home darkMode={darkMode}/>
+        </Route>
 
-          <Route exact path="/">
-            <Loader/>
-            <Nav darkMode={darkMode} setDarkMode={setDarkMode}/>
-          </Route>
-          </Switch>
+        <Route path="/home">
+          <Loader/>
+          <Nav darkMode={darkMode} setDarkMode={setDarkMode}/>
+          <Home darkMode={darkMode}/>
+        </Route>
+
+        <Route path="/projects">
+          <Loader/>
+          <Nav darkMode={darkMode} setDarkMode={setDarkMode}/>
+          <Projects darkMode={darkMode}/>
+        </Route>
+
+      </Switch>
+    </div>
   );
 }
 
