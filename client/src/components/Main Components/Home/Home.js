@@ -20,7 +20,8 @@ const Home = (props) =>{
         <div className="Wrapper">
             <div className={(props.darkMode ? "Center_Section dark" : "Center_Section light")}>
                 <img src={(props.darkMode) ? lightLogo : logo} alt='logo'/>
-                <h2 className="is-family-monospace is-size-3">{'<'}
+                <h2 className="is-family-monospace is-size-3">
+                    {'<'}
                     <Typed
                         strings={[`Alexis_Davalos Type={DEV}/>`]}
                         typeSpeed={120}

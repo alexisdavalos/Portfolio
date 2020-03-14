@@ -1,5 +1,5 @@
 import React from 'react';
-import './Styling/App.scss';
+import './Styling/index.scss';
 import {useDarkMode} from '../hooks/useDarkMode'
 import {Switch, Route} from 'react-router-dom';
 
