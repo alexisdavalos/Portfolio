@@ -10,7 +10,7 @@ const LoaderSection = () => {
     //Renders the loader component
     return (
         <div id="loader" className='loaderWrapper'>
-            <img src={Logo} alt='Alexis Davalos Developer/Programmer'style={{width: '300px'}}></img>
+            <img src={Logo} alt='Alexis Davalos Developer/Programmer' style={{ width: '300px' }}></img>
             <Loader
                 type="ThreeDots"
                 color="#333"

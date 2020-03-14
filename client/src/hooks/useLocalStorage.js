@@ -1,8 +1,8 @@
-import {useState} from 'react';
+import { useState } from 'react';
 
 export const useLocalStorage = (key, initialValue) => {
     //initializes state of storedValue to local storage item or initial value based on turnary operator
-    const [storedValue, setStoredValue] = useState(()=>{
+    const [storedValue, setStoredValue] = useState(() => {
         //Get from local storage by key
         const item = window.localStorage.getItem(key);
         //Parse and return stored json or, if undefined, returned initial value

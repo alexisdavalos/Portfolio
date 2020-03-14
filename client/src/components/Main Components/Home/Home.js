@@ -8,18 +8,18 @@ import Typed from 'react-typed';
 //configs
 import setUpConfig from '../config/particleConfig.js'
 
-const Home = (props) =>{
-     //Dynamically change color of particles
+const Home = (props) => {
+    //Dynamically change color of particles
     const configDark = setUpConfig("#ffffff");
     console.log('Dark', configDark)
 
     const configLight = setUpConfig("#000000");
     console.log('Light', configLight)
 
-    return(
+    return (
         <div className="Wrapper">
             <div className={(props.darkMode ? "Center_Section dark" : "Center_Section light")}>
-                <img src={(props.darkMode) ? lightLogo : logo} alt='logo'/>
+                <img src={(props.darkMode) ? lightLogo : logo} alt='logo' />
                 <h2 className="is-family-monospace is-size-3">
                     {'<'}
                     <Typed
@@ -31,7 +31,7 @@ const Home = (props) =>{
                 <h1 className="is-size-1 has-text-weight-medium is-family-monospace ">I am a Full Stack Developer</h1>
                 <h3 className="is-family-monospace is-size-4">with a passion for constantly learning and pushing the boundaries of my understanding.</h3>
             </div>
-           {(props.darkMode) ? <Particles className="Particles isDark" params={configDark}/> : <Particles className="Particles isLight" params={configLight}/>}
+            {(props.darkMode) ? <Particles className="Particles isDark" params={configDark} /> : <Particles className="Particles isLight" params={configLight} />}
         </div>
     )
 }

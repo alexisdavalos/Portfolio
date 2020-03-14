@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter as Router} from 'react-router-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
 //Components
 import App from './components/App';
 //Redux Imports
-import {Provider} from 'react-redux';
+import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 import rootReducer from './reducers'
 import thunk from 'redux-thunk'
@@ -20,9 +20,9 @@ const middleware = [thunk, logger]
 let store = [];
 
 //Use middleware in development only
-if (process.env.NODE_ENV !== 'production'){
+if (process.env.NODE_ENV !== 'production') {
     store = createStore(rootReducer, applyMiddleware(...middleware));
-}else{
+} else {
     store = createStore(rootReducer);
 }
 
@@ -32,8 +32,8 @@ ReactDOM.render(
         <Router>
             <App />
         </Router>
-    </Provider>, 
-document.getElementById('root')
+    </Provider>,
+    document.getElementById('root')
 );
 
 
