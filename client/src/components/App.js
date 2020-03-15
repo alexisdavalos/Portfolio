@@ -17,7 +17,7 @@ function App() {
     setDarkMode(false)
   };
   return (
-    <div className="Container is-dark">
+    <div className="app-container is-dark">
       <Switch>
         <Route exact path="/">
           <Loader />

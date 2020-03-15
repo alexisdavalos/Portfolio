@@ -17,8 +17,8 @@ const Home = (props) => {
     console.log('Light', configLight)
 
     return (
-        <div className="Wrapper">
-            <div className={(props.darkMode ? "Center_Section dark" : "Center_Section light")}>
+        <div className="wrapper">
+            <div className={(props.darkMode ? "center-section dark" : "center-section light")}>
                 <img src={(props.darkMode) ? lightLogo : logo} alt='logo' />
                 <h2 className="is-family-monospace is-size-3">
                     {'<'}
@@ -31,7 +31,7 @@ const Home = (props) => {
                 <h1 className="is-size-1 has-text-weight-medium is-family-monospace ">I am a Full Stack Developer</h1>
                 <h3 className="is-family-monospace is-size-4">with a passion for constantly learning and pushing the boundaries of my understanding.</h3>
             </div>
-            {(props.darkMode) ? <Particles className="Particles isDark" params={configDark} /> : <Particles className="Particles isLight" params={configLight} />}
+            {(props.darkMode) ? <Particles className="particles isDark" params={configDark} /> : <Particles className="Particles isLight" params={configLight} />}
         </div>
     )
 }
