@@ -33,7 +33,7 @@ const Projects = (props) => {
             <div className="search">
                 <div className="control has-icons-left">
                     <input 
-                    className="input is-rounded"
+                    className={props.darkMode ? "input is-rounded" : "input is-rounded has-background-dark has-text-light"}
                     name="search" 
                     type="search" 
                     placeholder="Search"
@@ -44,6 +44,8 @@ const Projects = (props) => {
                         <i className="fas fa-envelope"><FaSearch/></i>
                     </span>
                 </div>
+               
+            
             </div>
             {searchResults.map((project, index) => (
                 <Card project={project} key={index} darkMode={props.darkMode} />
