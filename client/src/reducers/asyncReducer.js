@@ -2,13 +2,13 @@
 import { FETCH_TOGGLE, FETCH_SUCCESS } from '../actions';
 
 const initialState = {
-  kanyeism: 'I love Redux like Kanye loves Kanye',
-  error: '',
-  isFetching: false
+	kanyeism: 'I love Redux like Kanye loves Kanye',
+	error: '',
+	isFetching: false
 }
 
 export const asyncReducer = (state = initialState, action) => {
-	switch(action.type){
+	switch (action.type) {
 		case FETCH_TOGGLE:
 			return {
 				...state,
@@ -20,10 +20,9 @@ export const asyncReducer = (state = initialState, action) => {
 				...state,
 				kanyeism: action.payload,
 				isFetching: false,
-                error: ''
-            }
+				error: ''
+			}
 		default:
-				return state;
+			return state;
 	}
 }
-	

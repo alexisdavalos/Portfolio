@@ -18,8 +18,13 @@
 .env.test.local
 .env.production.local
 .debug.log
-
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
+#psd 
+Block.psd
+Haute-Toffee-Block.psd
+Herbal-Healers-Block.psd
+Against-The-Grain-Block.psd
+Carmen-Restorations.psd
