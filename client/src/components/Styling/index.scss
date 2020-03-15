@@ -16,46 +16,91 @@ svg{
   justify-content: flex-start;
   color: white;
   transition: background-color 0.15s;
+  // Wrapper for Projects Page
   .Wrapper.Projects{
     height:100%;
+    min-height:100vh;
     display:flex;
     flex-wrap:wrap;
+    animation: none;
+    background: none;
+    @media (max-width:1024px){
+      .column{
+        margin: 1%;
+        width:48%;
+      }
+    }
     @media (max-width:768px){
-      flex-direction: column;
+      flex-direction:column;
+      .column{
+        margin: 1%;
+        width:100%;
+      }
     }
     .column{
+      height:100%;
       .card{
         width:100%;
+        .card-image{
+          display:flex;
+          img{
+            width:100%;
+          }
+        }
         .card-content{
           height: 100%;
-          display: flex;
-          justify-content: center;
           align-items: center;
           top: 0;
-          align-items: flex-start;
           display: flex;
           position: absolute;
+          opacity: 0;
+          font-weight:600;
+          .content{
+    
+          }
+          .tag{
+            margin:1%;
+            font-weight:600;
+          }
+          @media (max-width: 768px){
+            height: 100%;
+            align-items: center;
+            display: flex;
+            position: relative;
+          }
         }
-      }
-      &:hover{
-        .card-content{
-          transition: all ease-in 0.25s;
-          z-index:1;
-          opacity:.75;
+        //Card Hover
+        &:hover{
+          cursor:pointer;
+          .card-content{
+            transition: all ease-in .25s;
+            z-index:1;
+            opacity:100;
+            p{
+              cursor: pointer;
+            }
+          }
+          .card-image{
+            img{
+              transition: all ease-in .25s;
+              opacity:100;
+              z-index: -1;
+            }
+          }
+          @media (max-width: 768px){
+            .card-content{
+              opacity:100;
+            }
+          }
         }
-        img{
-          transition: all ease-in 0.25s;
-          opacity:0;
-          transform: scale(1);
-          z-index:-1;
-        }
-      }
+      }//End Card
     }
     
   }
   .Wrapper{
     width: 100%;
     height: 100vh;
+    margin-top:56px;
     background-image: linear-gradient(360deg, rgba(74, 18, 18, 0.3), rgba(35, 47, 28, 0) 100%);
     filter: hue-rotate(0deg);
     .Particles{

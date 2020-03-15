@@ -6,11 +6,14 @@ const Projects = (props) => {
     console.log('data in projects.js:', projectsData)
 
     return (
+        <>
+        <div>Search Bar</div>
         <div className="Wrapper Projects is-desktop">
             {projectsData.map((project, index) => (
                 <Card project={project} key={project.id} darkMode={props.darkMode} />
             ))}
         </div>
+        </>
     )
 }
 
