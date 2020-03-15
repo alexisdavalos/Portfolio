@@ -20,7 +20,6 @@ function App() {
     <div className="Container is-dark">
       <Switch>
         <Route exact path="/">
-          <Loader />
           <Nav darkMode={darkMode} setDarkMode={setDarkMode} />
           <Home darkMode={darkMode} />
         </Route>
