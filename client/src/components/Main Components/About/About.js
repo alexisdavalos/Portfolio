@@ -9,12 +9,12 @@ import htmlLogo from '../../../assetts/logos/html-logo.png'
 const About = (props) =>{
     return (
   
-        <div className="wrapper about is-desktop">
+        <div className="wrapper about is-desktop is-family-monospace">
             <div className={props.darkMode ? "box has-text-white" : "box has-text-dark"}>
-                <h1>About Me</h1>
+                <h1 className="is-size-3 is-family-monospace">About Me</h1>
+                <p>My name is Alexis Davalos, I am a Full-Stack Developer with a passion for constantly learning and pushing the boundaries of my understanding. I am passionate about philosophy, language, technology and wellness/fitness. I am fascinated by life and our ability to share our stories with one another.</p>
             </div>
             <div className={props.darkMode ? "box has-text-white" : "box has-text-dark"}>
-              
             <div class="cube-wrapper">
                 <div class="cube-wrap">
                     <div class="cube-box">

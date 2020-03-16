@@ -87,6 +87,9 @@ svg{
     margin-top:56px;
     width:100%;
     .box{
+      &:nth-child(odd){
+        padding:10%;
+      }
       width:50%;
       background:none;
       box-shadow: none;
@@ -94,6 +97,11 @@ svg{
       display:flex;
       justify-content: center;
       align-items: center;
+      flex-direction: column;
+      text-align: left;
+      h1{
+        width:100%;
+      }
     }
     @media (max-width: 1024px){
       flex-direction: column;
