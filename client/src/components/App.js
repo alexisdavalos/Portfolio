@@ -6,9 +6,10 @@ import { Switch, Route } from 'react-router-dom';
 //Component Imports
 import Loader from './Loader/Loader.js'
 import Nav from './Nav/Nav.js'
+import About from './Main Components/About/About.js'
 import Home from './Main Components/Home/Home.js'
 import Projects from './Main Components/Projects/Projects.js'
-import Tutorials from './Main Components/Tutorials/Tutorials.js'
+import Dashboard from './Main Components/Tutorials/Dashboard.js'
 
 function App() {
   //initialize dark mode hook
@@ -26,6 +27,12 @@ function App() {
           <Home darkMode={darkMode} />
         </Route>
 
+        <Route path="/about">
+          <Loader />
+          <Nav darkMode={darkMode} setDarkMode={setDarkMode} />
+          <About darkMode={darkMode} />
+        </Route>
+
         <Route path="/projects">
           <Loader />
           <Nav darkMode={darkMode} setDarkMode={setDarkMode} />
@@ -40,7 +47,7 @@ function App() {
         <Route path="/tutorials">
           <Loader />
           <Nav darkMode={darkMode} setDarkMode={setDarkMode} />
-          <Tutorials darkMode={darkMode}/>
+          <Dashboard darkMode={darkMode}/>
         </Route>
       </Switch>
     </div>

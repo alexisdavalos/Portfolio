@@ -3,62 +3,62 @@ import React from 'react'
 const Tutorials = (props) =>{
 
     return(
-    <div class="dashboard is-full-height">
-      <div class={props.darkMode ? "dashboard-panel is-medium has-thick-padding has-background-black is-hidden-mobile" : "dashboard-panel is-medium has-thick-padding has-background-light is-hidden-mobile"}>
-
-        <div class="dashboard-panel-content is-family-monospace">
-          <aside class="menu has-text-white" >
-            <p class="menu-label">
+    <div className="dashboard is-full-height">
+      {/* Dashboard Menu */}
+      <div className={props.darkMode ? "dashboard-panel is-medium has-thick-padding has-background-black is-hidden-mobile" : "dashboard-panel is-medium has-thick-padding has-background-light is-hidden-mobile"}>
+        <div className="dashboard-panel-content is-family-monospace">
+          <aside className="menu has-text-white" >
+            <p className="menu-label">
               General
             </p>
-            <ul class="menu-list">
-              <li><a>Dashboard</a></li>
-              <li><a>Customers</a></li>
+            <ul className="menu-list">
+              <li><a href="/tutorials" className="is-active">Dashboard</a></li>
+              <li><a href="/tutorials">Customers</a></li>
             </ul>
-            <p class="menu-label">
+            <p className="menu-label">
               Administration
             </p>
-            <ul class="menu-list">
-              <li><a>Team Settings</a></li>
+            <ul className="menu-list">
+              <li><a href="/tutorials">Team Settings</a></li>
               <li>
-                <a class="is-active">Manage Your Team</a>
+                <a href="/tutorials">Manage Your Team</a>
                 <ul>
-                  <li><a>Members</a></li>
-                  <li><a>Plugins</a></li>
-                  <li><a>Add a member</a></li>
+                  <li><a href="/tutorials">Members</a></li>
+                  <li><a href="/tutorials">Plugins</a></li>
+                  <li><a href="/tutorials">Add a member</a></li>
                 </ul>
               </li>
-              <li><a>Invitations</a></li>
-              <li><a>Cloud Storage Environment Settings</a></li>
-              <li><a>Authentication</a></li>
+              <li><a href="/tutorials">Invitations</a></li>
+              <li><a href="/tutorials">Cloud Storage Environment Settings</a></li>
+              <li><a href="/tutorials">Authentication</a></li>
             </ul>
-            <p class="menu-label">
+            <p className="menu-label">
               Transactions
             </p>
-            <ul class="menu-list">
-              <li><a>Payments</a></li>
-              <li><a>Transfers</a></li>
-              <li><a>Balance</a></li>
+            <ul className="menu-list">
+              <li><a href="/tutorials">Payments</a></li>
+              <li><a href="/tutorials">Transfers</a></li>
+              <li><a href="/tutorials">Balance</a></li>
             </ul>
           </aside>
         </div>
       </div>
     
       {/* <!-- main section --> */}
-      <div class="dashboard-main is-scrollable is-family-monospace">
+      <div className="dashboard-main is-scrollable is-family-monospace">
     
-        <section class="section">
-          <p class="title is-size-2 is-spaced">
+        <section className="section">
+          <p className={props.darkMode ? "title is-size-2 is-spaced has-text-white" : "title is-size-2 is-spaced has-text-dark"}>
             The Bulma Dashboard
           </p>
 
-          <p class="subtitle is-size-3">
+          <p className={props.darkMode ? "subtitle is-size-3 has-text-white" : "subtitle is-size-3 has-text-dark"}>
             A Bulma extension for full-page dashboard-style layouts
           </p>
 
           <hr/>
 
-          <section class="content is-medium is-family-monospace">
+          <section className={props.darkMode ? "content is-medium is-family-monospace has-text-white" : "content is-medium is-family-monospace has-text-dark"}>
             Sunt excepteur elit sunt incididunt do laboris labore. Nisi aliqua fugiat dolor velit Lorem elit pariatur cillum eiusmod proident nostrud enim reprehenderit. Qui minim est commodo aute ipsum tempor proident veniam elit quis amet Lorem id.
 
             Laboris laborum cillum quis sit ex officia velit dolor Lorem mollit consequat. Voluptate est ipsum ea amet elit. Ad ipsum officia excepteur id ut non ipsum ex minim. Ut adipisicing cillum consectetur anim cupidatat qui occaecat. Minim adipisicing mollit et laboris commodo laboris aliqua labore voluptate duis quis magna enim laboris. Minim et laborum pariatur in anim veniam aliqua officia sunt deserunt officia consequat. Est sit ex aute sunt sit Lorem proident amet reprehenderit do et quis duis labore.
