@@ -257,12 +257,11 @@ nav{
   flex-direction: column;
   height:100%;
   width:100%;
-  position:absolute;
+  position:fixed;
   z-index:100;
   background:white;
   opacity:100;
   visibility: visible;
-  transition:visibility 0.3s linear,opacity 0.3s linear;
   img{
       width:250px;
   }

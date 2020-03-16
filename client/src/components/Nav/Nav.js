@@ -12,11 +12,13 @@ import {
 import navLogoDark from '../../assetts/images/nav-logo.png'
 import navLogoLight from '../../assetts/images/nav-logo-light.png'
 
+import LoaderTimer from '../../utils/LoaderTimer.js'
+
 const Nav = ({darkMode, setDarkMode}) => {
     return (
         <nav className={(darkMode === true) ? "navbar is-dark" : "navbar is-light"} role="navigation" aria-label="main navigation">
             <div className="navbar-brand">
-                <Link to='/' className="navbar-item">
+                <Link onClick={(e) => LoaderTimer(e)} to='/' className="navbar-item">
                     <img src={(!darkMode) ? navLogoDark : navLogoLight} alt='logo' />
                 </Link>
 
@@ -29,15 +31,15 @@ const Nav = ({darkMode, setDarkMode}) => {
 
             <div className="navbar-menu is-family-monospace">
                 <div className="navbar-start">
-                    <Link to='/' className="navbar-item" ><FaHome size="2em"/><span className="typed-cursor typed-cursor--blink">|</span><span>Home</span></Link>
-                    <Link to='/about' className="navbar-item"><FaGrav  size="2em"/><span className="typed-cursor typed-cursor--blink">|</span><span>About</span></Link>
-                    <Link to='/projects' className="navbar-item"><FaGreaterThanEqual size="2em"/><span className="typed-cursor typed-cursor--blink">|</span><span>Projects</span></Link>
+                    <Link onClick={(e) => LoaderTimer(e)} to='/' className="navbar-item" ><FaHome size="2em"/><span className="typed-cursor typed-cursor--blink">|</span><span>Home</span></Link>
+                    <Link onClick={(e) => LoaderTimer(e)} to='/about' className="navbar-item"><FaGrav  size="2em"/><span className="typed-cursor typed-cursor--blink">|</span><span>About</span></Link>
+                    <Link onClick={(e) => LoaderTimer(e)} to='/projects' className="navbar-item"><FaGreaterThanEqual size="2em"/><span className="typed-cursor typed-cursor--blink">|</span><span>Projects</span></Link>
 
                     <div className="navbar-item has-dropdown is-hoverable">
                         <Link to='#top' className="navbar-link"><span className="typed-cursor typed-cursor--blink">|</span>More</Link>
 
                         <div className="navbar-dropdown" >
-                            <Link to='/tutorials' className="navbar-item">Tutorials</Link>
+                            <Link onClick={(e) => LoaderTimer(e)} to='/tutorials' className="navbar-item">Tutorials</Link>
                             <Link to='/' className="navbar-item">Social Media</Link>
                             <Link to='#top' className="navbar-item">Contact</Link>
                             <hr className="navbar-divider" />
