@@ -13,7 +13,7 @@ import Dashboard from './Main Components/Tutorials/Dashboard.js'
 
 function App() {
   //initialize dark mode hook
-  const [darkMode, setDarkMode] = useDarkMode('darkmode', false);
+  const [darkMode, setDarkMode] = useDarkMode('darkmode', true);
   //In case local storage can't set token -- defaults to light theme
   if (window.localStorage.getItem('darkmode') === null) {
     setDarkMode(false)

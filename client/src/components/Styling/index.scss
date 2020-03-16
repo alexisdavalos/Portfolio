@@ -88,7 +88,7 @@ svg{
     width:100%;
     .box{
       &:nth-child(odd){
-        padding:10%;
+        padding:5%;
       }
       width:50%;
       background:none;
@@ -233,7 +233,7 @@ svg{
 
 //Rotating Box
 .cube-wrapper{
-  width:50%;
+  width:75%;
 }
 .cube-wrap {
   width: 200px;
@@ -258,7 +258,7 @@ svg{
 }
 .cube-box {
   transform-style: preserve-3d;
-  // animation: rotate 10s infinite linear;
+  animation: rotate 10s infinite linear;
 }
 .side-front { 
   transform: translateZ(180px);
@@ -278,10 +278,6 @@ svg{
 .side-right { 
   transform: rotateY(90deg) translateZ(180px); 
 }
-
-
-
-
 
 /* ignore the code below */
 
@@ -395,10 +391,12 @@ nav{
 //Transitions
 @media (prefers-reduced-motion: no-preference) {
   .wrapper {
+    -webkit-animation: hue-filter infinite 30s linear;
     animation: hue-filter infinite 30s linear;
   }
   .cube-box{
-    animation: box-rotation infinite 20s linear;
+    -webkit-animation: box-rotation infinite 20s linear;
+    animation: hue-filter infinite 30s linear;
   }
 }
 
@@ -413,9 +411,11 @@ nav{
 
 @keyframes box-rotation{
   from{
+    -webkit-transform: rotate3d(1, 1, 0, 0deg);
     transform: rotate3d(1, 1, 0, 0deg);
   }
   to{
+    -webkit-transform: rotate3d(1, 1, 0, 360deg);
     transform: rotate3d(1, 1, 0, 360deg);
   }
 }
