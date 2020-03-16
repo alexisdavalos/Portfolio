@@ -37,7 +37,7 @@ const Nav = ({darkMode, setDarkMode}) => {
                         <Link to='#top' className="navbar-link"><span className="typed-cursor typed-cursor--blink">|</span>More</Link>
 
                         <div className="navbar-dropdown" >
-                            <Link to='/blog' className="navbar-item">Blog</Link>
+                            <Link to='/tutorials' className="navbar-item">Tutorials</Link>
                             <Link to='/' className="navbar-item">Social Media</Link>
                             <Link to='#top' className="navbar-item">Contact</Link>
                             <hr className="navbar-divider" />

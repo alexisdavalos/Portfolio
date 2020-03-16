@@ -8,6 +8,7 @@
     "@testing-library/user-event": "^7.x.x",
     "axios": "^0.x.x",
     "bulma": "^0.8.0",
+    "bulma-dashboard": "^0.3.1",
     "bulma-extensions": "^6.2.7",
     "core-js": "^3",
     "markdown-to-jsx": "^6.11.0",

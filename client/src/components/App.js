@@ -8,6 +8,7 @@ import Loader from './Loader/Loader.js'
 import Nav from './Nav/Nav.js'
 import Home from './Main Components/Home/Home.js'
 import Projects from './Main Components/Projects/Projects.js'
+import Tutorials from './Main Components/Tutorials/Tutorials.js'
 
 function App() {
   //initialize dark mode hook
@@ -34,6 +35,12 @@ function App() {
         <Route path="/home">
           <Loader />
           <Nav darkMode={darkMode} setDarkMode={setDarkMode} />
+        </Route>
+        
+        <Route path="/tutorials">
+          <Loader />
+          <Nav darkMode={darkMode} setDarkMode={setDarkMode} />
+          <Tutorials darkMode={darkMode}/>
         </Route>
       </Switch>
     </div>

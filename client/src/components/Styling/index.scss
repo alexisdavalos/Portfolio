@@ -1,5 +1,7 @@
 @import 'bulma';
 @import '../../../node_modules/bulma-extensions/bulma-switch/src/sass/index.sass';
+@import '../../../node_modules/bulma-dashboard/src/bulma-dashboard.sass';
+
 h1,h2,h3,h4{
   margin-bottom:10px;
 }
@@ -122,13 +124,13 @@ svg{
         }
         //Card Hover
         &:hover{
-          cursor:pointer;
           .card-content{
-          
+            .tag{
+              cursor:pointer;
+            }
             z-index:1;
             opacity:100;
             p{
-              cursor: pointer;
             }
           }
           .card-image{
@@ -173,6 +175,19 @@ svg{
           }
         }
       }
+    }
+  }
+  // Tutorials Dashboard
+  .dashboard{
+    overflow:hidden;
+    .dashboard-panel{
+      margin-top:56px;
+    }
+    .section{
+      padding:5%;
+    }
+    .footer{
+      padding:0;
     }
   }
   

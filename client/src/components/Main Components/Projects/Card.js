@@ -12,6 +12,7 @@ const Card = ({ project, darkMode }) => {
                         <h2 className={darkMode ? "has-text-dark" : "has-text-light"}>{project.name}</h2>
                         <p>{project.description}</p>
                         <br />
+                        <p>Categories:</p>
                         {project.hashtags.map((hashtag, index) => (
                             <span className={darkMode ? "tag is-dark" : "tag is-light"} key={index}>{hashtag}</span>
                         ))}
