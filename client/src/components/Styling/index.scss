@@ -1,5 +1,7 @@
 @import 'bulma';
 @import '../../../node_modules/bulma-extensions/bulma-switch/src/sass/index.sass';
+@import '../../../node_modules/bulma-dashboard/src/bulma-dashboard.sass';
+
 h1,h2,h3,h4{
   margin-bottom:10px;
 }
@@ -33,13 +35,19 @@ svg{
       flex-direction: column;
       height:100%;
       width:100%;
+      padding: 5%;
       z-index:1;
       position:absolute;
+      .social-icons{
+        a{
+          margin:5%;
+        }
+      }
       h3{
-        margin-bottom:5%;
+        margin-bottom:2%;
         max-width:800px;
         @media (max-width: 768px){
-          margin-bottom:5%;
+          margin-bottom:2%;
           max-width:600px;
           font-size: 1rem !important;
         }
@@ -70,13 +78,34 @@ svg{
       }
     }
   }
+  //Wrapper for About Page
+  .wrapper.about{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin-top:56px;
+    width:100%;
+    .box{
+      width:50%;
+      background:none;
+      box-shadow: none;
+      margin:0;
+      display:flex;
+      justify-content: center;
+      align-items: center;
+    }
+    @media (max-width: 1024px){
+      flex-direction: column;
+    }
+  }
   // Wrapper for Projects Page
   .wrapper.projects{
     height:100%;
     min-height:100vh;
     display:flex;
-    margin-top:56px;
     flex-wrap:wrap;
+    margin-top:56px;
     animation: none;
     background: none;
     .search{
@@ -87,6 +116,11 @@ svg{
       .control{
         width:50%;
         display:flex;
+        .icon{
+          svg{
+            width:85%;
+          }
+        }
         button{
           margin-left:-50px;
         }
@@ -122,14 +156,12 @@ svg{
         }
         //Card Hover
         &:hover{
-          cursor:pointer;
           .card-content{
-          
+            .tag{
+              cursor:pointer;
+            }
             z-index:1;
             opacity:100;
-            p{
-              cursor: pointer;
-            }
           }
           .card-image{
             img{
@@ -175,8 +207,91 @@ svg{
       }
     }
   }
+  // Tutorials Dashboard
+  .dashboard{
+    overflow:hidden;
+    .dashboard-panel{
+      margin-top:56px;
+    }
+    .section{
+      padding:5%;
+    }
+    .footer{
+      padding:0;
+    }
+  }
   
 }//end container
+
+//Rotating Box
+.cube-wrapper{
+  width:50%;
+}
+.cube-wrap {
+  width: 200px;
+  height: 200px;
+  perspective: 2000px;
+  perspective-origin: 50% -500px;
+}
+.single-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  background-color: #60c2ef9c;
+  transform: rotateY(90deg) translateZ(-200px) rotateX(15deg);
+  transform-origin: 50% 50% 0;      
+  img{
+    text-align: center;
+    width: 150px;
+  }      
+}
+.cube-box {
+  transform-style: preserve-3d;
+  // animation: rotate 10s infinite linear;
+}
+.side-front { 
+  transform: translateZ(180px);
+}
+.side-back { 
+  transform: rotateY(180deg) translateZ(180px);
+}
+.side-top {
+  transform: rotateX(90deg) translateZ(180px);
+}
+.side-bottom { 
+  transform: rotateX(-90deg) translateZ(180px); 
+}
+.side-left { 
+  transform: rotateY(-90deg) translateZ(180px); 
+}
+.side-right { 
+  transform: rotateY(90deg) translateZ(180px); 
+}
+
+
+
+
+
+/* ignore the code below */
+
+
+.link-area
+{
+  position:fixed;
+  bottom:20px;
+  left:20px;  
+  padding:15px;
+  border-radius:40px;
+  background:tomato;
+}
+.link-area a
+{
+  text-decoration:none;
+  color:#fff;
+}
 
 //Navigation
 nav{
@@ -242,12 +357,11 @@ nav{
   flex-direction: column;
   height:100%;
   width:100%;
-  position:absolute;
+  position:fixed;
   z-index:100;
   background:white;
   opacity:100;
   visibility: visible;
-  transition:visibility 0.3s linear,opacity 0.3s linear;
   img{
       width:250px;
   }
@@ -272,8 +386,11 @@ nav{
 
 //Transitions
 @media (prefers-reduced-motion: no-preference) {
-  .Wrapper {
+  .wrapper {
     animation: hue-filter infinite 30s linear;
+  }
+  .cube-box{
+    animation: box-rotation infinite 20s linear;
   }
 }
 
@@ -283,5 +400,14 @@ nav{
   }
   to {
     filter: hue-rotate(360deg);
+  }
+}
+
+@keyframes box-rotation{
+  from{
+    transform: rotate3d(1, 1, 0, 0deg);
+  }
+  to{
+    transform: rotate3d(1, 1, 0, 360deg);
   }
 }

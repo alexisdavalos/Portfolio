@@ -28,7 +28,6 @@ const Projects = (props) => {
         setSearch(e.target.value)
     }
     return (
-        <>
         <div className="wrapper projects is-desktop">
             <div className="search">
                 <div className="control has-icons-left">
@@ -41,7 +40,7 @@ const Projects = (props) => {
                     onChange={e => handleChange(e)}
                     />
                     <span className="icon is-small is-left">
-                        <i className="fas fa-envelope"><FaSearch/></i>
+                        <i className="fas fa-envelope"><FaSearch size="2rem"/></i>
                     </span>
                 </div>
                
@@ -51,7 +50,6 @@ const Projects = (props) => {
                 <Card project={project} key={index} darkMode={props.darkMode} />
             ))}
         </div>
-        </>
     )
 }
 
