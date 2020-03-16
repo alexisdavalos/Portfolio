@@ -239,7 +239,9 @@ svg{
   width: 200px;
   height: 200px;
   perspective: 2000px;
+  -webkit-perspective: 2000px;
   perspective-origin: 50% -500px;
+  -webkit-perspective-origin: 50% -500px;
 }
 .single-box {
   display: flex;
@@ -249,7 +251,9 @@ svg{
   width: 250px;
   height: 250px;
   background-color: #60c2ef9c;
+  -webkit-transform: rotateY(90deg) translateZ(-200px) rotateX(15deg);
   transform: rotateY(90deg) translateZ(-200px) rotateX(15deg);
+  -webkit-transform-origin: 50% 50% 0;      
   transform-origin: 50% 50% 0;      
   img{
     text-align: center;
@@ -257,25 +261,33 @@ svg{
   }      
 }
 .cube-box {
+  -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
+  -webkit-animation: rotate 10s infinite linear;
   animation: rotate 10s infinite linear;
 }
 .side-front { 
+  -webkit-transform: translateZ(180px);
   transform: translateZ(180px);
 }
 .side-back { 
+  -webkit-transform: rotateY(180deg) translateZ(180px);
   transform: rotateY(180deg) translateZ(180px);
 }
 .side-top {
+  -webkit-transform: rotateX(90deg) translateZ(180px);
   transform: rotateX(90deg) translateZ(180px);
 }
 .side-bottom { 
+  -webkit-transform: rotateX(-90deg) translateZ(180px); 
   transform: rotateX(-90deg) translateZ(180px); 
 }
 .side-left { 
+  -webkit-transform: rotateY(-90deg) translateZ(180px); 
   transform: rotateY(-90deg) translateZ(180px); 
 }
 .side-right { 
+  -webkit-transform: rotateY(90deg) translateZ(180px); 
   transform: rotateY(90deg) translateZ(180px); 
 }
 
@@ -402,9 +414,11 @@ nav{
 
 @keyframes hue-filter {
   from {
-    filter: hue-rotate(-360deg)  
+    -webkit-filter: hue-rotate(-360deg);  
+    filter: hue-rotate(-360deg); 
   }
   to {
+    -webkit-filter: hue-rotate(360deg);
     filter: hue-rotate(360deg);
   }
 }
