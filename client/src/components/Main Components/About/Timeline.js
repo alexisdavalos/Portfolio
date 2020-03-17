@@ -1,14 +1,17 @@
 import React from 'react';
+//import timeline icons
+import gritMatters from '../../../assetts/logos/grit-matters-logo.png'
+import herbalHealers from '../../../assetts/logos/herbal-healers-logo.png'
 
 const Timeline = () => {
     return (
-        <div class="timeline is-centered">
+        <div class="timeline is-hidden-mobile is-centered">
             <header class="timeline-header">
                 <span class="tag is-medium is-primary">Start</span>
             </header>
             <div class="timeline-item is-warning">
                 <div class="timeline-marker is-warning is-image is-32x32">
-                    <img src="http://bulma.io/images/placeholders/32x32.png" alt="icon"/>
+                    <img src={gritMatters} alt="grit matters"/>
                 </div>
                     <div class="timeline-content">
                         <p class="heading">June 2017</p>
@@ -26,7 +29,7 @@ const Timeline = () => {
             </div>
             <div class="timeline-item is-warning">
                 <div class="timeline-marker is-warning is-image is-32x32">
-                    <img src="http://bulma.io/images/placeholders/32x32.png" alt="icon"/>
+                    <img src={herbalHealers} alt="icon"/>
                 </div>
                     <div class="timeline-content">
                         <p class="heading">Dec 2017</p>

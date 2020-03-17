@@ -100,10 +100,18 @@ svg{
       text-align: left;
       .about{
         width:45%;
+        @media (max-width:1024px){
+          width:100%;
+        }
       }
       .timeline{
         transform: scale(.75);
         width:50%;
+        .timeline-marker{
+          img{
+            animation:none;
+          }
+        }
       }
       h1{
         width:100%;
@@ -111,9 +119,13 @@ svg{
     }
     .box.w-30{
       width:30%;
+      @media (max-width:768px){
+        margin-top:20%;
+      }
     }
     @media (max-width: 1024px){
       flex-direction: column;
+      margin-top:20%;
     }
   }
   // Wrapper for Projects Page
