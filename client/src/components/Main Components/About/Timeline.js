@@ -34,7 +34,7 @@ const Timeline = () => {
                 </div>
                     <div className="timeline-content">
                         <p className="heading">Dec 2017</p>
-                        <p>Herbal Healers - FrontEnd Developer</p>
+                        <p>Herbal Healers - FrontEnd Developer/Graphic Designer</p>
                     </div>
             </div>
                 <header className="timeline-header">
