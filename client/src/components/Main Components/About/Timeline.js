@@ -2,6 +2,7 @@ import React from 'react';
 //import timeline icons
 import gritMatters from '../../../assetts/logos/grit-matters-logo.png'
 import herbalHealers from '../../../assetts/logos/herbal-healers-logo.png'
+import lambdaSchool from '../../../assetts/logos/lambda-school-logo.png'
 
 const Timeline = () => {
     return (
@@ -50,7 +51,7 @@ const Timeline = () => {
                 </div>
                 <div class="timeline-item is-warning">
                 <div class="timeline-marker is-warning is-image is-32x32">
-                    <img src="http://bulma.io/images/placeholders/32x32.png" alt="icon"/>
+                    <img src={lambdaSchool} alt="Lambda School Logo"/>
                 </div>
                     <div class="timeline-content">
                         <p class="heading">October 2019</p>
