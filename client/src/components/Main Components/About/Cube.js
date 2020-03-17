@@ -8,25 +8,25 @@ import htmlLogo from '../../../assetts/logos/html-logo.png'
 import githubLogo from '../../../assetts/logos/github-logo.png'
 const Cube = (props) =>{
     return(
-        <div class="cube-wrapper">
-            <div class="cube-wrap">
-                <div class="cube-box">
-                    <div class="single-box side-back">
+        <div className="cube-wrapper">
+            <div className="cube-wrap">
+                <div className="cube-box">
+                    <div className="single-box side-back">
                         <img src={reactLogo} alt="react logo"/>
                     </div>
-                    <div class="single-box side-top">
+                    <div className="single-box side-top">
                         <img src={reduxLogo} alt="redux logo"/>
                     </div>
-                    <div class="single-box side-bottom">
+                    <div className="single-box side-bottom">
                         <img src={jsLogo} alt="javascript logo"/>
                     </div>
-                    <div class="single-box side-left">
+                    <div className="single-box side-left">
                         <img src={cssLogo} alt="css logo"/>
                     </div>
-                    <div class="single-box side-right">
+                    <div className="single-box side-right">
                         <img src={htmlLogo} alt="html logo"/>
                     </div>
-                    <div class="single-box side-front">
+                    <div className="single-box side-front">
                         <img src={githubLogo} alt="github logo"/>
                     </div>
             </div>
