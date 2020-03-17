@@ -19,7 +19,7 @@ const About = (props) => {
                     <h1 className="is-size-3 is-family-monospace">About Me</h1>
                     <p>My name is Alexis Davalos, I am a Full-Stack Developer with a passion for constantly learning and pushing the boundaries of my understanding. I am passionate about philosophy, language, technology and wellness/fitness. I am fascinated by life and our ability to share our stories with one another.</p>
                     <div className="select">
-                            <select class={props.darkMode ? "has-background-light" : "has-background-dark has-text-light"}id="options" value={skills} placeholder={skills} onChange={(e)=> handleChange(e)}>
+                            <select className={props.darkMode ? "has-background-light" : "has-background-dark has-text-light"}id="options" value={skills} placeholder={skills} onChange={(e)=> handleChange(e)}>
                                 <option value="front-end" className="is-size-5 is-family-monospace">Front End Skills</option>
                                 <option value="back-end" className="is-size-5 is-family-monospace">Back End Skills</option>
                                 <option value="design" className="is-size-5 is-family-monospace">Design Skills</option>

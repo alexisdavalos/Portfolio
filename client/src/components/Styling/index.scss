@@ -447,6 +447,10 @@ nav{
   .wrapper {
     animation: hue-filter infinite 60s linear;
   }
+  .wrapper.about{
+    -webkit-transform: scale(.90);
+    transform: scale(.90);
+  }
   .cube-box{
     animation: box-rotation infinite 20s linear;
   }
