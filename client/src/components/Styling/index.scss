@@ -101,6 +101,14 @@ svg{
       .about{
         width:45%;
         margin:5%;
+        .skills{
+          margin-top:2.5%;
+          .skills-container{
+            display:flex;
+            flex-wrap:wrap;
+            justify-content: flex-start;
+          }
+        }
         @media (max-width:1024px){
           width:100%;
         }
@@ -256,7 +264,7 @@ svg{
 
 //Rotating Box
 .cube-wrapper{
-  width:75%;
+  width:45%;
   @media (max-width:1024px){
     width:100%;
   }
@@ -417,7 +425,7 @@ nav{
 //Transitions
 @media (prefers-reduced-motion: no-preference) {
   .wrapper {
-    animation: hue-filter infinite 30s linear;
+    animation: hue-filter infinite 60s linear;
   }
   .cube-box{
     animation: box-rotation infinite 20s linear;
