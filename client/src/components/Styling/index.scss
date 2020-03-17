@@ -97,12 +97,19 @@ svg{
       box-shadow: none;
       margin:0;
       display:flex;
-      justify-content: center;
+      justify-content: space-evenly;
       align-items: center;
       text-align: left;
       .about{
         width:45%;
         margin:5%;
+        .select{
+          margin-top:5%;
+          width:100%;
+          select{
+            width:100%;
+          }
+        }
         .skills{
           margin-top:2.5%;
           .skills-container{
@@ -121,7 +128,7 @@ svg{
       .timeline{
         transform: scale(.75);
         width:45%;
-        margin:5%;
+        margin:7.5%;
         .timeline-marker{
           img{
             animation:none;
@@ -130,6 +137,9 @@ svg{
       }
       h1{
         width:100%;
+      }
+      @media (max-width: 1024px){
+        align-items: flex-start;
       }
     }
     .box.w-30{

@@ -23,7 +23,7 @@ const Nav = ({darkMode, setDarkMode}) => {
                     <img src={(!darkMode) ? navLogoDark : navLogoLight} alt='logo' />
                 </Link>
 
-                <Link onClick={()=> setMobileNav(!mobileNav)} role="button" className="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                <Link to="#" onClick={()=> setMobileNav(!mobileNav)} role="button" className="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
                     <span aria-hidden="true"></span>
                     <span aria-hidden="true"></span>
                     <span aria-hidden="true"></span>
