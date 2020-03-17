@@ -15,7 +15,7 @@ const Timeline = () => {
                 </div>
                     <div class="timeline-content">
                         <p class="heading">June 2017</p>
-                        <p>Grit Matters - Research Assistant</p>
+                        <p>Grit Matters - Research Consultant</p>
                     </div>
             </div>
             <div class="timeline-item is-primary">
@@ -39,8 +39,8 @@ const Timeline = () => {
                 <header class="timeline-header">
                     <span class="tag is-primary">2019</span>
                 </header>
-                <div class="timeline-item is-danger">
-                    <div class="timeline-marker is-danger is-icon">
+                <div class="timeline-item is-primary">
+                    <div class="timeline-marker is-primary is-icon">
                         <i class="fa fa-flag"></i>
                     </div>
                     <div class="timeline-content">
