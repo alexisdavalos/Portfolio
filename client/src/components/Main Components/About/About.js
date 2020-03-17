@@ -53,7 +53,7 @@ const About = (props) => {
                             }
                     </div>
                 </div>
-                <Timeline />
+                <Timeline darkMode={props.darkMode}/>
             </div>
             <div className={props.darkMode ? "box w-30 has-text-white is-desktop" : "box w-30 has-text-dark is-desktop"}>
                 <Cube />

@@ -4,14 +4,14 @@ import gritMatters from '../../../assetts/logos/grit-matters-logo.png'
 import herbalHealers from '../../../assetts/logos/herbal-healers-logo.png'
 import lambdaSchool from '../../../assetts/logos/lambda-school-logo.png'
 
-const Timeline = () => {
+const Timeline = (props) => {
     return (
         <div className="timeline is-hidden-mobile is-centered">
             <header className="timeline-header">
                 <span className="tag is-medium is-primary">Start</span>
             </header>
-            <div className="timeline-item is-warning">
-                <div className="timeline-marker is-warning is-image is-32x32">
+            <div className={props.darkMode ? "timeline-item is-light" : "timeline-item is-dark"}>
+                <div className="timeline-marker is-dark is-image is-32x32">
                     <img src={gritMatters} alt="grit matters"/>
                 </div>
                     <div className="timeline-content">
@@ -28,8 +28,8 @@ const Timeline = () => {
                     <p>Freelance Web & Graphic Design</p>
                 </div>
             </div>
-            <div className="timeline-item is-warning">
-                <div className="timeline-marker is-warning is-image is-32x32">
+            <div className={props.darkMode ? "timeline-item is-light" : "timeline-item is-dark"}>
+                <div className="timeline-marker is-dark is-image is-32x32">
                     <img src={herbalHealers} alt="icon"/>
                 </div>
                     <div className="timeline-content">
@@ -49,8 +49,8 @@ const Timeline = () => {
                         <p>Ecom Educational - Ecommerce Mentor</p>
                     </div>
                 </div>
-                <div className="timeline-item is-warning">
-                <div className="timeline-marker is-warning is-image is-32x32">
+                <div className={props.darkMode ? "timeline-item is-light" : "timeline-item is-dark"}>
+                <div className="timeline-marker is-dark is-image is-32x32">
                     <img src={lambdaSchool} alt="Lambda School Logo"/>
                 </div>
                     <div className="timeline-content">
