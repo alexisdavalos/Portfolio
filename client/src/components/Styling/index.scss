@@ -107,6 +107,9 @@ svg{
             display:flex;
             flex-wrap:wrap;
             justify-content: flex-start;
+            .tags{
+              margin-right:5px;
+            }
           }
         }
         @media (max-width:1024px){
