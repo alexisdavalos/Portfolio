@@ -1,7 +1,7 @@
 import React from 'react';
 //import icons for tags
-import {DiJavascript1, DiReact, DiCss3, DiSass, DiLess, DiHtml5} from 'react-icons/di'
-import {FaCheck} from'react-icons/fa'
+import {DiJavascript1, DiReact, DiCss3, DiSass, DiLess, DiHtml5 , DiMysql, DiPostgresql, DiSqllite, DiPhotoshop, DiIllustrator} from 'react-icons/di'
+import {FaCheck, FaRegFileVideo} from'react-icons/fa'
 
 //Skills Data
 export const frontEndSkills = ['Javascript', 'React.js', 'CSS', 'SASS', 'LESS', 'HTML']
@@ -23,8 +23,20 @@ export const getSkillIcon = (skill) =>{
             return (<DiLess/>)
         case ('html'):
             return (<DiHtml5/>)
-        case ('react.js'):
-            return (<DiReact/>)
+        case ('sql'):
+            return (<DiMysql/>)
+        case ('postgresql'):
+            return (<DiPostgresql/>)
+        case ('sqlite3'):
+            return (<DiSqllite/>)
+        case ('express.js'):
+            return (<DiJavascript1/>)
+        case ('adobe photoshop'):
+            return (<DiPhotoshop/>)
+        case ('adobe illustrator'):
+            return (<DiIllustrator/>)
+        case ('adobe premiere'):
+            return (<FaRegFileVideo/>)
         default:
             return (<FaCheck/>)
     }
