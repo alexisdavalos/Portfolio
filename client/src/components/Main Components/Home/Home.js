@@ -23,9 +23,8 @@ const Home = (props) => {
             <div className={(props.darkMode ? "center-section dark" : "center-section light")}>
                 <img src={(props.darkMode) ? lightLogo : logo} alt='logo' />
                 <h2 className="is-family-monospace is-size-3">
-                    {'<'}
                     <Typed
-                        strings={[`Alexis_Davalos Type={DEV}/>`]}
+                        strings={[`My name is Alexis Davalos`]}
                         typeSpeed={120}
                         backSpeed={75}
                     />

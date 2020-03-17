@@ -16,7 +16,7 @@ const About = (props) => {
                 <div className="about">
                     <h1 className="is-size-3 is-family-monospace">About Me</h1>
                     <p>My name is Alexis Davalos, I am a Full-Stack Developer with a passion for constantly learning and pushing the boundaries of my understanding. I am passionate about philosophy, language, technology and wellness/fitness. I am fascinated by life and our ability to share our stories with one another.</p>
-                    <div className="skills">
+                    <div className="skills is-hidden-mobile">
                         <h2 className="is-size-5 is-family-monospace">Front End Skills:</h2>
                         <div className="skills-container">
                         {frontEndSkills.map((skill, index) =>(
@@ -24,7 +24,7 @@ const About = (props) => {
                         ))}
                         </div>
                     </div>
-                    <div className="skills">
+                    <div className="skills is-hidden-mobile">
                         <h2 className="is-size-5 is-family-monospace">Back End Skills:</h2>
                         <div className="skills-container">
                         {backEndSkills.map((skill, index) =>(
@@ -32,7 +32,7 @@ const About = (props) => {
                         ))}
                         </div>
                     </div>
-                    <div className="skills">
+                    <div className="skills is-hidden-mobile">
                         <h2 className="is-size-5 is-family-monospace">Design Skills:</h2>
                         <div className="skills-container">
                         {designSkills.map((skill, index) =>(
