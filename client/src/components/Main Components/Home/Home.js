@@ -8,7 +8,7 @@ import Typed from 'react-typed';
 //icons
 import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa'
 //configs
-import setUpConfig from '../config/particleConfig.js'
+import setUpConfig from './config/particleConfig.js'
 
 const Home = (props) => {
     //Dynamically change color of particles

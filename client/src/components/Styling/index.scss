@@ -1,6 +1,7 @@
 @import 'bulma';
 @import '../../../node_modules/bulma-extensions/bulma-switch/src/sass/index.sass';
 @import '../../../node_modules/bulma-dashboard/src/bulma-dashboard.sass';
+@import '../../../node_modules/bulma-extensions/bulma-timeline/src/sass/index.sass';
 
 h1,h2,h3,h4{
   margin-bottom:10px;
@@ -70,10 +71,10 @@ svg{
       img{
         padding-bottom:25px;
         padding-top: 56px;
-        width:400px;
+        width:300px;
         transition: img 5s;
         @media (max-width: 1024px){
-          width:250px;
+          width:200px;
         }
       }
     }
@@ -87,21 +88,29 @@ svg{
     margin-top:56px;
     width:100%;
     .box{
-      &:nth-child(odd){
-        padding:5%;
-      }
-      width:50%;
+      width:70%;
+      height:100%;
+      padding:0;
       background:none;
       box-shadow: none;
       margin:0;
       display:flex;
       justify-content: center;
       align-items: center;
-      flex-direction: column;
       text-align: left;
+      .about{
+        width:45%;
+      }
+      .timeline{
+        transform: scale(.75);
+        width:50%;
+      }
       h1{
         width:100%;
       }
+    }
+    .box.w-30{
+      width:30%;
     }
     @media (max-width: 1024px){
       flex-direction: column;
@@ -126,7 +135,8 @@ svg{
         display:flex;
         .icon{
           svg{
-            width:85%;
+            width:55%;
+            padding:5%;
           }
         }
         button{
@@ -234,14 +244,15 @@ svg{
 //Rotating Box
 .cube-wrapper{
   width:75%;
+  @media (max-width:1024px){
+    width:100%;
+  }
 }
 .cube-wrap {
   width: 200px;
   height: 200px;
   perspective: 2000px;
-  -webkit-perspective: 2000px;
   perspective-origin: 50% -500px;
-  -webkit-perspective-origin: 50% -500px;
 }
 .single-box {
   display: flex;
@@ -251,9 +262,7 @@ svg{
   width: 250px;
   height: 250px;
   background-color: #60c2ef9c;
-  -webkit-transform: rotateY(90deg) translateZ(-200px) rotateX(15deg);
   transform: rotateY(90deg) translateZ(-200px) rotateX(15deg);
-  -webkit-transform-origin: 50% 50% 0;      
   transform-origin: 50% 50% 0;      
   img{
     text-align: center;
@@ -261,33 +270,25 @@ svg{
   }      
 }
 .cube-box {
-  -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
-  -webkit-animation: rotate 10s infinite linear;
   animation: rotate 10s infinite linear;
 }
 .side-front { 
-  -webkit-transform: translateZ(180px);
   transform: translateZ(180px);
 }
 .side-back { 
-  -webkit-transform: rotateY(180deg) translateZ(180px);
   transform: rotateY(180deg) translateZ(180px);
 }
 .side-top {
-  -webkit-transform: rotateX(90deg) translateZ(180px);
   transform: rotateX(90deg) translateZ(180px);
 }
 .side-bottom { 
-  -webkit-transform: rotateX(-90deg) translateZ(180px); 
   transform: rotateX(-90deg) translateZ(180px); 
 }
 .side-left { 
-  -webkit-transform: rotateY(-90deg) translateZ(180px); 
   transform: rotateY(-90deg) translateZ(180px); 
 }
 .side-right { 
-  -webkit-transform: rotateY(90deg) translateZ(180px); 
   transform: rotateY(90deg) translateZ(180px); 
 }
 
@@ -317,7 +318,6 @@ nav{
   box-shadow: 0px -12px 20px 7px #0000008a;
   .navbar-start{
     .navbar-item{
-      width: -webkit-max-content;
       a{
         span{
           padding-right:5px;
@@ -404,33 +404,27 @@ nav{
 //Transitions
 @media (prefers-reduced-motion: no-preference) {
   .wrapper {
-    -webkit-animation: hue-filter infinite 30s linear;
     animation: hue-filter infinite 30s linear;
   }
   .cube-box{
-    -webkit-animation: box-rotation infinite 20s linear;
-    animation: hue-filter infinite 30s linear;
+    animation: box-rotation infinite 20s linear;
   }
 }
 
 @keyframes hue-filter {
   from {
-    -webkit-filter: hue-rotate(-360deg);  
-    filter: hue-rotate(-360deg); 
+    filter: hue-rotate(-360deg)  
   }
   to {
-    -webkit-filter: hue-rotate(360deg);
     filter: hue-rotate(360deg);
   }
 }
 
 @keyframes box-rotation{
   from{
-    -webkit-transform: rotate3d(1, 1, 0, 0deg);
     transform: rotate3d(1, 1, 0, 0deg);
   }
   to{
-    -webkit-transform: rotate3d(1, 1, 0, 360deg);
     transform: rotate3d(1, 1, 0, 360deg);
   }
 }

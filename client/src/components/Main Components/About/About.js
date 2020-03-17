@@ -1,4 +1,6 @@
 import React from 'react'
+//components
+import Timeline from './Timeline.js'
 //logos
 import reactLogo from '../../../assetts/logos/react-logo.png'
 import reduxLogo from '../../../assetts/logos/redux-logo.png'
@@ -11,10 +13,14 @@ const About = (props) =>{
   
         <div className="wrapper about is-desktop is-family-monospace">
             <div className={props.darkMode ? "box has-text-white" : "box has-text-dark"}>
-                <h1 className="is-size-3 is-family-monospace">About Me</h1>
-                <p>My name is Alexis Davalos, I am a Full-Stack Developer with a passion for constantly learning and pushing the boundaries of my understanding. I am passionate about philosophy, language, technology and wellness/fitness. I am fascinated by life and our ability to share our stories with one another.</p>
+                <Timeline/>
+                <div className="about">
+                    <h1 className="is-size-3 is-family-monospace">About Me</h1>
+                    <p>My name is Alexis Davalos, I am a Full-Stack Developer with a passion for constantly learning and pushing the boundaries of my understanding. I am passionate about philosophy, language, technology and wellness/fitness. I am fascinated by life and our ability to share our stories with one another.</p>
+                </div>
             </div>
-            <div className={props.darkMode ? "box has-text-white is-desktop" : "box has-text-dark is-desktop"}>
+            <div className={props.darkMode ? "box w-30 has-text-white is-desktop" : "box w-30 has-text-dark is-desktop"}>
+            {/* Cube Animation */}
             <div class="cube-wrapper">
                 <div class="cube-wrap">
                     <div class="cube-box">
