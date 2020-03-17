@@ -28,7 +28,7 @@ const About = (props) => {
                                 <option value="Design Skills" className="is-size-5 is-family-monospace">Design Skills</option>
                             </select>
                         { (skills === 'Front End Skills') ?
-                            <div className="skills is-hidden-mobile">
+                            <div className="skills">
                                 <div className="skills-container">
                                 {frontEndSkills.map((skill, index) =>(
                                     <Tag skill={skill} key={index}/>
@@ -37,7 +37,7 @@ const About = (props) => {
                             </div> : <> </>
                             }
                             { (skills === 'Back End Skills') ?
-                            <div className="skills is-hidden-mobile">
+                            <div className="skills">
                                 <div className="skills-container">
                                 {backEndSkills.map((skill, index) =>(
                                     <Tag skill={skill} key={index}/>
@@ -46,7 +46,7 @@ const About = (props) => {
                             </div> : <> </>
                             }
                             { (skills === 'Design Skills') ?
-                            <div className="skills is-hidden-mobile">
+                            <div className="skills">
                                 <div className="skills-container">
                                 {designSkills.map((skill, index) =>(
                                     <Tag skill={skill} key={index}/>
