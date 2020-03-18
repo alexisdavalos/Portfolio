@@ -473,18 +473,22 @@ nav{
 
 @keyframes hue-filter {
   from {
+    -webkit-filter: hue-rotate(-360deg)  ;
     filter: hue-rotate(-360deg)  
   }
   to {
+    -webkit-filter: hue-rotate(360deg);
     filter: hue-rotate(360deg);
   }
 }
 
 @keyframes box-rotation{
   from{
+    -webkit-transform: rotate3d(1, 1, 0, 0deg);
     transform: rotate3d(1, 1, 0, 0deg);
   }
   to{
+    -webkit-transform: rotate3d(1, 1, 0, 360deg);
     transform: rotate3d(1, 1, 0, 360deg);
   }
 }
