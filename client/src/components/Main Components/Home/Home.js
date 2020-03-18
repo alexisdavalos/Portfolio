@@ -25,7 +25,7 @@ const Home = (props) => {
                 <h2 className="is-family-monospace is-size-3">
                     <Typed
                         strings={[`My name is Alexis Davalos`]}
-                        typeSpeed={120}
+                        typeSpeed={80}
                         backSpeed={75}
                     />
                 </h2>
