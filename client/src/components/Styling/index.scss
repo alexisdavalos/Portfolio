@@ -380,7 +380,7 @@ nav{
 
 }
 
-//Animations
+//Animations CSS
 @media (prefers-reduced-motion: no-preference) {
 
   //Wrapper Hue Rotation
@@ -403,9 +403,6 @@ nav{
   .cube-box{
     -webkit-transform-style: preserve-3d;
     transform-style: preserve-3d;
-    //Box Rotation Axis
-    -webkit-animation: rotate 10s infinite linear;
-    animation: rotate 10s infinite linear;
 
     //Box Rotation Animation
     -webkit-animation-name: box-rotation;
@@ -494,18 +491,16 @@ nav{
 
 @keyframes box-rotation{
   from{
-    -webkit-transform: rotate3d(1, 1, 0, 0deg);
     transform: rotate3d(1, 1, 0, 0deg);
   }
   to{
-    -webkit-transform: rotate3d(1, 1, 0, 360deg);
     transform: rotate3d(1, 1, 0, 360deg);
   }
 }
 @-webkit-keyframes box-rotation{ 
   from { 
-    -webkit-transform: rotate3d(1, 1, 0, 0deg); 
-  } to { 
     -webkit-transform: rotate3d(1, 1, 0, 360deg); 
+  } to { 
+    -webkit-transform: rotate3d(1, 1, 0, 0deg); 
   }
 }
