@@ -24,6 +24,7 @@ svg{
     width: 100%;
     height: 100vh;
     background-image: linear-gradient(360deg, rgba(74, 18, 18, 0.3), rgba(35, 47, 28, 0) 100%);
+    -webkit-filter: hue-rotate(0deg);
     filter: hue-rotate(0deg);
     .particles{
       width:100%;
@@ -58,6 +59,7 @@ svg{
       h1{
         margin-top: 1%;
         background: linear-gradient(to right, rgba(74, 18, 18, 0.35), rgba(35, 47, 28, 0.35) 150%);
+        -webkit-filter: hue-rotate(180deg);
         filter: hue-rotate(180deg);
         opacity: .95;
         color: white;
@@ -282,79 +284,6 @@ svg{
   
 }//end container
 
-//Rotating Box
-.cube-wrapper{
-  width:45%;
-  @media (max-width:1024px){
-    width:100%;
-  }
-}
-.cube-wrap {
-  width: 200px;
-  height: 200px;
-  perspective: 2000px;
-  perspective-origin: 50% -500px;
-}
-.single-box {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  width: 250px;
-  height: 250px;
-  background-color: #60c2ef9c;
-  transform: rotateY(90deg) translateZ(-200px) rotateX(15deg);
-  transform-origin: 50% 50% 0;      
-  img{
-    text-align: center;
-    width: 150px;
-  }      
-}
-.cube-box {
-  transform-style: preserve-3d;
-  animation: rotate 10s infinite linear;
-}
-.side-front { 
-  transform: translateZ(180px);
-}
-.side-back { 
-  -webkit-transform: rotateY(180deg) translateZ(180px);
-  transform: rotateY(180deg) translateZ(180px);
-}
-.side-top {
-  -webkit-transform: rotateX(90deg) translateZ(180px);
-  transform: rotateX(90deg) translateZ(180px);
-}
-.side-bottom { 
-  -webkit-transform: rotateX(-90deg) translateZ(180px); 
-  transform: rotateX(-90deg) translateZ(180px); 
-}
-.side-left { 
-  -webkit-transform: rotateY(-90deg) translateZ(180px); 
-  transform: rotateY(-90deg) translateZ(180px); 
-}
-.side-right { 
-  -webkit-transform: rotateY(90deg) translateZ(180px); 
-  transform: rotateY(90deg) translateZ(180px); 
-}
-
-/* ignore the code below */
-
-
-.link-area
-{
-  position:fixed;
-  bottom:20px;
-  left:20px;  
-  padding:15px;
-  border-radius:40px;
-  background:tomato;
-}
-.link-area a
-{
-  text-decoration:none;
-  color:#fff;
-}
 
 //Navigation
 nav{
@@ -365,6 +294,8 @@ nav{
   box-shadow: 0px -12px 20px 7px #0000008a;
   .navbar-start{
     .navbar-item{
+      //safari compatability --snaps back to size after hover
+      width: -webkit-max-content;
       a{
         span{
           padding-right:5px;
@@ -449,8 +380,10 @@ nav{
 
 }
 
-//Transitions
+//Animations
 @media (prefers-reduced-motion: no-preference) {
+
+  //Wrapper Hue Rotation
   .wrapper {
     animation-name: hue-filter;
     -webkit-animation-name: hue-filter;
@@ -465,7 +398,11 @@ nav{
     -webkit-transform: scale(.90);
     transform: scale(.90);
   }
+
+  //Rotating Box CSS/Animations
   .cube-box{
+    transform-style: preserve-3d;
+    animation: rotate 10s infinite linear;
     animation-name: box-rotation;
     -webkit-animation-name: box-rotation;
     animation-duration: 20s;
@@ -474,6 +411,62 @@ nav{
     -webkit-animation-timing-function: linear;
     animation-iteration-count: infinite;
   }
+  .cube-wrapper{
+    width:45%;
+    @media (max-width:1024px){
+      width:100%;
+    }
+  }
+  .cube-wrap {
+    width: 200px;
+    height: 200px;
+    -webkit-perspective: 2000px;
+    perspective: 2000px;
+    -webkit-perspective-origin: 50% -500px;
+    perspective-origin: 50% -500px;
+  }
+  .single-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    background-color: #60c2ef9c;
+    -webkit-transform: rotateY(90deg) translateZ(-200px) rotateX(15deg);
+    transform: rotateY(90deg) translateZ(-200px) rotateX(15deg);
+    -webkit-transform-origin: 50% 50% 0;      
+    transform-origin: 50% 50% 0;      
+    img{
+      text-align: center;
+      width: 150px;
+    }      
+  }
+  .side-front { 
+    -webkit-transform: translateZ(180px);
+    transform: translateZ(180px);
+  }
+  .side-back { 
+    -webkit-transform: rotateY(180deg) translateZ(180px);
+    transform: rotateY(180deg) translateZ(180px);
+  }
+  .side-top {
+    -webkit-transform: rotateX(90deg) translateZ(180px);
+    transform: rotateX(90deg) translateZ(180px);
+  }
+  .side-bottom { 
+    -webkit-transform: rotateX(-90deg) translateZ(180px); 
+    transform: rotateX(-90deg) translateZ(180px); 
+  }
+  .side-left { 
+    -webkit-transform: rotateY(-90deg) translateZ(180px); 
+    transform: rotateY(-90deg) translateZ(180px); 
+  }
+  .side-right { 
+    -webkit-transform: rotateY(90deg) translateZ(180px); 
+    transform: rotateY(90deg) translateZ(180px); 
+  }
+  //End of Cube Animations
 }
 
 @keyframes hue-filter {
