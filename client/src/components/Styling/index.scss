@@ -403,14 +403,18 @@ nav{
   .cube-box{
     -webkit-transform-style: preserve-3d;
     transform-style: preserve-3d;
+    //Box Rotation Axis
     -webkit-animation: rotate 10s infinite linear;
     animation: rotate 10s infinite linear;
-    animation-name: box-rotation;
+
+    //Box Rotation Animation
     -webkit-animation-name: box-rotation;
-    animation-duration: 20s;
+    animation-name: box-rotation;
     -webkit-animation-duration: 20s;
-    animation-timing-function: linear ;
+    animation-duration: 20s;
     -webkit-animation-timing-function: linear;
+    animation-timing-function: linear ;
+    -webkit-animation-iteration-count: infinite;
     animation-iteration-count: infinite;
   }
   .cube-wrapper{
