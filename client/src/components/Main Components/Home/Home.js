@@ -8,7 +8,7 @@ import Typed from 'react-typed';
 //icons
 import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa'
 //configs
-import setUpConfig from '../config/particleConfig.js'
+import setUpConfig from './config/particleConfig.js'
 
 const Home = (props) => {
     //Dynamically change color of particles
@@ -23,10 +23,9 @@ const Home = (props) => {
             <div className={(props.darkMode ? "center-section dark" : "center-section light")}>
                 <img src={(props.darkMode) ? lightLogo : logo} alt='logo' />
                 <h2 className="is-family-monospace is-size-3">
-                    {'<'}
                     <Typed
-                        strings={[`Alexis_Davalos Type={DEV}/>`]}
-                        typeSpeed={120}
+                        strings={[`My name is Alexis Davalos`]}
+                        typeSpeed={80}
                         backSpeed={75}
                     />
                 </h2>
