@@ -10,18 +10,14 @@ import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa'
 //configs
 import setUpConfig from './config/particleConfig.js'
 
-const Home = (props) => {
+const Home = ({darkMode}) => {
     //Dynamically change color of particles
     const configDark = setUpConfig("#ffffff");
-    console.log('Dark', configDark)
-
     const configLight = setUpConfig("#000000");
-    console.log('Light', configLight)
-
     return (
         <div className="wrapper">
-            <div className={(props.darkMode ? "center-section dark" : "center-section light")}>
-                <img src={(props.darkMode) ? lightLogo : logo} alt='logo' />
+            <div className={(darkMode ? "center-section dark" : "center-section light")}>
+                <img src={(darkMode) ? lightLogo : logo} alt='logo' />
                 <h2 className="is-family-monospace is-size-3">
                     <Typed
                         strings={[`My name is Alexis Davalos`]}
@@ -37,7 +33,7 @@ const Home = (props) => {
                     <a href="https://twitter.com/digitalnomadjs" target="_empty"><FaTwitter size="3em"/></a>
                 </div>
             </div>
-            {(props.darkMode) ? <Particles className="particles isDark" params={configDark} /> : <Particles className="particles isLight" params={configLight} />}
+            {(darkMode) ? <Particles className="particles isDark" params={configDark} /> : <Particles className="particles isLight" params={configLight} />}
         </div>
     )
 }
