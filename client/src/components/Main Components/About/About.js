@@ -4,7 +4,7 @@ import Timeline from './Timeline.js'
 import Cube from './Cube.js'
 import Tag from './Tag.js'
 //skill data
-import { frontEndSkills, backEndSkills, designSkills } from './Skills.js'
+import { frontEndSkills, backEndSkills, designSkills } from './data/Skills.js'
 const About = ({ darkMode }) => {
     let devSkills = [frontEndSkills, backEndSkills, designSkills]
     const [skills, setSkills] = useState(devSkills[0]);
@@ -26,7 +26,6 @@ const About = ({ darkMode }) => {
                         <div className="skills">
                             <div className="skills-container">
                                 {(skills.length > 0) ? skills.map((skills, index) => {
-                                    console.log(`skills at index ${index}:`, skills)
                                     return <Tag skill={skills} key={index} index={index} />
                                 }) : <></>}
                             </div>
