@@ -213,10 +213,14 @@ svg {
         width: 50%;
         display: flex;
 
-        .icon {
-          svg {
-            width: 55%;
-            padding: 5%;
+        .icon{
+          .icon-container{
+            display:flex;
+            justify-content: center;
+            svg {
+              width: 55%;
+              padding: 5%;
+            }
           }
         }
 
