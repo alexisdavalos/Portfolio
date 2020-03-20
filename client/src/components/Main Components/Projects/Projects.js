@@ -40,7 +40,7 @@ const Projects = (props) => {
                     onChange={e => handleChange(e)}
                     />
                     <span className="icon is-small is-left">
-                        <i className="fas fa-envelope"><FaSearch size="2rem"/></i>
+                        <i className="icon-container fas fa-envelope"><FaSearch size="2rem"/></i>
                     </span>
                 </div>
                

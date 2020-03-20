@@ -1,6 +1,6 @@
 import React from 'react';
 //import Skills helper function
-import { getSkillIcon } from './Skills.js'
+import { getSkillIcon } from './data/Skills.js'
 const Tag = ({skill}) => {
     return (
         <div className="field is-grouped is-grouped-multiline">
