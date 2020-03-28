@@ -518,7 +518,7 @@ nav {
     position: absolute;
     width: 250px;
     height: 250px;
-    background-color: #60c2ef9c;
+    background-color: #1b4a5de6;
     -webkit-transform: rotateY(90deg) translateZ(-200px) rotateX(15deg);
     transform: rotateY(90deg) translateZ(-200px) rotateX(15deg);
     -webkit-transform-origin: 50% 50% 0;
@@ -526,7 +526,7 @@ nav {
     //cube shadow for each child
     &:nth-child(1n+0){
       box-shadow: inset 0px 0px 20px 6px #333333c4;
-      border:solid 1px #33333333;
+      border:solid 1px #0077f3;
     }
     //img on cube face size
     img {
