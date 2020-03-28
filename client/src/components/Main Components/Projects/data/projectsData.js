@@ -29,7 +29,7 @@ export const projectsData = [
         img: coffeemugsgalore,
         description: "A simple coffee mugs store. I built this site using Shopify and customized the front-end using SCSS and Liquid. I was also responsible briefly for generating marketing content and creating brand image. Made initial effort to collect data with Facebook Ads and streamline targetted audience to sales funnels.",
         hashtags: ["Liquid", "SCSS", "JS", "Shopify", "Marketing", "MailChimp", "CRM", "Adobe Creative Suite", "Video Editing", "Graphic Design"],
-        url: 'www.https://coffeemugsgalore.com/'
+        url: 'https://www.coffeemugsgalore.com/'
         
     },
     {
