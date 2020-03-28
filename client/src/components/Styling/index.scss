@@ -503,8 +503,8 @@ nav {
   }
 
   .cube-wrap {
-    width: 200px;
-    height: 200px;
+    width: 1px;
+    height: 100px;
     -webkit-perspective: 2000px;
     perspective: 2000px;
     -webkit-perspective-origin: 50% -500px;
@@ -526,38 +526,44 @@ nav {
 
     img {
       text-align: center;
-      width: 150px;
+      width: 100px;
     }
   }
 
   .side-front {
-    -webkit-transform: translateZ(180px);
-    transform: translateZ(180px);
+    -webkit-transform: translateZ(125px);
+    transform: translateZ(125px);
+    border:solid 1px #333;
   }
 
   .side-back {
-    -webkit-transform: rotateY(180deg) translateZ(180px);
-    transform: rotateY(180deg) translateZ(180px);
+    -webkit-transform: rotateY(180deg) translateZ(125px);
+    transform: rotateY(180deg) translateZ(125px);
+    border:solid 1px #333;
   }
 
   .side-top {
-    -webkit-transform: rotateX(90deg) translateZ(180px);
-    transform: rotateX(90deg) translateZ(180px);
+    -webkit-transform: rotateX(90deg) translateZ(125px);
+    transform: rotateX(90deg) translateZ(125px);
+    border:solid 1px #333;
   }
 
   .side-bottom {
-    -webkit-transform: rotateX(-90deg) translateZ(180px);
-    transform: rotateX(-90deg) translateZ(180px);
+    -webkit-transform: rotateX(-90deg) translateZ(125px);
+    transform: rotateX(-90deg) translateZ(125px);
+    border:solid 1px #333;
   }
 
   .side-left {
-    -webkit-transform: rotateY(-90deg) translateZ(180px);
-    transform: rotateY(-90deg) translateZ(180px);
+    -webkit-transform: rotateY(-90deg) translateZ(125px);
+    transform: rotateY(-90deg) translateZ(125px);
+    border:solid 1px #333;
   }
 
   .side-right {
-    -webkit-transform: rotateY(90deg) translateZ(180px);
-    transform: rotateY(90deg) translateZ(180px);
+    -webkit-transform: rotateY(90deg) translateZ(125px);
+    transform: rotateY(90deg) translateZ(125px);
+    border:solid 1px #333;
   }
 
   //End of Cube Animations
