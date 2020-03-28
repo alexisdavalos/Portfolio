@@ -523,47 +523,46 @@ nav {
     transform: rotateY(90deg) translateZ(-200px) rotateX(15deg);
     -webkit-transform-origin: 50% 50% 0;
     transform-origin: 50% 50% 0;
-
+    //cube shadow for each child
+    &:nth-child(1n+0){
+      box-shadow: inset 0px 0px 20px 6px #333333c4;
+      border:solid 1px #33333333;
+    }
+    //img on cube face size
     img {
       text-align: center;
       width: 100px;
     }
   }
-
+  //Cube Faces/Children
   .side-front {
     -webkit-transform: translateZ(125px);
     transform: translateZ(125px);
-    border:solid 1px #333;
   }
 
   .side-back {
     -webkit-transform: rotateY(180deg) translateZ(125px);
     transform: rotateY(180deg) translateZ(125px);
-    border:solid 1px #333;
   }
 
   .side-top {
     -webkit-transform: rotateX(90deg) translateZ(125px);
     transform: rotateX(90deg) translateZ(125px);
-    border:solid 1px #333;
   }
 
   .side-bottom {
     -webkit-transform: rotateX(-90deg) translateZ(125px);
     transform: rotateX(-90deg) translateZ(125px);
-    border:solid 1px #333;
   }
 
   .side-left {
     -webkit-transform: rotateY(-90deg) translateZ(125px);
     transform: rotateY(-90deg) translateZ(125px);
-    border:solid 1px #333;
   }
 
   .side-right {
     -webkit-transform: rotateY(90deg) translateZ(125px);
     transform: rotateY(90deg) translateZ(125px);
-    border:solid 1px #333;
   }
 
   //End of Cube Animations
