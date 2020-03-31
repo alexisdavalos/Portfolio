@@ -18,14 +18,14 @@ const Home = ({darkMode}) => {
         <div className="wrapper">
             <div className={(darkMode ? "center-section dark" : "center-section light")}>
                 <img src={(darkMode) ? lightLogo : logo} alt='logo' />
-                <h2 className="is-family-monospace is-size-3">
+                <h2 className="is-size-1 has-text-weight-medium is-family-monospace ">I am a
                     <Typed
-                        strings={[`My name is Alexis Davalos`]}
+                        strings={[`Fullstack Developer`, `Graphic Designer`, `Bookworm`, `Philosopher`, `Dreamer`]}
                         typeSpeed={80}
                         backSpeed={75}
+                        loop
                     />
                 </h2>
-                <h1 className="is-size-1 has-text-weight-medium is-family-monospace ">I am a Full Stack Developer</h1>
                 <h3 className="is-family-monospace is-size-4">with a passion for learning constantly and pushing the boundaries of my understanding.</h3>
                 <div className="social-icons is-flex">
                     <a href="https://github.com/alexisdavalos" target="_empty"><FaGithub size="3em"/></a>

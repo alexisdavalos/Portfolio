@@ -68,25 +68,21 @@ svg {
         }
       }
 
-      h1 {
+      h2 {
         margin-top: 1%;
         background: linear-gradient(to right, rgba(74, 18, 18, 0.35), rgba(35, 47, 28, 0.35) 150%);
         -webkit-filter: hue-rotate(180deg);
         filter: hue-rotate(180deg);
         opacity: .95;
         color: white;
-
+        width: 75%;
+        span{
+          margin-left:10px;
+        }
         @media (max-width: 768px) {
           font-size: 1.5rem !important;
         }
       }
-
-      h2 {
-        @media (max-width: 768px) {
-          font-size: 1.5rem !important;
-        }
-      }
-
       img {
         padding-bottom: 25px;
         padding-top: 56px;
@@ -484,14 +480,26 @@ nav {
     transform-style: preserve-3d;
 
     //Box Rotation Animation
-    -webkit-animation-name: box-rotation;
-    animation-name: box-rotation;
-    -webkit-animation-duration: 20s;
-    animation-duration: 20s;
-    -webkit-animation-timing-function: linear;
-    animation-timing-function: linear;
-    -webkit-animation-iteration-count: infinite;
+    animation-name:box-rotation; 
+    animation-duration:20s; 
     animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    -webkit-animation-name:box-rotation; 
+    -webkit-animation-duration:20s; 
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    -o-animation-name:box-rotation; 
+    -o-animation-duration:20s; 
+    -o-animation-iteration-count: infinite;
+    -o-animation-timing-function: linear;
+    -moz-animation-name:box-rotation; 
+    -moz-animation-duration:20s; 
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: linear;
+    -ms-animation-name:box-rotation; 
+    -ms-animation-duration:20s; 
+    -ms-animation-iteration-count: infinite;
+    -ms-animation-timing-function: linear;
   }
 
   .cube-wrapper {
