@@ -594,11 +594,7 @@ nav {
 }
 
 @-webkit-keyframes box-rotation {
-  from {
-    -webkit-transform: rotate3d(1, 1, 0, 360deg);
-  }
-
-  to {
-    -webkit-transform: rotate3d(1, 1, 0, 0deg);
-  }
+  0% { -webkit-transform: rotate3d(1, 1, 0, 360deg);}
+  50% { -webkit-transform: rotate3d(1, 1, 0, 180deg);}
+  100% { -webkit-transform: rotate3d(1, 1, 0, 0deg);}
 }
