@@ -1,5 +1,6 @@
-import React from 'react'
-import Loader from 'react-loader-spinner'
+import React from 'react';
+import Loader from 'react-loader-spinner';
+
 const Card = ({ project, darkMode }) => {
     return (
         <div className="column is-one-third">
@@ -17,7 +18,8 @@ const Card = ({ project, darkMode }) => {
                             <span className={darkMode ? "tag is-dark" : "tag is-light"} key={index}>{hashtag}</span>
                         ))}
                         <br />
-                        <time dateTime="2016-1-1">11:09 PM - 1 Jan 2020</time>
+                        <br />
+                        <a href={project.url} target="_blank" rel="noopener noreferrer" className={darkMode ? "button is-dark is-rounded" : "button is-light is-rounded"}><strong>Visit Project</strong></a>
                     </div>
                 </div>
             </div>

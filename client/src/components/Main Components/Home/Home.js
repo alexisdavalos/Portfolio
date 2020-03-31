@@ -29,7 +29,7 @@ const Home = ({darkMode}) => {
                 <h3 className="is-family-monospace is-size-4">with a passion for learning constantly and pushing the boundaries of my understanding.</h3>
                 <div className="social-icons is-flex">
                     <a href="https://github.com/alexisdavalos" target="_empty"><FaGithub size="3em"/></a>
-                    <a href="https://linkedin.com/alexisdavalos" target="_empty"><FaLinkedin size="3em"/></a>
+                    <a href="https://linkedin.com/in/alexisdavalos" target="_empty"><FaLinkedin size="3em"/></a>
                     <a href="https://twitter.com/digitalnomadjs" target="_empty"><FaTwitter size="3em"/></a>
                 </div>
             </div>

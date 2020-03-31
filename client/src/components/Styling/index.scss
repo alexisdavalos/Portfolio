@@ -496,6 +496,7 @@ nav {
 
   .cube-wrapper {
     width: 45%;
+    padding-bottom: 25%;
 
     @media (max-width:1024px) {
       width: 100%;
@@ -503,8 +504,8 @@ nav {
   }
 
   .cube-wrap {
-    width: 200px;
-    height: 200px;
+    width: 1px;
+    height: 100px;
     -webkit-perspective: 2000px;
     perspective: 2000px;
     -webkit-perspective-origin: 50% -500px;
@@ -518,46 +519,51 @@ nav {
     position: absolute;
     width: 250px;
     height: 250px;
-    background-color: #60c2ef9c;
+    background-color: #1b4a5d80;
     -webkit-transform: rotateY(90deg) translateZ(-200px) rotateX(15deg);
     transform: rotateY(90deg) translateZ(-200px) rotateX(15deg);
     -webkit-transform-origin: 50% 50% 0;
     transform-origin: 50% 50% 0;
-
+    //cube shadow for each child
+    &:nth-child(1n+0){
+      box-shadow: inset 0px 0px 20px 6px #33333354;
+      border:solid 1px #0077f3;
+    }
+    //img on cube face size
     img {
       text-align: center;
-      width: 150px;
+      width: 100px;
     }
   }
-
+  //Cube Faces/Children
   .side-front {
-    -webkit-transform: translateZ(180px);
-    transform: translateZ(180px);
+    -webkit-transform: translateZ(125px);
+    transform: translateZ(125px);
   }
 
   .side-back {
-    -webkit-transform: rotateY(180deg) translateZ(180px);
-    transform: rotateY(180deg) translateZ(180px);
+    -webkit-transform: rotateY(180deg) translateZ(125px);
+    transform: rotateY(180deg) translateZ(125px);
   }
 
   .side-top {
-    -webkit-transform: rotateX(90deg) translateZ(180px);
-    transform: rotateX(90deg) translateZ(180px);
+    -webkit-transform: rotateX(90deg) translateZ(125px);
+    transform: rotateX(90deg) translateZ(125px);
   }
 
   .side-bottom {
-    -webkit-transform: rotateX(-90deg) translateZ(180px);
-    transform: rotateX(-90deg) translateZ(180px);
+    -webkit-transform: rotateX(-90deg) translateZ(125px);
+    transform: rotateX(-90deg) translateZ(125px);
   }
 
   .side-left {
-    -webkit-transform: rotateY(-90deg) translateZ(180px);
-    transform: rotateY(-90deg) translateZ(180px);
+    -webkit-transform: rotateY(-90deg) translateZ(125px);
+    transform: rotateY(-90deg) translateZ(125px);
   }
 
   .side-right {
-    -webkit-transform: rotateY(90deg) translateZ(180px);
-    transform: rotateY(90deg) translateZ(180px);
+    -webkit-transform: rotateY(90deg) translateZ(125px);
+    transform: rotateY(90deg) translateZ(125px);
   }
 
   //End of Cube Animations
