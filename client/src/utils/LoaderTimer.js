@@ -10,11 +10,11 @@ const LoaderToggle = async (e) => {
     const HTMLbody = document.querySelector('html');
     //toggles Y-Axis Overflow
     HTMLbody.style.overflowY = "hidden";
-    //declares 1 second timer
+    //declares 3 second timer
     const timer = setTimeout(() => {
         loader.classList.toggle("hidden")
         HTMLbody.style.overflowY = "visible"
-    }, 1000)
+    }, 3000)
 
     // cleaup function - removes timer reference from memory
     return () => {

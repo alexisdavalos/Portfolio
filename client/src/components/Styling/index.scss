@@ -1,7 +1,8 @@
-@import 'bulma';
-@import '../../../node_modules/bulma-extensions/bulma-switch/src/sass/index.sass';
-@import '../../../node_modules/bulma-dashboard/src/bulma-dashboard.sass';
-@import '../../../node_modules/bulma-extensions/bulma-timeline/src/sass/index.sass';
+@import "bulma";
+@import "../../../node_modules/bulma-extensions/bulma-switch/src/sass/index.sass";
+@import "../../../node_modules/bulma-dashboard/src/bulma-dashboard.sass";
+@import "../../../node_modules/bulma-extensions/bulma-timeline/src/sass/index.sass";
+
 h1,
 h2,
 h3,
@@ -11,6 +12,62 @@ h4 {
 
 svg {
   vertical-align: middle;
+}
+
+//progress bar
+
+.progressBar {
+  width: 100%;
+  position: fixed;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  z-index: 1;
+  .progress {
+    transform: rotate(90deg);
+    width: 300px !important;
+    margin-right: -125px;
+    margin-top: 25%;
+  }
+}
+
+//parallax
+.section-parallax {
+  padding: 0;
+  background-image: url(../../assetts/images/parallax-1.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  .content {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+    .box {
+      background: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1;
+      .cube-wrapper {
+        width: 100%;
+      }
+      .cube-wrap {
+        margin-right: 200px;
+        .cube-box {
+          img {
+            margin: 0;
+          }
+        }
+      }
+      img {
+        margin-bottom: -20%;
+        width: 50%;
+      }
+    }
+  }
 }
 
 //App Container
@@ -28,7 +85,11 @@ svg {
   .wrapper {
     width: 100%;
     height: 100vh;
-    background-image: linear-gradient(360deg, rgba(74, 18, 18, 0.3), rgba(35, 47, 28, 0) 100%);
+    background-image: linear-gradient(
+      360deg,
+      rgba(74, 18, 18, 0.3),
+      rgba(35, 47, 28, 0) 100%
+    );
     -webkit-filter: hue-rotate(0deg);
     filter: hue-rotate(0deg);
 
@@ -47,6 +108,9 @@ svg {
       padding: 5%;
       z-index: 1;
       position: absolute;
+      background: url(../../assetts/images/background-xl.png);
+      background-attachment: scroll;
+      background-size: cover;
 
       .social-icons {
         display: flex;
@@ -70,15 +134,19 @@ svg {
 
       h2 {
         margin-top: 1%;
-        background: linear-gradient(to right, rgba(74, 18, 18, 0.35), rgba(35, 47, 28, 0.35) 150%);
+        background: linear-gradient(
+          to right,
+          rgba(74, 18, 18, 0.35),
+          rgba(35, 47, 28, 0.35) 150%
+        );
         -webkit-filter: hue-rotate(180deg);
         filter: hue-rotate(180deg);
-        opacity: .95;
+        opacity: 0.95;
         color: white;
-        width: 75%;
-        span{
-          color:white;
-          margin-left:10px;
+        width: 60%;
+        span {
+          color: white;
+          margin-left: 10px;
         }
         @media (max-width: 768px) {
           font-size: 1.5rem !important;
@@ -96,7 +164,27 @@ svg {
       }
     }
   }
+  //Skills & Select
+  .select {
+    width: 100%;
 
+    select {
+      width: 100%;
+    }
+  }
+  .skills {
+    margin-top: 2.5%;
+
+    .skills-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+
+      .tags {
+        margin-right: 5px;
+      }
+    }
+  }
   //Wrapper for About Page
   .wrapper.about {
     display: flex;
@@ -131,27 +219,13 @@ svg {
           }
         }
 
-        .skills {
-          margin-top: 2.5%;
-
-          .skills-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: flex-start;
-
-            .tags {
-              margin-right: 5px;
-            }
-          }
-        }
-
-        @media (max-width:1024px) {
+        @media (max-width: 1024px) {
           width: 100%;
         }
       }
 
       .timeline {
-        transform: scale(.75);
+        transform: scale(0.75);
         width: 45%;
         margin: 7.5% 7.5% 7.5% 0%;
 
@@ -179,7 +253,7 @@ svg {
     .box.w-30 {
       width: 30%;
 
-      @media (max-width:768px) {
+      @media (max-width: 768px) {
         margin-top: 20%;
       }
     }
@@ -196,7 +270,7 @@ svg {
     min-height: 100vh;
     display: flex;
     flex-wrap: wrap;
-    margin-top: 56px;
+    margin-top: 10%;
     animation: none;
     background: none;
 
@@ -210,9 +284,9 @@ svg {
         width: 50%;
         display: flex;
 
-        .icon{
-          .icon-container{
-            display:flex;
+        .icon {
+          .icon-container {
+            display: flex;
             justify-content: center;
             svg {
               width: 55%;
@@ -268,8 +342,8 @@ svg {
               cursor: pointer;
             }
 
-            z-index:1;
-            opacity:100;
+            z-index: 1;
+            opacity: 100;
           }
 
           .card-image {
@@ -293,14 +367,14 @@ svg {
     }
 
     //wrapper.projects media queries
-    @media (max-width:1024px) {
+    @media (max-width: 1024px) {
       .column {
         margin: 1%;
         width: 48%;
       }
     }
 
-    @media (max-width:768px) {
+    @media (max-width: 768px) {
       flex-direction: column;
 
       .column {
@@ -343,11 +417,9 @@ svg {
       padding: 0;
     }
   }
-
 }
 
 //end container
-
 
 //Navigation
 nav {
@@ -377,14 +449,14 @@ nav {
         position: absolute;
         opacity: 0;
         visibility: hidden;
-        transition: opacity .0s, visibility .0s;
-        -webkit-transition: opacity .0s, visibility .0s;
+        transition: opacity 0s, visibility 0s;
+        -webkit-transition: opacity 0s, visibility 0s;
       }
 
       &:hover {
         span {
           position: relative;
-          opacity: .95;
+          opacity: 0.95;
           visibility: visible;
         }
       }
@@ -396,16 +468,16 @@ nav {
 
     .switch-wrapper {
       .switch {
-        &[type="checkbox"]+label {
+        &[type="checkbox"] + label {
           padding-top: 0 !important;
 
-          &:focus+label::before {
+          &:focus + label::before {
             outline: 0;
           }
         }
 
-        &[type="checkbox"]:focus+label::before,
-        &[type="checkbox"]:focus+label::after {
+        &[type="checkbox"]:focus + label::before,
+        &[type="checkbox"]:focus + label::after {
           outline: none !important;
         }
 
@@ -438,7 +510,6 @@ nav {
   img {
     width: 250px;
   }
-
 }
 
 //Utils
@@ -457,12 +528,10 @@ nav {
 
 .dark * {
   color: whitesmoke;
-
 }
 
 //Animations CSS
 @media (prefers-reduced-motion: no-preference) {
-
   //Wrapper Hue Rotation
   .wrapper {
     animation-name: hue-filter;
@@ -479,26 +548,25 @@ nav {
   .cube-box {
     -webkit-transform-style: preserve-3d;
     transform-style: preserve-3d;
-
     //Box Rotation Animation
-    animation-name:box-rotation; 
-    animation-duration:20s; 
+    animation-name: box-rotation;
+    animation-duration: 20s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
-    -webkit-animation-name:box-rotation; 
-    -webkit-animation-duration:20s; 
+    -webkit-animation-name: box-rotation;
+    -webkit-animation-duration: 20s;
     -webkit-animation-iteration-count: infinite;
     -webkit-animation-timing-function: linear;
-    -o-animation-name:box-rotation; 
-    -o-animation-duration:20s; 
+    -o-animation-name: box-rotation;
+    -o-animation-duration: 20s;
     -o-animation-iteration-count: infinite;
     -o-animation-timing-function: linear;
-    -moz-animation-name:box-rotation; 
-    -moz-animation-duration:20s; 
+    -moz-animation-name: box-rotation;
+    -moz-animation-duration: 20s;
     -moz-animation-iteration-count: infinite;
     -moz-animation-timing-function: linear;
-    -ms-animation-name:box-rotation; 
-    -ms-animation-duration:20s; 
+    -ms-animation-name: box-rotation;
+    -ms-animation-duration: 20s;
     -ms-animation-iteration-count: infinite;
     -ms-animation-timing-function: linear;
   }
@@ -507,8 +575,9 @@ nav {
     width: 45%;
     padding-bottom: 25%;
 
-    @media (max-width:1024px) {
+    @media (max-width: 1024px) {
       width: 100%;
+      margin-right:100px;
     }
   }
 
@@ -519,6 +588,7 @@ nav {
     perspective: 2000px;
     -webkit-perspective-origin: 50% -500px;
     perspective-origin: 50% -500px;
+    margin-right:200px;
   }
 
   .single-box {
@@ -534,9 +604,9 @@ nav {
     -webkit-transform-origin: 50% 50% 0;
     transform-origin: 50% 50% 0;
     //cube shadow for each child
-    &:nth-child(1n+0){
+    &:nth-child(1n + 0) {
       box-shadow: inset 0px 0px 20px 6px #33333354;
-      border:solid 1px #0077f3;
+      border: solid 1px #0077f3;
     }
     //img on cube face size
     img {
@@ -548,31 +618,60 @@ nav {
   .side-front {
     -webkit-transform: translateZ(125px);
     transform: translateZ(125px);
+    &:hover {
+      -webkit-transform: translateZ(150px);
+      transform: translateZ(150px);
+    }
   }
 
   .side-back {
     -webkit-transform: rotateY(180deg) translateZ(125px);
     transform: rotateY(180deg) translateZ(125px);
+    &:hover {
+      -webkit-transform: rotateY(180deg) translateZ(150px);
+      transform: rotateY(180deg) translateZ(150px);
+      cursor: pointer;
+    }
   }
 
   .side-top {
     -webkit-transform: rotateX(90deg) translateZ(125px);
     transform: rotateX(90deg) translateZ(125px);
+    &:hover {
+      -webkit-transform: rotateX(90deg) translateZ(150px);
+      transform: rotateX(90deg) translateZ(150px);
+      cursor: pointer;
+    }
   }
 
   .side-bottom {
     -webkit-transform: rotateX(-90deg) translateZ(125px);
     transform: rotateX(-90deg) translateZ(125px);
+    &:hover {
+      -webkit-transform: rotateX(-90deg) translateZ(150px);
+      transform: rotateX(-90deg) translateZ(150px);
+      cursor: pointer;
+    }
   }
 
   .side-left {
     -webkit-transform: rotateY(-90deg) translateZ(125px);
     transform: rotateY(-90deg) translateZ(125px);
+    &:hover {
+      -webkit-transform: rotateY(-90deg) translateZ(150px);
+      transform: rotateY(-90deg) translateZ(150px);
+      cursor: pointer;
+    }
   }
 
   .side-right {
     -webkit-transform: rotateY(90deg) translateZ(125px);
     transform: rotateY(90deg) translateZ(125px);
+    &:hover {
+      -webkit-transform: rotateY(90deg) translateZ(150px);
+      transform: rotateY(90deg) translateZ(150px);
+      cursor: pointer;
+    }
   }
 
   //End of Cube Animations
@@ -580,7 +679,7 @@ nav {
 
 @keyframes hue-filter {
   from {
-    filter: hue-rotate(-360deg)
+    filter: hue-rotate(-360deg);
   }
 
   to {
@@ -609,7 +708,13 @@ nav {
 }
 
 @-webkit-keyframes box-rotation {
-  0% { -webkit-transform: rotate3d(1, 1, 0, 360deg);}
-  50% { -webkit-transform: rotate3d(1, 1, 0, 180deg);}
-  100% { -webkit-transform: rotate3d(1, 1, 0, 0deg);}
+  0% {
+    -webkit-transform: rotate3d(1, 1, 0, 360deg);
+  }
+  50% {
+    -webkit-transform: rotate3d(1, 1, 0, 180deg);
+  }
+  100% {
+    -webkit-transform: rotate3d(1, 1, 0, 0deg);
+  }
 }

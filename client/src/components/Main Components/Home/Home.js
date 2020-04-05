@@ -2,9 +2,13 @@ import React from 'react';
 //images
 import logo from '../../../assetts/images/logo.png'
 import lightLogo from '../../../assetts/images/logo-light.png'
+
 //components
+import Cube from '../About/Cube.js'
 import Particles from 'react-particles-js'
 import Typed from 'react-typed';
+import Projects from '../Projects/Projects.js'
+import Skills from '../About/Skills.js'
 //icons
 import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa'
 //configs
@@ -15,8 +19,9 @@ const Home = ({darkMode}) => {
     const configDark = setUpConfig("#ffffff");
     const configLight = setUpConfig("#000000");
     return (
+        <>
         <div className="wrapper">
-            <div className={(darkMode ? "center-section dark" : "center-section light")}>
+            <section className={(darkMode ? "center-section dark" : "center-section light")}>
                 <img src={(darkMode) ? lightLogo : logo} alt='logo' />
                 <h2 className="is-size-1 has-text-weight-medium is-family-monospace ">I am a
                     <Typed
@@ -32,9 +37,20 @@ const Home = ({darkMode}) => {
                     <a href="https://linkedin.com/in/alexisdavalos" target="_empty"><FaLinkedin size="3em"/></a>
                     <a href="https://twitter.com/digitalnomadjs" target="_empty"><FaTwitter size="3em"/></a>
                 </div>
-            </div>
+            </section>
             {(darkMode) ? <Particles className="particles isDark" params={configDark} /> : <Particles className="particles isLight" params={configLight} />}
         </div>
+        <section className="section-parallax">
+        <div className="content">
+            <div className="box">
+                <Cube/>
+            </div>      
+            <div> <Skills darkMode={darkMode}/> </div>
+        </div>
+        </section>
+        <Projects darkMode={darkMode}/>
+        <div class="is-block has-background-black" style={{width:'100%', padding: '2%'}}><p>Copyright alexisdavalos</p></div>
+        </>
     )
 }
 

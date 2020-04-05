@@ -31,7 +31,6 @@ const Nav = ({darkMode, setDarkMode}) => {
             </div>
             <div className="navbar-menu is-family-monospace">
                 <div className="navbar-start">
-                    <Link onClick={(e) => LoaderTimer(e)} to='/' className="navbar-item" ><FaHome size="2em"/><span className="typed-cursor typed-cursor--blink">|</span><span>Home</span></Link>
                     <Link onClick={(e) => LoaderTimer(e)} to='/about' className="navbar-item"><FaGrav  size="2em"/><span className="typed-cursor typed-cursor--blink">|</span><span>About</span></Link>
                     <Link onClick={(e) => LoaderTimer(e)} to='/projects' className="navbar-item"><FaGreaterThanEqual size="2em"/><span className="typed-cursor typed-cursor--blink">|</span><span>Projects</span></Link>
 
@@ -41,9 +40,9 @@ const Nav = ({darkMode, setDarkMode}) => {
                         <div className="navbar-dropdown" >
                             {/* <Link onClick={(e) => LoaderTimer(e)} to='/tutorials' className="navbar-item">Tutorials</Link> */}
                             {/* <Link to='/' className="navbar-item">Social Media</Link> */}
-                            <Link to='#top' className="navbar-item">Contact</Link>
+                            <Link to='#top' className="navbar-item">Resume</Link>
                             <hr className="navbar-divider" />
-                            <Link to='#top' className="navbar-item">Report an issue</Link>
+                            <Link to='#top' className="navbar-item">Contact</Link>
                         </div>
                     </div>
                 </div>
