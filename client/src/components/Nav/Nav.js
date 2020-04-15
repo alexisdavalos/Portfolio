@@ -54,8 +54,6 @@ const Nav = ({darkMode, setDarkMode}) => {
                             <input onClick={() => setDarkMode(!darkMode)} id="switchThinColorDefault" type="checkbox" className="switch is-black is-rounded" defaultChecked={(darkMode) ? true : false}/> 
                             <label htmlFor="switchThinColorDefault"><b>{(darkMode) ? <FaMoon size="1em"/> : <FaSun size="1em"/>}</b></label>
                         </div>
-                        <Link to='#top' className={darkMode ? "button is-white is-rounded" : "button is-black is-rounded"}><strong>Resume</strong></Link>
-                        <Link to='#top' className={darkMode ? "button is-light is-rounded is-outlined" : "button is-dark is-rounded is-outlined"}>Contact</Link>
                         </div>
                     </div>
                 </div>

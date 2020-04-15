@@ -1,0 +1,15 @@
+//progress bar
+.progressBar {
+  width: 100%;
+  position: fixed;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  z-index: 1;
+  .progress {
+    transform: rotate(90deg);
+    width: 300px !important;
+    margin-right: -125px;
+    margin-top: 25%;
+  }
+}
