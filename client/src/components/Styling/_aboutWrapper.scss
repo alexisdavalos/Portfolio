@@ -1,80 +1,93 @@
 //Wrapper for About Page
-.app-container {
-  .wrapper.about {
+.wrapper.about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  padding-top: 56px;
+  width: 100%;
+
+  .box {
+    width: 70%;
+    height: 100%;
+    padding: 0;
+    background: none;
+    box-shadow: none;
+    margin: 0;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
-    flex-direction: row;
-    padding-top: 56px;
-    width: 100%;
+    text-align: left;
 
-    .box {
-      width: 70%;
-      height: 100%;
-      padding: 0;
-      background: none;
-      box-shadow: none;
-      margin: 0;
-      display: flex;
-      justify-content: space-evenly;
-      align-items: center;
-      text-align: left;
+    .about {
+      width: 45%;
+      margin: -5% 5% 5% 5%;
 
-      .about {
-        width: 45%;
-        margin: -5% 5% 5% 5%;
-
-        .select {
-          margin-top: 5%;
-          width: 100%;
-
-          select {
-            width: 100%;
-          }
-        }
-
-        @media (max-width: 1024px) {
-          width: 100%;
-        }
-      }
-
-      .timeline {
-        transform: scale(0.75);
-        width: 45%;
-        margin: 7.5% 7.5% 7.5% 0%;
-
-        .timeline-marker {
-          img {
-            animation: none;
-          }
-        }
-
-        @media (max-width: 1024px) {
-          margin-top: -25%;
-        }
-      }
-
-      h1 {
+      .select {
+        margin-top: 5%;
         width: 100%;
+
+        select {
+          width: 100%;
+        }
+      }
+
+      .skills {
+        margin-top: 2.5%;
+
+        .skills-container {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: flex-start;
+
+          .tags {
+            margin-right: 5px;
+          }
+        }
       }
 
       @media (max-width: 1024px) {
-        align-items: flex-start;
-        margin-top: -7.5%;
+        width: 100%;
       }
     }
 
-    .box.w-30 {
-      width: 30%;
+    .timeline {
+      display: none;
+      transform: scale(0.75);
+      width: 45%;
+      margin: 7.5% 7.5% 7.5% 0%;
 
-      @media (max-width: 768px) {
-        margin-top: 20%;
+      .timeline-marker {
+        img {
+          animation: none;
+        }
       }
+
+      @media (max-width: 1024px) {
+        margin-top: -25%;
+      }
+    }
+
+    h1 {
+      width: 100%;
     }
 
     @media (max-width: 1024px) {
-      flex-direction: column;
+      align-items: flex-start;
+      margin-top: -7.5%;
+    }
+  }
+
+  .box.w-30 {
+    width: 30%;
+
+    @media (max-width: 768px) {
       margin-top: 20%;
     }
+  }
+
+  @media (max-width: 1024px) {
+    flex-direction: column;
+    margin-top: 20%;
   }
 }
