@@ -66,7 +66,7 @@ const Home = ({ darkMode }) => {
       {/* About Section */}
       <section className="about-section">
         <div className="content left">
-          <h3 className="is-family-monospace is-size-4">Ich Bin</h3>
+          <h3 className="is-family-monospace is-size-4">My Journey</h3>
         </div>
         <div className="content right">
           <Timeline />

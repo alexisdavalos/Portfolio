@@ -2,7 +2,7 @@ import React from "react";
 import { events } from "./data/Events.js";
 const Timeline = ({ darkMode }) => {
   return (
-    <div className="timeline is-hidden-mobile is-centered">
+    <div className="timeline is-centered">
       <header className="timeline-header">
         <span className="tag is-medium is-primary">Start</span>
       </header>
