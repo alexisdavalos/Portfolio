@@ -1,0 +1,5 @@
+@mixin flex($flex, $position) {
+  // write the css here
+  display: $flex;
+  justify-content: $position;
+}

@@ -1,0 +1,9 @@
+@import "./mixins";
+//Footer
+.footer {
+  @include flex(flex, center);
+  p {
+    @include flex(flex, center);
+    align-items: center;
+  }
+}

@@ -29,8 +29,8 @@
       background: url(../../assetts/images/background-xl.png);
       background-attachment: scroll;
       background-size: cover;
-      .container{
-        display:flex;
+      .container {
+        display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
@@ -84,6 +84,67 @@
         @media (max-width: 1024px) {
           width: 200px;
         }
+      }
+    }
+  }
+  .about-section {
+    display: flex;
+    background: black;
+    width: 100%;
+    height: 50%;
+    @media (max-width: 1024px) {
+      flex-direction: column;
+    }
+    .content {
+      width: 50%;
+      height: 75vh;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      @media (max-width: 1024px) {
+        width: 100%;
+      }
+    }
+    .content.left {
+      h3 {
+        z-index: 1;
+        color: white;
+        position: absolute;
+        margin: 0;
+        transition: all 0.7s ease;
+        -webkit-transition: all 0.7s ease;
+      }
+      &:hover {
+        h3 {
+          font-size: 1.7rem !important;
+          filter: invert(1);
+        }
+      }
+      &:before {
+        content: "";
+        position: absolute;
+        background: url(../../assetts/images/waves.jpg);
+        width: 50%;
+        height: 75vh;
+        overflow: hidden;
+        background-size: 200%;
+        transition: all 0.7s ease;
+        -webkit-transition: all 0.7s ease;
+        @media (max-width: 1024px) {
+          width: 100%;
+        }
+      }
+      &:hover:before {
+        background-size: 700%;
+        cursor: pointer;
+        filter: invert(1);
+      }
+    }
+    .content.right {
+      background: #333;
+      .timeline {
+        transform: scale(0.75);
       }
     }
   }

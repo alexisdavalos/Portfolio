@@ -1,7 +1,7 @@
 //parallax
 .section-parallax {
   padding: 0;
-  background-image: url(../../assetts/images/parallax-1.jpg);
+  background-image: url(../../assetts/images/waves.jpg);
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -12,6 +12,7 @@
     justify-content: space-evenly;
     align-items: center;
     flex-direction: row;
+    box-shadow: inset -1px 6px 20px 20px #0000006b;
     .box {
       background: none;
       display: flex;

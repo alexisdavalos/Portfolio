@@ -4,8 +4,8 @@
   .wrapper {
     animation-name: hue-filter;
     -webkit-animation-name: hue-filter;
-    animation-duration: 60s;
-    -webkit-animation-duration: 60s;
+    animation-duration: 30s;
+    -webkit-animation-duration: 30s;
     animation-timing-function: linear;
     -webkit-animation-timing-function: linear;
     animation-iteration-count: infinite;
@@ -64,8 +64,8 @@
     justify-content: center;
     align-items: center;
     position: absolute;
-    width: 250px;
-    height: 250px;
+    width: 175px;
+    height: 175px;
     background-color: #1b4a5d80;
     -webkit-transform: rotateY(90deg) translateZ(-200px) rotateX(15deg);
     transform: rotateY(90deg) translateZ(-200px) rotateX(15deg);
@@ -84,60 +84,60 @@
   }
   //Cube Faces/Children
   .side-front {
-    -webkit-transform: translateZ(125px);
-    transform: translateZ(125px);
+    -webkit-transform: translateZ(100px);
+    transform: translateZ(100px);
     &:hover {
-      -webkit-transform: translateZ(150px);
-      transform: translateZ(150px);
+      -webkit-transform: translateZ(125px);
+      transform: translateZ(125px);
     }
   }
 
   .side-back {
-    -webkit-transform: rotateY(180deg) translateZ(125px);
-    transform: rotateY(180deg) translateZ(125px);
+    -webkit-transform: rotateY(180deg) translateZ(100px);
+    transform: rotateY(180deg) translateZ(100px);
     &:hover {
-      -webkit-transform: rotateY(180deg) translateZ(150px);
-      transform: rotateY(180deg) translateZ(150px);
+      -webkit-transform: rotateY(180deg) translateZ(125px);
+      transform: rotateY(180deg) translateZ(125px);
       cursor: pointer;
     }
   }
 
   .side-top {
-    -webkit-transform: rotateX(90deg) translateZ(125px);
-    transform: rotateX(90deg) translateZ(125px);
+    -webkit-transform: rotateX(90deg) translateZ(100px);
+    transform: rotateX(90deg) translateZ(100px);
     &:hover {
-      -webkit-transform: rotateX(90deg) translateZ(150px);
-      transform: rotateX(90deg) translateZ(150px);
+      -webkit-transform: rotateX(90deg) translateZ(125px);
+      transform: rotateX(90deg) translateZ(125px);
       cursor: pointer;
     }
   }
 
   .side-bottom {
-    -webkit-transform: rotateX(-90deg) translateZ(125px);
-    transform: rotateX(-90deg) translateZ(125px);
+    -webkit-transform: rotateX(-90deg) translateZ(100px);
+    transform: rotateX(-90deg) translateZ(100px);
     &:hover {
-      -webkit-transform: rotateX(-90deg) translateZ(150px);
-      transform: rotateX(-90deg) translateZ(150px);
+      -webkit-transform: rotateX(-90deg) translateZ(125px);
+      transform: rotateX(-90deg) translateZ(125px);
       cursor: pointer;
     }
   }
 
   .side-left {
-    -webkit-transform: rotateY(-90deg) translateZ(125px);
-    transform: rotateY(-90deg) translateZ(125px);
+    -webkit-transform: rotateY(-90deg) translateZ(100px);
+    transform: rotateY(-90deg) translateZ(100px);
     &:hover {
-      -webkit-transform: rotateY(-90deg) translateZ(150px);
-      transform: rotateY(-90deg) translateZ(150px);
+      -webkit-transform: rotateY(-90deg) translateZ(125px);
+      transform: rotateY(-90deg) translateZ(125px);
       cursor: pointer;
     }
   }
 
   .side-right {
-    -webkit-transform: rotateY(90deg) translateZ(125px);
-    transform: rotateY(90deg) translateZ(125px);
+    -webkit-transform: rotateY(90deg) translateZ(100px);
+    transform: rotateY(90deg) translateZ(100px);
     &:hover {
-      -webkit-transform: rotateY(90deg) translateZ(150px);
-      transform: rotateY(90deg) translateZ(150px);
+      -webkit-transform: rotateY(90deg) translateZ(125px);
+      transform: rotateY(90deg) translateZ(125px);
       cursor: pointer;
     }
   }
