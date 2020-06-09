@@ -1,7 +1,8 @@
 //parallax
 .section-parallax {
+  height: 100% !important;
   padding: 0;
-  background-image: url(../../assetts/images/waves.jpg);
+  background: #e6494499;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;

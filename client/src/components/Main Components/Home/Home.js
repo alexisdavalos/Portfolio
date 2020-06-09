@@ -65,7 +65,7 @@ const Home = ({ darkMode }) => {
       </div>
       {/* About Section */}
       <section className="about-section">
-        <div className="content left">
+        <div className="wrapper content left">
           <h3 className="is-family-monospace is-size-4">My Journey</h3>
         </div>
         <div className="content right">
@@ -89,8 +89,7 @@ const Home = ({ darkMode }) => {
         className="has-background-black footer"
         style={{ width: "100%", padding: "2%" }}
       >
-        <p>Built with React.js</p>
-        <img src={reactLogo} />
+        <p>Copyright © 2020 | Alexis Davalos</p>
       </div>
     </>
   );

@@ -7,6 +7,12 @@ nav {
   box-shadow: 0px -12px 20px 7px #0000008a;
 
   .navbar-start {
+    .navbar-menu is-active is-light {
+      background-color: #333;
+    }
+    .navbar-menu .is-light {
+      background-color: white;
+    }
     .navbar-item {
       //safari compatability --snaps back to size after hover
       .buttons {
