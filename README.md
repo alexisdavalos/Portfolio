@@ -3,7 +3,6 @@
 ---
 #### Author: Alexis Davalos
 **NOTE: This is a React.js based project.** 
-**NOTE: Make sure to follow install instructions to preview** 
 ---
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
