@@ -1,4 +1,4 @@
-# Alexis Davalos Portfolio
+# React Portfolio
 
 ---
 #### Author: Alexis Davalos
