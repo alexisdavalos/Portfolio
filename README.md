@@ -1,4 +1,4 @@
-# Alexis Davalos Portfolio"
+# Alexis Davalos Portfolio
 
 ---
 #### Author: Alexis Davalos
@@ -7,6 +7,12 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 <a href="https://codeclimate.com/github/alexisdavalos/portfolio/maintainability"><img src="https://api.codeclimate.com/v1/badges/a372d9d669e3aafd140a/maintainability" /></a>
+
+# Notes:
+## Styled with SASS
+## Built In Custom Hooks
+## Data loaded client side for now
+## Feedback is welcome
 
 ## Available Scripts
 
