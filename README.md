@@ -9,10 +9,14 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 <a href="https://codeclimate.com/github/alexisdavalos/portfolio/maintainability"><img src="https://api.codeclimate.com/v1/badges/a372d9d669e3aafd140a/maintainability" /></a>
 
 # Notes:
-## Styled with SASS
-## Built In Custom Hooks
-## Data loaded client side for now
-## Feedback is welcome
+* Styled with SASS
+* Built In Custom Hooks (Dark Mode, LocalStorage)
+* Data loaded client side for now
+* Feedback is welcome
+
+# TODO
+* Create Express Server
+* Resize/Optimize Assetts
 
 ## Available Scripts
 
