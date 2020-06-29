@@ -2,11 +2,10 @@ import React from "react";
 //images
 import logo from "../../../assetts/images/logo.png";
 import lightLogo from "../../../assetts/images/logo-light.png";
-import reactLogo from "../64px-React-icon.svg.png";
 //components
 import Cube from "../About/Cube.js";
 import Particles from "react-particles-js";
-import Timeline from "../About/Timeline.js";
+// import Timeline from "../About/Timeline.js";
 import Typed from "react-typed";
 import Projects from "../Projects/Projects.js";
 import Skills from "../About/Skills.js";

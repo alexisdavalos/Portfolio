@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "../styling/index.scss";
 import { useDarkMode } from "../hooks/useDarkMode";
 import { Switch, Route } from "react-router-dom";
