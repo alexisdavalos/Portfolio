@@ -64,14 +64,14 @@ const Home = ({ darkMode }) => {
         )}
       </div>
       {/* About Section */}
-      <section className="about-section">
+      {/* <section className="about-section">
         <div className="wrapper content left">
           <h3 className="is-family-monospace is-size-4">My Journey</h3>
         </div>
         <div className="content right">
           <Timeline />
         </div>
-      </section>
+      </section> */}
       {/* Parallax Section */}
       <section className="section-parallax">
         <div className="content">
