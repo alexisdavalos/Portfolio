@@ -3,34 +3,35 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@testing-library/jest-dom": "^4.x.x",
-    "@testing-library/react": "^9.x.x",
-    "@testing-library/user-event": "^7.x.x",
-    "axios": "^0.x.x",
-    "bulma": "^0.8.2",
-    "bulma-dashboard": "^0.3.1",
-    "bulma-extensions": "^6.2.7",
-    "core-js": "^3.6.5",
-    "markdown-to-jsx": "^6.11.1",
-    "node-sass": "^4.x.x",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "react-icons": "^3.9.0",
-    "react-loader-spinner": "^3.1.14",
-    "react-particles-js": "^2.7.1",
-    "react-redux": "^7.x.x",
-    "react-router-dom": "^5.1.2",
-    "react-scripts": "^3.4.1",
-    "react-typed": "^1.2.0",
-    "redux": "^4.x.x",
-    "redux-logger": "^3.x.x",
-    "redux-thunk": "^2.x.x"
+    "@testing-library/jest-dom": "*",
+    "@testing-library/react": "*",
+    "@testing-library/user-event": "*",
+    "axios": "*",
+    "bulma": "*",
+    "bulma-dashboard": "*",
+    "bulma-extensions": "*",
+    "core-js": "*",
+    "markdown-to-jsx": "*",
+    "node-sass": "*",
+    "react": "*",
+    "react-dom": "*",
+    "react-icons": "*",
+    "react-loader-spinner": "*",
+    "react-particles-js": "*",
+    "react-redux": "*",
+    "react-router-dom": "*",
+    "react-scripts": "*",
+    "react-typed": "*",
+    "redux": "*",
+    "redux-logger": "*",
+    "redux-thunk": "*"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "update:packages": "node wipe-dependencies.js && rm -rf nod_modules && npm update --save-dev && npm update --save"
   },
   "browserslist": {
     "production": [
@@ -45,13 +46,13 @@
     ]
   },
   "devDependencies": {
-    "eslint": "^6.8.0",
-    "eslint-config-google": "^0.14.0",
-    "eslint-config-standard": "^14.1.1",
-    "eslint-plugin-import": "^2.20.2",
-    "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-promise": "^4.2.1",
-    "eslint-plugin-react": "^7.19.0",
-    "eslint-plugin-standard": "^4.0.1"
+    "eslint": "*",
+    "eslint-config-google": "*",
+    "eslint-config-standard": "*",
+    "eslint-plugin-import": "*",
+    "eslint-plugin-node": "*",
+    "eslint-plugin-promise": "*",
+    "eslint-plugin-react": "*",
+    "eslint-plugin-standard": "*"
   }
 }

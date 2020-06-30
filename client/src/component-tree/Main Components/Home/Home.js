@@ -1,28 +1,31 @@
-import React from "react";
-//images
-import logo from "../../../assetts/images/logo.png";
-import lightLogo from "../../../assetts/images/logo-light.png";
-//components
-import Cube from "../About/Cube.js";
-import Particles from "react-particles-js";
+import React from 'react';
+// images
+import logo from '../../../assetts/images/logo.png';
+import lightLogo from '../../../assetts/images/logo-light.png';
+// components
+import Cube from '../About/Cube.js';
+import Particles from 'react-particles-js';
+import Timeline from '../About/Timeline.js'
 // import Timeline from "../About/Timeline.js";
-import Typed from "react-typed";
-import Projects from "../Projects/Projects.js";
-import Skills from "../About/Skills.js";
-//icons
-import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
-//configs
-import setUpConfig from "./config/particleConfig.js";
+import Typed from 'react-typed';
+import Projects from '../Projects/Projects.js';
+import Skills from '../About/Skills.js';
+// icons
+import {FaGithub, FaLinkedin, FaTwitter} from 'react-icons/fa';
+// configs
+import setUpConfig from './config/particleConfig.js';
 
-const Home = ({ darkMode }) => {
-  //Dynamically change color of particles
-  const configDark = setUpConfig("#ffffff");
-  const configLight = setUpConfig("#000000");
+const Home = ({darkMode}) => {
+  // Props Validation
+  console.log(darkMode);
+  // Dynamically change color of particles
+  const configDark = setUpConfig('#ffffff');
+  const configLight = setUpConfig('#000000');
   return (
     <>
       <div className="wrapper">
         <section
-          className={darkMode ? "center-section dark" : "center-section light"}
+          className={darkMode ? 'center-section dark' : 'center-section light'}
         >
           <div className="container">
             <img src={darkMode ? lightLogo : logo} alt="logo" />
@@ -86,7 +89,7 @@ const Home = ({ darkMode }) => {
       <Projects darkMode={darkMode} />
       <div
         className="has-background-black footer"
-        style={{ width: "100%", padding: "2%" }}
+        style={{width: '100%', padding: '2%'}}
       >
         <p>Copyright © 2020 | Alexis Davalos</p>
       </div>

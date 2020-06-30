@@ -2,7 +2,7 @@ export const setUpConfig = (color) => {
     return {
         "particles": {
             "number": {
-                "value": 160,
+                "value": 50,
                 "density": {
                     "enable": false
                 }
