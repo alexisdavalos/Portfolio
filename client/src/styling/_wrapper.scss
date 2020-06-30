@@ -1,3 +1,5 @@
+@import "_svgs.scss";
+
 // App Wrapper
 .app-container {
   .wrapper {
@@ -110,6 +112,12 @@
     }
     .content.left {
       background: url(../assetts/images/background-xl.png);
+      .img {
+        width: 50%;
+        z-index: 1;
+        transition: all 0.7s ease;
+        -webkit-transition: all 0.7s ease;
+      }
       h3 {
         z-index: 1;
         color: white;
@@ -119,24 +127,31 @@
         -webkit-transition: all 0.7s ease;
         width: 40%;
         font-style: italic;
-        text-decoration: line-through;
       }
       &:hover {
+        .img {
+          width: 90%;
+          z-index: 1;
+          cursor: pointer;
+        }
         h3 {
           font-size: 1.7rem !important;
-          filter: invert(1);
           text-decoration: none;
         }
       }
       &:before {
         content: "";
         position: absolute;
-        opacity: 0.6;
-        background: url(../assetts/images/waves.jpg);
+        opacity: 0.5;
+        background-color: #000000;
+        background-image: url($ellipse);
+        background-size: cover;
+        background-position: center;
+        filter: sepia(50%);
         width: 100%;
         height: 75vh;
         overflow: hidden;
-        background-size: 300%;
+        background-size: 150%;
         transition: all 0.7s ease;
         -webkit-transition: all 0.7s ease;
         @media (max-width: 1024px) {
@@ -144,9 +159,9 @@
         }
       }
       &:hover:before {
-        background-size: 600%;
+        background-size: 300%;
         cursor: pointer;
-        filter: invert(1);
+        filter: sepia(0%);
       }
     }
     .content.right {

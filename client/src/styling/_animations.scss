@@ -1,7 +1,7 @@
 //Animations CSS
 @media (prefers-reduced-motion: no-preference) {
   //Wrapper Hue Rotation
-  .wrapper {
+  .hue-rotate {
     animation-name: hue-filter;
     -webkit-animation-name: hue-filter;
     animation-duration: 30s;

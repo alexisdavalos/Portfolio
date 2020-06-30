@@ -1,41 +1,42 @@
-import React from 'react';
+import React from "react";
 // images
-import logo from '../../../assetts/images/logo.png';
-import lightLogo from '../../../assetts/images/logo-light.png';
+import logo from "../../assetts/images/logo.png";
+import lightLogo from "../../assetts/images/logo-light.png";
+import mk3 from "../../assetts/images/mk-3.png";
 // components
-import Cube from '../About/Cube.js';
-import Particles from 'react-particles-js';
-import Timeline from '../About/Timeline.js'
+import Cube from "../About/Cube.js";
+import Particles from "react-particles-js";
+import Timeline from "../About/Timeline.js";
 // import Timeline from "../About/Timeline.js";
-import Typed from 'react-typed';
-import Projects from '../Projects/Projects.js';
-import Skills from '../About/Skills.js';
+import Typed from "react-typed";
+import Projects from "../Projects/Projects.js";
+import Skills from "../About/Skills.js";
 // icons
-import {FaGithub, FaLinkedin, FaTwitter} from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 // configs
-import setUpConfig from './config/particleConfig.js';
+import setUpConfig from "./config/particleConfig.js";
 
-const Home = ({darkMode}) => {
+const Home = ({ darkMode }) => {
   // Props Validation
   console.log(darkMode);
   // Dynamically change color of particles
-  const configDark = setUpConfig('#ffffff');
-  const configLight = setUpConfig('#000000');
+  const configDark = setUpConfig("#ffffff");
+  const configLight = setUpConfig("#000000");
   return (
     <>
-      <div className="wrapper">
+      <div className="wrapper hue-rotate">
         <section
-          className={darkMode ? 'center-section dark' : 'center-section light'}
+          className={darkMode ? "center-section dark" : "center-section light"}
         >
           <div className="container">
             <img src={darkMode ? lightLogo : logo} alt="logo" />
             <h2 className="is-size-1 has-text-weight-medium is-family-monospace ">
-              I am a
+              I am
               <Typed
                 strings={[
-                  `Fullstack Developer`,
-                  `Graphic Designer`,
-                  `Eternal Student`,
+                  `a Fullstack Developer`,
+                  `a Graphic Designer`,
+                  `an Eternal Student`,
                 ]}
                 typeSpeed={80}
                 backSpeed={75}
@@ -66,14 +67,15 @@ const Home = ({darkMode}) => {
         )}
       </div>
       {/* About Section */}
-      {/* <section className="about-section">
-        <div className="wrapper content left">
-          <h3 className="is-family-monospace is-size-4">My Journey</h3>
+      <section className="about-section">
+        <div className="content left hue-rotate">
+          <img className="img" src={mk3} alt="mk-3" />
+          {/* <h3 className="is-family-monospace is-size-4">About Me</h3> */}
         </div>
         <div className="content right">
           <Timeline />
         </div>
-      </section> */}
+      </section>
       {/* Parallax Section */}
       <section className="section-parallax">
         <div className="content">
@@ -89,7 +91,7 @@ const Home = ({darkMode}) => {
       <Projects darkMode={darkMode} />
       <div
         className="has-background-black footer"
-        style={{width: '100%', padding: '2%'}}
+        style={{ width: "100%", padding: "2%" }}
       >
         <p>Copyright © 2020 | Alexis Davalos</p>
       </div>

@@ -1,9 +1,9 @@
 // Image imports
-import homebaked from "../../../../assetts/portfolio/home-baked.jpg";
-import herbalhealers from "../../../../assetts/portfolio/herbal-healers.jpg";
-import hautetoffee from "../../../../assetts/portfolio/haute-toffee.jpg";
-import coffeemugsgalore from "../../../../assetts/portfolio/coffee-mugs-galore.jpg";
-import carmenrestorations from "../../../../assetts/portfolio/carmen-restorations.jpg";
+import homebaked from "../../../assetts/portfolio/home-baked.jpg";
+import herbalhealers from "../../../assetts/portfolio/herbal-healers.jpg";
+import hautetoffee from "../../../assetts/portfolio/haute-toffee.jpg";
+import coffeemugsgalore from "../../../assetts/portfolio/coffee-mugs-galore.jpg";
+import carmenrestorations from "../../../assetts/portfolio/carmen-restorations.jpg";
 
 export const projectsData = [
   {
