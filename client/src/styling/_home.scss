@@ -1,5 +1,4 @@
-@import "_svgs.scss";
-
+@import "./svgs";
 // App Wrapper
 .app-container {
   .wrapper {
@@ -12,121 +11,156 @@
     );
     -webkit-filter: hue-rotate(0deg);
     filter: hue-rotate(0deg);
-
+    // Particles Component
     .particles {
       width: 100%;
       height: 100%;
+      &:before {
+        content: "";
+        position: absolute;
+        opacity: 0.1;
+        background-color: #fff0;
+        background-image: url($spirals);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 50%;
+        filter: sepia(50%);
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+      }
     }
-    .center-section {
+  }
+
+  // Center Section
+  .center-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    padding: 5%;
+    margin: 0 auto;
+    z-index: 1;
+    position: absolute;
+    background: url(../assetts/images/background-xl.png);
+    background-attachment: scroll;
+    background-size: cover;
+    .container {
       display: flex;
       justify-content: center;
       align-items: center;
       flex-direction: column;
-      height: 100%;
-      width: 100%;
-      padding: 5%;
-      margin: 0 auto;
-      z-index: 1;
-      position: absolute;
-      background: url(../assetts/images/background-xl.png);
-      background-attachment: scroll;
-      background-size: cover;
-      .container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        transform: scale(0.75);
-      }
-      .social-icons {
-        display: flex;
-        justify-content: space-evenly;
+      transform: scale(0.75);
+    }
+    .social-icons {
+      display: flex;
+      justify-content: space-evenly;
 
-        a {
-          margin: 5%;
-        }
+      a {
+        margin: 5%;
       }
+    }
 
-      h3 {
+    h3 {
+      margin-bottom: 2%;
+      max-width: 800px;
+
+      @media (max-width: 768px) {
         margin-bottom: 2%;
-        max-width: 800px;
-
-        @media (max-width: 768px) {
-          margin-bottom: 2%;
-          max-width: 600px;
-          font-size: 1rem !important;
-        }
+        max-width: 600px;
+        font-size: 1rem !important;
       }
+    }
 
-      h2 {
-        margin-top: 1%;
-        background: linear-gradient(
-          to right,
-          rgba(74, 18, 18, 0.35),
-          rgba(35, 47, 28, 0.35) 150%
-        );
-        -webkit-filter: hue-rotate(180deg);
-        filter: hue-rotate(180deg);
-        opacity: 0.95;
+    h2 {
+      margin-top: 1%;
+      background: linear-gradient(
+        to right,
+        rgba(74, 18, 18, 0.35),
+        rgba(35, 47, 28, 0.35) 150%
+      );
+      -webkit-filter: hue-rotate(180deg);
+      filter: hue-rotate(180deg);
+      opacity: 0.95;
+      color: white;
+      width: 100%;
+      span {
         color: white;
-        width: 100%;
-        span {
-          color: white;
-          margin-left: 10px;
-        }
-        @media (max-width: 768px) {
-          font-size: 1.5rem !important;
-        }
+        margin-left: 10px;
       }
-      img {
-        padding-bottom: 25px;
-        padding-top: 56px;
-        width: 300px;
-        transition: img 5s;
+      @media (max-width: 768px) {
+        font-size: 1.5rem !important;
+      }
+    }
+    img {
+      padding-bottom: 25px;
+      padding-top: 56px;
+      width: 300px;
+      transition: img 5s;
 
-        @media (max-width: 1024px) {
-          width: 200px;
-        }
+      @media (max-width: 1024px) {
+        width: 200px;
       }
     }
   }
+
+  // About Section
+
   .about-section {
     display: flex;
-    background: black;
     width: 100%;
     height: 50%;
+    .is-dark {
+      background: #333;
+    }
     box-shadow: 0px -12px 20px 0px #00000087;
     @media (max-width: 1024px) {
       flex-direction: column;
     }
     .content {
       width: 50%;
-      height: 75vh;
       margin: 0;
       display: flex;
       justify-content: center;
       align-items: center;
       @media (max-width: 1024px) {
         width: 100%;
+        height: 20vh;
       }
     }
+
+    // Left Component
     .content.left {
       background: url(../assetts/images/background-xl.png);
+      color: #333;
+      .is-dark {
+        background: #333;
+        color: white;
+      }
       .img {
         width: 50%;
         z-index: 1;
         transition: all 0.7s ease;
         -webkit-transition: all 0.7s ease;
+        @media (max-width: 1024px) {
+          width: 75%;
+        }
       }
       h3 {
         z-index: 1;
+        font-size: 3.5rem;
         color: white;
+        opacity: 0;
         position: absolute;
         margin: 0;
         transition: all 0.7s ease;
         -webkit-transition: all 0.7s ease;
-        width: 40%;
-        font-style: italic;
+        width: 100%;
+        // font-style: italic;
+        background: #000000ad;
+        cursor: pointer;
       }
       &:hover {
         .img {
@@ -135,27 +169,29 @@
           cursor: pointer;
         }
         h3 {
-          font-size: 1.7rem !important;
           text-decoration: none;
+          opacity: 100%;
         }
       }
       &:before {
         content: "";
         position: absolute;
         opacity: 0.5;
-        background-color: white;
+        background-color: #fff0;
         background-image: url($ellipse);
         background-size: cover;
         background-position: center;
+        background-repeat: no-repeat;
         filter: sepia(50%);
         width: 100%;
-        height: 75vh;
+        height: 100%;
         overflow: hidden;
         background-size: 150%;
         transition: all 0.7s ease;
         -webkit-transition: all 0.7s ease;
         @media (max-width: 1024px) {
           width: 100%;
+          height: 20vh;
         }
       }
       &:hover:before {
@@ -164,10 +200,13 @@
         filter: sepia(0%);
       }
     }
+    // Right Component
     .content.right {
-      background: #333;
       .timeline {
         transform: scale(0.75);
+      }
+      @media (max-width: 1024px) {
+        display: none;
       }
     }
   }

@@ -67,10 +67,10 @@ const Home = ({ darkMode }) => {
         )}
       </div>
       {/* About Section */}
-      <section className="about-section">
+      <section className={darkMode ? "about-section is-dark" : "about-section"}>
         <div className="content left hue-rotate">
           <img className="img" src={mk3} alt="mk-3" />
-          {/* <h3 className="is-family-monospace is-size-4">About Me</h3> */}
+          <h3 className="is-family-monospace">About Me</h3>
         </div>
         <div className="content right">
           <Timeline />
