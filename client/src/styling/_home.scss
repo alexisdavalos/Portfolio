@@ -28,6 +28,9 @@
         width: 100%;
         height: 100%;
         overflow: hidden;
+        @media (max-width: 1024px) {
+          background-size: 200%;
+        }
       }
     }
   }
@@ -47,6 +50,24 @@
     background: url(../assetts/images/background-xl.png);
     background-attachment: scroll;
     background-size: cover;
+    &:before {
+      content: "";
+      position: absolute;
+      opacity: 0.1;
+      background-color: #fff0;
+      background-image: url(../assetts/images/Flat-Mountains.svg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 100%;
+      filter: sepia(50%);
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      @media (max-width: 1024px) {
+        height: 100vh;
+        background-size: cover;
+      }
+    }
     .container {
       display: flex;
       justify-content: center;
@@ -175,7 +196,7 @@
       &:before {
         content: "";
         position: absolute;
-        opacity: 0.5;
+        opacity: 0.25;
         background-color: #fff0;
         background-image: url(../assetts/images/Parabolic-Ellipse2.svg);
         background-position: center;
