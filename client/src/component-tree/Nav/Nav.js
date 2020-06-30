@@ -42,17 +42,10 @@ const Nav = ({ darkMode, setDarkMode }) => {
         </Link>
       </div>
       {!mobileNav ? (
+        // Desktop & Mobile Turnary Component
+
         <div className="navbar-menu is-family-monospace">
           <div className="navbar-start">
-            <Link
-              onClick={(e) => LoaderTimer(e)}
-              to="/"
-              className="navbar-item"
-            >
-              <FaHome size="2em" />
-              <span className="typed-cursor typed-cursor--blink">|</span>
-              <span>Home</span>
-            </Link>
             <Link
               onClick={(e) => LoaderTimer(e)}
               to="/about"
@@ -133,9 +126,8 @@ const Nav = ({ darkMode, setDarkMode }) => {
           </div>
         </div>
       ) : (
-        <></>
-      )}
-      {mobileNav ? (
+        // Mobile Nav Bar
+
         <div
           className={
             darkMode
@@ -178,8 +170,6 @@ const Nav = ({ darkMode, setDarkMode }) => {
             </label>
           </div>
         </div>
-      ) : (
-        <></>
       )}
     </nav>
   );
