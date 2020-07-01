@@ -1,13 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 // Import Icons From Library
-import {
-  FaGrav,
-  FaGreaterThanEqual,
-  FaHome,
-  FaSun,
-  FaMoon,
-} from "react-icons/fa/";
+import { FaGrav, FaGreaterThanEqual, FaSun, FaMoon } from "react-icons/fa/";
 // Import Images from assetts
 import navLogoDark from "../../assetts/images/nav-logo.png";
 import navLogoLight from "../../assetts/images/nav-logo-light.png";
