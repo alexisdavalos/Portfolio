@@ -1,4 +1,5 @@
 @import "svgs.scss";
+
 // App Wrapper
 .app-container {
   .wrapper {
@@ -50,6 +51,21 @@
     background: url(../assetts/images/background-xl.png);
     background-attachment: scroll;
     background-size: cover;
+    &:after {
+      z-index: -1;
+      content: "";
+      position: absolute;
+      opacity: 0.29;
+      background-color: #fff0;
+      background-image: url(../assetts/images/Subtle-Prism.svg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 117%;
+      filter: brightness(0.25);
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
     &:before {
       content: "";
       position: absolute;
@@ -68,6 +84,7 @@
         background-size: cover;
       }
     }
+
     .container {
       display: flex;
       justify-content: center;
