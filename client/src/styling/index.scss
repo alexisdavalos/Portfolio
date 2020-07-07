@@ -1,9 +1,10 @@
+// Bulma Styles
 @import "bulma";
 @import "../../node_modules/bulma-extensions/bulma-switch/src/sass/index.sass";
 @import "../../node_modules/bulma-dashboard/src/bulma-dashboard.sass";
 @import "../../node_modules/bulma-extensions/bulma-timeline/src/sass/index.sass";
 
-//style imports
+//Sass Modules
 @import "./parallax";
 @import "./appContainer";
 @import "./animations";
@@ -20,6 +21,7 @@
 @import "./aboutWrapper";
 @import "./svgs";
 
+//Soft CSS Reset
 h1,
 h2,
 h3,

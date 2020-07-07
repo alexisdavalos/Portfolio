@@ -15,7 +15,7 @@ function App() {
   //Initialize dark mode hook
   const [darkMode, setDarkMode] = useDarkMode("darkmode", true);
 
-  //In case local storage can't set token -- defaults to light theme
+  //In case hook fails and can't set token -- defaults to dark theme
   if (window.localStorage.getItem("darkmode") === null) {
     setDarkMode(true);
   }

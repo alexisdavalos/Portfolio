@@ -1,8 +1,10 @@
 import React from "react";
+
 // images
 import logo from "../../assetts/images/logo.png";
 import lightLogo from "../../assetts/images/logo-light.png";
 import mk3 from "../../assetts/images/mk-3.png";
+
 // components
 import Cube from "../About/Cube.js";
 import Particles from "react-particles-js";
@@ -11,9 +13,11 @@ import Timeline from "../About/Timeline.js";
 import Typed from "react-typed";
 import Projects from "../Projects/Projects.js";
 import Skills from "../About/Skills.js";
+
 // icons
 import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
-// configs
+
+// particle configs
 import setUpConfig from "./config/particleConfig.js";
 
 const Home = ({ darkMode }) => {
@@ -60,11 +64,13 @@ const Home = ({ darkMode }) => {
             </div>
           </div>
         </section>
+        {/* Particles Component */}
         {darkMode ? (
           <Particles className="particles isDark" params={configDark} />
         ) : (
           <Particles className="particles isLight" params={configLight} />
         )}
+        {/* Particles Component End */}
       </div>
       {/* About Section */}
       <section className={darkMode ? "about-section is-dark" : "about-section"}>
