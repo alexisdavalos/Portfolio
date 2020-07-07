@@ -1,0 +1,222 @@
+//Animations CSS
+@media (prefers-reduced-motion: no-preference) {
+  //Wrapper Hue Rotation
+  .hue-rotate {
+    animation-name: hue-filter;
+    -webkit-animation-name: hue-filter;
+    animation-duration: 30s;
+    -webkit-animation-duration: 30s;
+    animation-timing-function: linear;
+    -webkit-animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+  }
+
+  // Spiral Animation
+  .particles::before {
+    animation-name: spiral;
+    -webkit-animation-name: spiral;
+    animation-duration: 30s;
+    -webkit-animation-duration: 30s;
+    animation-timing-function: linear;
+    -webkit-animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+  }
+
+  //Rotating Box CSS/Animations
+  .cube-box {
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    //Box Rotation Animation
+    animation-name: box-rotation;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    -webkit-animation-name: box-rotation;
+    -webkit-animation-duration: 20s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    -o-animation-name: box-rotation;
+    -o-animation-duration: 20s;
+    -o-animation-iteration-count: infinite;
+    -o-animation-timing-function: linear;
+    -moz-animation-name: box-rotation;
+    -moz-animation-duration: 20s;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: linear;
+    -ms-animation-name: box-rotation;
+    -ms-animation-duration: 20s;
+    -ms-animation-iteration-count: infinite;
+    -ms-animation-timing-function: linear;
+  }
+
+  .cube-wrapper {
+    width: 45%;
+    padding-bottom: 25%;
+
+    @media (max-width: 1024px) {
+      width: 100%;
+      margin-right: 100px;
+    }
+  }
+
+  .cube-wrap {
+    width: 1px;
+    height: 100px;
+    -webkit-perspective: 2000px;
+    perspective: 2000px;
+    -webkit-perspective-origin: 50% -500px;
+    perspective-origin: 50% -500px;
+    margin-right: 200px;
+  }
+
+  .single-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 175px;
+    height: 175px;
+    background-color: #1b4a5d80;
+    -webkit-transform: rotateY(90deg) translateZ(-200px) rotateX(15deg);
+    transform: rotateY(90deg) translateZ(-200px) rotateX(15deg);
+    -webkit-transform-origin: 50% 50% 0;
+    transform-origin: 50% 50% 0;
+    //cube shadow for each child
+    &:nth-child(1n + 0) {
+      box-shadow: inset 0px 0px 20px 6px #33333354;
+      border: solid 1px #0077f3;
+    }
+    //img on cube face size
+    img {
+      text-align: center;
+      width: 100px;
+    }
+  }
+  //Cube Faces/Children
+  .side-front {
+    -webkit-transform: translateZ(100px);
+    transform: translateZ(100px);
+    &:hover {
+      -webkit-transform: translateZ(125px);
+      transform: translateZ(125px);
+    }
+  }
+
+  .side-back {
+    -webkit-transform: rotateY(180deg) translateZ(100px);
+    transform: rotateY(180deg) translateZ(100px);
+    &:hover {
+      -webkit-transform: rotateY(180deg) translateZ(125px);
+      transform: rotateY(180deg) translateZ(125px);
+      cursor: pointer;
+    }
+  }
+
+  .side-top {
+    -webkit-transform: rotateX(90deg) translateZ(100px);
+    transform: rotateX(90deg) translateZ(100px);
+    &:hover {
+      -webkit-transform: rotateX(90deg) translateZ(125px);
+      transform: rotateX(90deg) translateZ(125px);
+      cursor: pointer;
+    }
+  }
+
+  .side-bottom {
+    -webkit-transform: rotateX(-90deg) translateZ(100px);
+    transform: rotateX(-90deg) translateZ(100px);
+    &:hover {
+      -webkit-transform: rotateX(-90deg) translateZ(125px);
+      transform: rotateX(-90deg) translateZ(125px);
+      cursor: pointer;
+    }
+  }
+
+  .side-left {
+    -webkit-transform: rotateY(-90deg) translateZ(100px);
+    transform: rotateY(-90deg) translateZ(100px);
+    &:hover {
+      -webkit-transform: rotateY(-90deg) translateZ(125px);
+      transform: rotateY(-90deg) translateZ(125px);
+      cursor: pointer;
+    }
+  }
+
+  .side-right {
+    -webkit-transform: rotateY(90deg) translateZ(100px);
+    transform: rotateY(90deg) translateZ(100px);
+    &:hover {
+      -webkit-transform: rotateY(90deg) translateZ(125px);
+      transform: rotateY(90deg) translateZ(125px);
+      cursor: pointer;
+    }
+  }
+
+  //End of Cube Animations
+}
+
+@keyframes hue-filter {
+  from {
+    filter: hue-rotate(-360deg);
+  }
+
+  to {
+    filter: hue-rotate(360deg);
+  }
+}
+
+@-webkit-keyframes hue-filter {
+  from {
+    -webkit-filter: hue-rotate(-360deg);
+  }
+
+  to {
+    -webkit-filter: hue-rotate(360deg);
+  }
+}
+
+@keyframes box-rotation {
+  from {
+    transform: rotate3d(1, 1, 0, 0deg);
+  }
+
+  to {
+    transform: rotate3d(1, 1, 0, 360deg);
+  }
+}
+
+@-webkit-keyframes box-rotation {
+  0% {
+    -webkit-transform: rotate3d(1, 1, 0, 360deg);
+  }
+  50% {
+    -webkit-transform: rotate3d(1, 1, 0, 180deg);
+  }
+  100% {
+    -webkit-transform: rotate3d(1, 1, 0, 0deg);
+  }
+}
+
+@keyframes spiral {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes spiral {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  50% {
+    -webkit-transform: rotate(180deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}

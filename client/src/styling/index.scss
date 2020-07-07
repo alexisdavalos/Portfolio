@@ -1,0 +1,45 @@
+// Bulma Styles
+@import "bulma";
+@import "../../node_modules/bulma-extensions/bulma-switch/src/sass/index.sass";
+@import "../../node_modules/bulma-dashboard/src/bulma-dashboard.sass";
+@import "../../node_modules/bulma-extensions/bulma-timeline/src/sass/index.sass";
+
+//Sass Modules
+@import "./parallax";
+@import "./appContainer";
+@import "./animations";
+@import "./dashboard";
+@import "./loader";
+@import "./navigation";
+@import "./progressBar";
+@import "./projectsWrapper";
+@import "./skills";
+@import "./utils";
+@import "./home";
+@import "./footer";
+@import "./mixins";
+@import "./aboutWrapper";
+@import "./svgs";
+
+//Soft CSS Reset
+h1,
+h2,
+h3,
+h4 {
+  margin-bottom: 10px;
+}
+
+body {
+  margin: 0;
+  text-align: center;
+  overflow: hidden;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+svg {
+  vertical-align: middle;
+}

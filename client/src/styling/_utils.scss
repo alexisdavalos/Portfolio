@@ -1,0 +1,17 @@
+//Utils
+.hidden {
+  opacity: 0;
+  visibility: hidden !important;
+}
+
+.dark-mode {
+  background: #333;
+}
+
+.light * {
+  color: #333;
+}
+
+.dark * {
+  color: whitesmoke;
+}

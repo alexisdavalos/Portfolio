@@ -1,0 +1,23 @@
+//Skills & Select
+.app-container {
+  .select {
+    width: 100%;
+
+    select {
+      width: 100%;
+    }
+  }
+  .skills {
+    margin-top: 2.5%;
+
+    .skills-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+
+      .tags {
+        margin-right: 5px;
+      }
+    }
+  }
+}
