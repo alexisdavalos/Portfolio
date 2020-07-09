@@ -56,12 +56,12 @@
 			z-index: -1;
 			content: "";
 			position: absolute;
-			opacity: 0.29;
+			opacity: 0.5;
 			background-color: #fff0;
 			background-image: url(../assetts/images/Subtle-Prism.svg);
 			background-position: center;
 			background-repeat: no-repeat;
-			background-size: 117%;
+			background-size: cover;
 			filter: brightness(0.25);
 			width: 100%;
 			height: 100%;
@@ -76,7 +76,7 @@
 			background-image: url(../assetts/images/Flat-Mountains.svg);
 			background-position: center;
 			background-repeat: no-repeat;
-			background-size: 100%;
+			background-size: cover;
 			filter: sepia(50%);
 			width: 100%;
 			height: 100%;
@@ -160,32 +160,33 @@
 			flex-direction: column;
 		}
 		.content {
-			width: 50%;
 			margin: 0;
 			display: flex;
 			justify-content: center;
 			align-items: center;
+		}
+
+		// Full Width Component
+		.content.full {
+			width: 100%;
+			height: 20vh;
+			background: url(../assetts/images/background-xl.png);
+			color: #333;
 			@media (max-width: 1024px) {
 				width: 100%;
 				height: 20vh;
 			}
-		}
-
-		// Left Component
-		.content.left {
-			background: url(../assetts/images/background-xl.png);
-			color: #333;
 			.is-dark {
 				background: #333;
 				color: white;
 			}
 			.img {
-				width: 50%;
+				width: 40%;
 				z-index: 1;
 				transition: all 0.7s ease;
 				-webkit-transition: all 0.7s ease;
 				@media (max-width: 1024px) {
-					width: 75%;
+					width: 50%;
 				}
 			}
 			h3 {
@@ -204,8 +205,11 @@
 			}
 			&:hover {
 				.img {
-					width: 90%;
+					width: 60%;
 					cursor: pointer;
+					@media (max-width: 1024px) {
+						width: 75%;
+					}
 				}
 				h3 {
 					text-decoration: none;
