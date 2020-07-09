@@ -8,7 +8,6 @@ import mk3 from "../../assetts/images/mk-3.png";
 // components
 import Cube from "../About/Cube.js";
 import Particles from "react-particles-js";
-import Timeline from "../About/Timeline.js";
 // import Timeline from "../About/Timeline.js";
 import Typed from "react-typed";
 import Projects from "../Projects/Projects.js";
@@ -74,12 +73,9 @@ const Home = ({ darkMode }) => {
       </div>
       {/* About Section */}
       <section className={darkMode ? "about-section is-dark" : "about-section"}>
-        <div className="content left hue-rotate">
+        <div className="content full hue-rotate">
           <img className="img" src={mk3} alt="mk-3" />
           <h3 className="is-family-monospace">About Me</h3>
-        </div>
-        <div className="content right">
-          <Timeline />
         </div>
       </section>
       {/* Parallax Section */}
