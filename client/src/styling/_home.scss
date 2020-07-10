@@ -198,10 +198,14 @@
 				margin: 0;
 				transition: all 0.7s ease;
 				-webkit-transition: all 0.7s ease;
-				width: 200px;
+				width: 35%;
 				// font-style: italic;
 				background: #00000069;
 				cursor: pointer;
+				@media (max-width: 1024px) {
+					font-size: 2.5rem;
+					width: 50%;
+				}
 			}
 			&:hover {
 				.img {
