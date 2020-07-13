@@ -74,7 +74,7 @@ const Home = ({ darkMode }) => {
       {/* About Section */}
       <section className={darkMode ? "about-section is-dark" : "about-section"}>
         <div className="content full hue-rotate">
-          <img className="img" src={mk3} alt="mk-3" />
+          <img className="img" src={mk3} alt="layered screens" />
           <h3 className="is-family-monospace">About Me</h3>
         </div>
       </section>
