@@ -30,7 +30,7 @@ const Projects = (props) => {
   };
   return (
     <div className="wrapper projects is-desktop">
-      <div className="search">
+      {/* <div className="search">
         <div className="control has-icons-left">
           <input
             className={
@@ -50,9 +50,9 @@ const Projects = (props) => {
             </i>
           </span>
         </div>
-      </div>
+      </div> */}
       {searchResults.map((project, index) => (
-        <Card project={project} key={index} darkMode={props.darkMode} />
+        <Card project={project} key={Math.random()} darkMode={props.darkMode} />
       ))}
     </div>
   );

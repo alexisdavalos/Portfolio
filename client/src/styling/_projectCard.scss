@@ -1,0 +1,14 @@
+.wrapper.projects {
+  .card {
+    display: flex;
+    .card-image {
+      width: 25%;
+    }
+    .card-content {
+      width: 75%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
