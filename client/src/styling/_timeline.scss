@@ -17,7 +17,7 @@
     }
   }
   .timeline-item:hover .timeline-content {
-    opacity: 100%;
+    opacity: 1;
     font-weight: 600;
   }
   .timeline-item:nth-of-type(2n) .timeline-content {
@@ -31,7 +31,7 @@
     .timeline-content {
       transform: rotate(90deg);
       transition: all 0.05s ease-in-out;
-      opacity: 50%;
+      opacity: 0.5;
       // Override Bulma
       text-align: center !important;
       align-items: center !important;
