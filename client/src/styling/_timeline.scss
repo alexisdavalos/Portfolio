@@ -2,8 +2,8 @@
 .timeline {
 	display: flex;
 	transform: rotate(-90deg) scale(0.75);
-	margin: -15% 0% !important;
-	@media (max-width: 1250px) {
+	margin: -17.5% 0% !important;
+	@media (max-width: 1450px) {
 		// Bulma Override
 		margin: -25% 0% !important;
 	}
