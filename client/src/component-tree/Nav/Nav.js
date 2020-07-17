@@ -75,7 +75,7 @@ const Nav = ({ darkMode, setDarkMode }) => {
 							<span>Projects</span>
 						</Link>
 
-						<div className="navbar-item has-dropdown is-hoverable">
+						{/* <div className="navbar-item has-dropdown is-hoverable">
 							<Link to="#top" className="navbar-link">
 								<span className="typed-cursor typed-cursor--blink">|</span>More
 							</Link>
@@ -89,7 +89,7 @@ const Nav = ({ darkMode, setDarkMode }) => {
 									Report an issue
 								</Link>
 							</div>
-						</div>
+						</div> */}
 					</div>
 
 					<div className="navbar-end">
