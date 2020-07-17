@@ -1,10 +1,11 @@
 import React from "react";
 import { events } from "./data/Events.js";
 const Timeline = ({ darkMode }) => {
+  console.log("darkMode in Timeline:", darkMode);
   return (
     <div className="timeline is-centered">
       <header className="timeline-header">
-        <span className="tag is-medium is-primary">Start</span>
+        <span className="tag start is-medium is-primary">Start</span>
       </header>
       {events ? (
         events.map((event, index) => {
@@ -12,15 +13,24 @@ const Timeline = ({ darkMode }) => {
             return (
               <div
                 className={
-                  darkMode ? "timeline-item is-light" : "timeline-item is-dark"
+                  darkMode
+                    ? "timeline-item is-warning"
+                    : "timeline-item is-warning"
                 }
-                key={index}
+                key={Math.random()}
               >
                 <div className="timeline-marker is-dark is-image is-32x32">
                   <img src={event.img} alt={event.role} />
                 </div>
-                <div className="timeline-content">
+                <div
+                  className={
+                    darkMode
+                      ? "timeline-content has-text-light"
+                      : "timeline-content has-text-dark"
+                  }
+                >
                   <p className="heading">{event.date}</p>
+                  <p>{event.company}</p>
                   <p>{event.role}</p>
                 </div>
               </div>
@@ -31,8 +41,15 @@ const Timeline = ({ darkMode }) => {
                 <div className="timeline-marker is-primary">
                   <i className={event.img}></i>
                 </div>
-                <div className="timeline-content">
+                <div
+                  className={
+                    darkMode
+                      ? "timeline-content has-text-light"
+                      : "timeline-content has-text-dark"
+                  }
+                >
                   <p className="heading">{event.date}</p>
+                  <p>{event.company}</p>
                   <p>{event.role}</p>
                 </div>
               </div>
@@ -45,7 +62,7 @@ const Timeline = ({ darkMode }) => {
         <></>
       )}
       <header className="timeline-header">
-        <span className="tag is-medium is-primary">2020</span>
+        <span className="tag end is-medium is-danger">2020</span>
       </header>
     </div>
   );

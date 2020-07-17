@@ -10,6 +10,16 @@ import LoaderTimer from "../../utils/LoaderTimer.js";
 
 const Nav = ({ darkMode, setDarkMode }) => {
   const [mobileNav, setMobileNav] = useState(false);
+  const scrollToSection = (query) => {
+    // Select Projects Element
+    let section = document.querySelector(query);
+    //Check if Mobile
+    if (mobileNav) {
+      setMobileNav(false);
+    }
+    // Scroll To Projects
+    section.scrollIntoView({ block: "center", behavior: "smooth" });
+  };
   return (
     <nav
       className={darkMode === true ? "navbar is-dark" : "navbar is-light"}
@@ -17,12 +27,16 @@ const Nav = ({ darkMode, setDarkMode }) => {
       aria-label="main navigation"
     >
       <div className="navbar-brand">
-        <Link onClick={(e) => LoaderTimer(e)} to="/" className="navbar-item">
+        <Link
+          onClick={() => scrollToSection(".center-section")}
+          to="/"
+          className="navbar-item"
+        >
           <img src={!darkMode ? navLogoDark : navLogoLight} alt="logo" />
         </Link>
 
         <Link
-          to="#"
+          to="/"
           onClick={() => setMobileNav(!mobileNav)}
           role="button"
           className="navbar-burger burger"
@@ -41,8 +55,10 @@ const Nav = ({ darkMode, setDarkMode }) => {
         <div className="navbar-menu is-family-monospace">
           <div className="navbar-start">
             <Link
-              onClick={(e) => LoaderTimer(e)}
-              to="/about"
+              onClick={() => {
+                scrollToSection(".about-section");
+              }}
+              to="/"
               className="navbar-item"
             >
               <FaGrav size="2em" />
@@ -50,8 +66,8 @@ const Nav = ({ darkMode, setDarkMode }) => {
               <span>About</span>
             </Link>
             <Link
-              onClick={(e) => LoaderTimer(e)}
-              to="/projects"
+              onClick={() => scrollToSection(".projects")}
+              to="/"
               className="navbar-item"
             >
               <FaGreaterThanEqual size="2em" />
@@ -125,44 +141,62 @@ const Nav = ({ darkMode, setDarkMode }) => {
         <div
           className={
             darkMode
-              ? "navbar-menu is-active is-dark"
-              : "navbar-menu is-active is-light"
+              ? "navbar-menu is-active has-background-light"
+              : "navbar-menu is-active has-background-dark"
           }
           id="navMenu"
         >
           <Link
-            onClick={(e) => LoaderTimer(e) && setMobileNav(false)}
+            onClick={() => scrollToSection(".center-section")}
             to="/"
-            className="navbar-item"
+            className={
+              darkMode
+                ? "navbar-item has-text-dark"
+                : "navbar-item has-text-light"
+            }
           >
             <span>Home</span>
           </Link>
           <Link
-            onClick={(e) => LoaderTimer(e) && setMobileNav(false)}
-            to="/about"
-            className="navbar-item"
+            onClick={() => scrollToSection(".about-section")}
+            to="/"
+            className={
+              darkMode
+                ? "navbar-item has-text-dark"
+                : "navbar-item has-text-light"
+            }
           >
             <span>About</span>
           </Link>
           <Link
-            onClick={(e) => LoaderTimer(e) && setMobileNav(false)}
-            to="/projects"
-            className="navbar-item"
+            onClick={() => scrollToSection(".projects")}
+            to="/"
+            className={
+              darkMode
+                ? "navbar-item has-text-dark"
+                : "navbar-item has-text-light"
+            }
           >
             <span>Projects</span>
           </Link>
-          <div className="field switch-wrapper">
-            <input
-              onClick={() => setDarkMode(!darkMode)}
-              id="switchThinColorDefault"
-              type="checkbox"
-              className="switch is-black is-rounded"
-              defaultChecked={darkMode ? true : false}
-            />
-            <label htmlFor="switchThinColorDefault">
-              <b>{darkMode ? "DarkMode: ON" : "DarkMode: OFF"}</b>
-            </label>
-          </div>
+          {mobileNav ? (
+            <div className="field switch-wrapper hidden-desktop">
+              <input
+                onClick={() => setDarkMode(!darkMode)}
+                id="switchThinColorDefault"
+                type="checkbox"
+                className="switch is-black is-rounded"
+                defaultChecked={darkMode ? true : false}
+              />
+              <label htmlFor="switchThinColorDefault">
+                <b className={darkMode ? "has-text-dark" : "has-text-light"}>
+                  {darkMode ? "DarkMode: ON" : "DarkMode: OFF"}
+                </b>
+              </label>
+            </div>
+          ) : (
+            <></>
+          )}
         </div>
       )}
     </nav>

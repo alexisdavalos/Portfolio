@@ -1,0 +1,51 @@
+// Timeline Component Styles
+.timeline {
+  display: flex;
+  transform: rotate(-90deg) scale(0.75);
+  margin: -20% 0%;
+  @media (max-width: 1024px) {
+    // Bulma Override
+    margin-top: -20% !important;
+  }
+  .timeline-header {
+    transform: rotate(90deg);
+    .tag.start {
+      margin-right: 50px;
+    }
+    .tag.end {
+      margin-left: 50px;
+    }
+  }
+  .timeline-item:hover .timeline-content {
+    opacity: 100%;
+    font-weight: 600;
+  }
+  .timeline-item:nth-of-type(2n) .timeline-content {
+    // Override Bulma
+    margin-right: -50px;
+  }
+  .timeline-item {
+    background: none;
+    transition: all 1s ease-in-out;
+    cursor: pointer;
+    .timeline-content {
+      transform: rotate(90deg);
+      transition: all 0.05s ease-in-out;
+      opacity: 50%;
+      // Override Bulma
+      text-align: center !important;
+      align-items: center !important;
+    }
+    .timeline-marker {
+      cursor: pointer;
+      img {
+        transform: rotate((90deg));
+        animation: none;
+      }
+    }
+  }
+
+  @media (max-width: 1024px) {
+    margin-top: -25%;
+  }
+}

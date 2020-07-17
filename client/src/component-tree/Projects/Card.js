@@ -1,55 +1,27 @@
-import React from "react";
-import Loader from "react-loader-spinner";
+import React, { useState } from "react";
+import CardModal from "./CardModal.js";
 
 const Card = ({ project, darkMode }) => {
+  const [modal, setModal] = useState(false);
   return (
-    <div className="card">
-      <div className="card-image">
-        {project.img ? (
-          <img src={project.img} alt={project.name} />
-        ) : (
-          <Loader type="ThreeDots" color="#333" height={100} width={100} />
-        )}
-      </div>
-      <div
-        className={
-          darkMode
-            ? "card-content has-background-light has-text-dark-ter"
-            : "card-content has-background-dark has-text-white-ter"
-        }
-      >
-        <div className="content">
-          <h2 className={darkMode ? "has-text-dark" : "has-text-light"}>
-            {project.name}
-          </h2>
-          <p>{project.description}</p>
-          <br />
-          <p>Categories:</p>
-          {project.hashtags.map((hashtag, index) => (
-            <span
-              className={darkMode ? "tag is-dark" : "tag is-light"}
-              key={index}
-            >
-              {hashtag}
-            </span>
-          ))}
-          <br />
-          <br />
-          <a
-            href={project.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={
-              darkMode
-                ? "button is-dark is-rounded"
-                : "button is-light is-rounded"
-            }
-          >
-            <strong>Visit Project</strong>
-          </a>
+    <>
+      {/* Card Modal Component */}
+      <CardModal
+        modal={modal}
+        setModal={setModal}
+        darkMode={darkMode}
+        project={project}
+      />
+      {/* Card Modal Component End */}
+
+      {/* Card Component */}
+      <div className="card" onClick={() => setModal(!modal)}>
+        <div className="card-image is-square">
+          <img src={project.img} alt={project.description} />
         </div>
       </div>
-    </div>
+      {/* Card Component End */}
+    </>
   );
 };
 

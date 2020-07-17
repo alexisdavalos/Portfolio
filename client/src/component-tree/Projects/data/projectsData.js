@@ -4,7 +4,7 @@ import herbalhealers from "../../../assetts/portfolio/herbal-healers.jpg";
 import hautetoffee from "../../../assetts/portfolio/haute-toffee.jpg";
 import coffeemugsgalore from "../../../assetts/portfolio/coffee-mugs-galore.jpg";
 import carmenrestorations from "../../../assetts/portfolio/carmen-restorations.jpg";
-
+import magariwear from "../../../assetts/portfolio/magari-wear.jpg";
 export const projectsData = [
   {
     id: 1,
@@ -86,5 +86,21 @@ export const projectsData = [
       "Graphic Design",
     ],
     url: "https://www.carmenrestorations.com/",
+  },
+  {
+    id: 6,
+    name: "MagariWear",
+    img: magariwear,
+    description:
+      "Collaborted with project manager to give Magari Wear a fresh new look. Following design specs and brain storming sessions, a new vision was born. By riders, for rider, see with us, not with them.",
+    hashtags: [
+      "Liquid",
+      "CSS",
+      "JS",
+      "Shopify",
+      "Adobe Creative Suite",
+      "Graphic Design",
+    ],
+    url: "https://www.magariwear.com",
   },
 ];
