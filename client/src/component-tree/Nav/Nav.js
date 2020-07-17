@@ -6,8 +6,6 @@ import { FaGrav, FaGreaterThanEqual, FaSun, FaMoon } from "react-icons/fa/";
 import navLogoDark from "../../assetts/images/nav-logo.png";
 import navLogoLight from "../../assetts/images/nav-logo-light.png";
 
-import LoaderTimer from "../../utils/LoaderTimer.js";
-
 const Nav = ({ darkMode, setDarkMode }) => {
   const [mobileNav, setMobileNav] = useState(false);
   const scrollToSection = (query) => {
