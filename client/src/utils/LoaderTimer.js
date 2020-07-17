@@ -14,7 +14,7 @@ const LoaderToggle = async (e) => {
   const timer = setTimeout(() => {
     loader.classList.toggle("hidden");
     HTMLbody.style.overflowY = "visible";
-  }, 3000);
+  }, 2000);
 
   // cleaup function - removes timer reference from memory
   return () => {

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 // images
 import logo from "../../assetts/images/logo.png";
@@ -8,6 +8,7 @@ import mk3 from "../../assetts/images/mk-3.png";
 // components
 import Cube from "../About/Cube.js";
 import Particles from "react-particles-js";
+import AboutModal from "../About/AboutModal.js";
 // import Timeline from "../About/Timeline.js";
 import Typed from "react-typed";
 import Projects from "../Projects/Projects.js";
@@ -20,8 +21,17 @@ import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 import setUpConfig from "./config/particleConfig.js";
 
 const Home = ({ darkMode }) => {
-  // Props Validation
-  console.log(darkMode);
+  // Popup Modal Toggle
+  const [toggle, setToggle] = useState(false);
+  // Scroll To Projects Section and Toggle Modal
+  const viewProjects = () => {
+    // Select Projects Element
+    let projects = document.querySelector(".projects");
+    // Toggle Modal
+    setToggle(!toggle);
+    // Scroll To Projects
+    projects.scrollIntoView({ behavior: "smooth" });
+  };
   // Dynamically change color of particles
   const configDark = setUpConfig("#ffffff");
   const configLight = setUpConfig("#000000");
@@ -73,9 +83,22 @@ const Home = ({ darkMode }) => {
       </div>
       {/* About Section */}
       <section className={darkMode ? "about-section is-dark" : "about-section"}>
+        <AboutModal
+          toggle={toggle}
+          setToggle={setToggle}
+          darkMode={darkMode}
+          viewProjects={viewProjects}
+        />
         <div className="content full hue-rotate">
-          <img className="img" src={mk3} alt="mk-3" />
-          <h3 className="is-family-monospace">About Me</h3>
+          {/* Image Component */}
+          <img
+            className="img"
+            src={mk3}
+            onClick={() => setToggle(!toggle)}
+            alt="layered screens design"
+          />
+          {/* Overlayed Subtitle <h3> */}
+          <h3 onClick={() => setToggle(!toggle)}>About Me</h3>
         </div>
       </section>
       {/* Parallax Section */}

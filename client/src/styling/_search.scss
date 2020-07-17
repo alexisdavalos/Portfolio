@@ -1,0 +1,26 @@
+.search {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 1%;
+
+  .control {
+    width: 50%;
+    display: flex;
+
+    .icon {
+      .icon-container {
+        display: flex;
+        justify-content: center;
+        svg {
+          width: 55%;
+          padding: 5%;
+        }
+      }
+    }
+
+    button {
+      margin-left: -50px;
+    }
+  }
+}

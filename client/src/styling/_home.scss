@@ -2,258 +2,148 @@
 
 // App Wrapper
 .app-container {
-	.wrapper {
-		width: 100%;
-		height: 100vh;
-		background-image: linear-gradient(
-			360deg,
-			rgba(74, 18, 18, 0.3),
-			rgba(35, 47, 28, 0) 100%
-		);
-		-webkit-filter: hue-rotate(0deg);
-		filter: hue-rotate(0deg);
-		// Particles Component
-		.particles {
-			width: 100%;
-			height: 100%;
-			&:before {
-				content: "";
-				position: absolute;
-				opacity: 0.1;
-				background-color: #fff0;
-				background-image: url(../assetts/images/Parabolic-Triangle.svg);
-				background-position: center;
-				background-repeat: no-repeat;
-				background-size: 117%;
-				filter: sepia(50%);
-				width: 100%;
-				height: 100%;
-				overflow: hidden;
-				@media (max-width: 1024px) {
-					background-size: 200%;
-				}
-			}
-		}
-	}
+  .wrapper {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(
+      360deg,
+      rgba(74, 18, 18, 0.3),
+      rgba(35, 47, 28, 0) 100%
+    );
+    -webkit-filter: hue-rotate(0deg);
+    filter: hue-rotate(0deg);
 
-	// Center Section
-	.center-section {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		flex-direction: column;
-		height: 100%;
-		width: 100%;
-		padding: 5%;
-		margin: 0 auto;
-		z-index: 1;
-		position: absolute;
-		background: url(../assetts/images/background-xl.png);
-		background-attachment: scroll;
-		background-size: cover;
-		// Pseudo After Element: Subtle-Prism
-		&:after {
-			z-index: -1;
-			content: "";
-			position: absolute;
-			opacity: 0.5;
-			background-color: #fff0;
-			background-image: url(../assetts/images/Subtle-Prism.svg);
-			background-position: center;
-			background-repeat: no-repeat;
-			background-size: cover;
-			filter: brightness(0.25);
-			width: 100%;
-			height: 100%;
-			overflow: hidden;
-		}
-		// Pseudo Before Element: Flat Mountains
-		&:before {
-			content: "";
-			position: absolute;
-			opacity: 0.1;
-			background-color: #fff0;
-			background-image: url(../assetts/images/Flat-Mountains.svg);
-			background-position: center;
-			background-repeat: no-repeat;
-			background-size: cover;
-			filter: sepia(50%);
-			width: 100%;
-			height: 100%;
-			overflow: hidden;
-			@media (max-width: 1024px) {
-				height: 100vh;
-				background-size: cover;
-			}
-		}
+    // Particles Component
+    .particles {
+      width: 100%;
+      height: 100%;
+      &:before {
+        content: "";
+        position: absolute;
+        opacity: 0.1;
+        background-color: #fff0;
+        background-image: url(../assetts/images/Parabolic-Triangle.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 117%;
+        filter: sepia(50%);
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        @media (max-width: 1024px) {
+          background-size: 200%;
+        }
+      }
+    }
+  }
 
-		.container {
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			flex-direction: column;
-			transform: scale(0.75);
-		}
-		.social-icons {
-			display: flex;
-			justify-content: space-evenly;
+  // Center Section
+  .center-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    padding: 5%;
+    margin: 0 auto;
+    z-index: 1;
+    position: absolute;
+    background: url(../assetts/images/background-xl.png);
+    background-attachment: scroll;
+    background-size: cover;
+    // Pseudo After Element: Subtle-Prism
+    &:after {
+      z-index: -1;
+      content: "";
+      position: absolute;
+      opacity: 0.5;
+      background-color: #fff0;
+      background-image: url(../assetts/images/Subtle-Prism.svg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      filter: brightness(0.25);
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+    // Pseudo Before Element: Flat Mountains
+    &:before {
+      content: "";
+      position: absolute;
+      opacity: 0.1;
+      background-color: #fff0;
+      background-image: url(../assetts/images/Flat-Mountains.svg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      filter: sepia(50%);
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      @media (max-width: 1024px) {
+        height: 100vh;
+        background-size: cover;
+      }
+    }
+    // Main Home Page Container
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      transform: scale(0.75);
+    }
+    .social-icons {
+      display: flex;
+      justify-content: space-evenly;
 
-			a {
-				margin: 5%;
-			}
-		}
+      a {
+        margin: 5%;
+      }
+    }
 
-		h3 {
-			margin-bottom: 2%;
-			max-width: 800px;
+    h3 {
+      margin-bottom: 2%;
+      max-width: 800px;
 
-			@media (max-width: 768px) {
-				margin-bottom: 2%;
-				max-width: 600px;
-				font-size: 1rem !important;
-			}
-		}
+      @media (max-width: 768px) {
+        margin-bottom: 2%;
+        max-width: 600px;
+        font-size: 1rem !important;
+      }
+    }
 
-		h2 {
-			margin-top: 1%;
-			background: linear-gradient(
-				to right,
-				rgba(74, 18, 18, 0.35),
-				rgba(35, 47, 28, 0.35) 150%
-			);
-			-webkit-filter: hue-rotate(180deg);
-			filter: hue-rotate(180deg);
-			opacity: 0.95;
-			color: white;
-			width: 100%;
-			span {
-				color: white;
-				margin-left: 10px;
-			}
-			@media (max-width: 768px) {
-				font-size: 1.5rem !important;
-			}
-		}
-		img {
-			padding-bottom: 25px;
-			padding-top: 56px;
-			width: 300px;
-			transition: img 5s;
+    h2 {
+      margin-top: 1%;
+      background: linear-gradient(
+        to right,
+        rgba(74, 18, 18, 0.35),
+        rgba(35, 47, 28, 0.35) 150%
+      );
+      -webkit-filter: hue-rotate(180deg);
+      filter: hue-rotate(180deg);
+      opacity: 0.95;
+      color: white;
+      width: 100%;
+      span {
+        color: white;
+        margin-left: 10px;
+      }
+      @media (max-width: 768px) {
+        font-size: 1.5rem !important;
+      }
+    }
+    img {
+      padding-bottom: 25px;
+      padding-top: 56px;
+      width: 300px;
+      transition: img 5s;
 
-			@media (max-width: 1024px) {
-				width: 200px;
-			}
-		}
-	}
-
-	// About Section
-
-	.about-section {
-		display: flex;
-		width: 100%;
-		height: 50%;
-		.is-dark {
-			background: #333;
-		}
-		box-shadow: 0px -12px 20px 0px #00000087;
-		@media (max-width: 1024px) {
-			flex-direction: column;
-		}
-		.content {
-			margin: 0;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-		}
-
-		// Full Width Component
-		.content.full {
-			width: 100%;
-			height: 20vh;
-			background: url(../assetts/images/background-xl.png);
-			color: #333;
-			@media (max-width: 1024px) {
-				width: 100%;
-				height: 20vh;
-			}
-			.is-dark {
-				background: #333;
-				color: white;
-			}
-			.img {
-				width: 40%;
-				z-index: 1;
-				transition: all 0.7s ease;
-				-webkit-transition: all 0.7s ease;
-				@media (max-width: 1024px) {
-					width: 50%;
-				}
-			}
-			h3 {
-				z-index: 2;
-				font-size: 3.5rem;
-				color: white;
-				opacity: 0;
-				position: absolute;
-				margin: 0;
-				transition: all 0.7s ease;
-				-webkit-transition: all 0.7s ease;
-				width: 35%;
-				// font-style: italic;
-				background: #00000069;
-				cursor: pointer;
-				@media (max-width: 1024px) {
-					font-size: 2.5rem;
-					width: 50%;
-				}
-			}
-			&:hover {
-				.img {
-					width: 60%;
-					cursor: pointer;
-					@media (max-width: 1024px) {
-						width: 75%;
-					}
-				}
-				h3 {
-					text-decoration: none;
-					opacity: 1;
-				}
-			}
-			&:before {
-				content: "";
-				position: absolute;
-				opacity: 0.25;
-				background-color: #fff0;
-				background-image: url(../assetts/images/Parabolic-Ellipse2.svg);
-				background-position: center;
-				background-repeat: no-repeat;
-				filter: sepia(50%);
-				width: 100%;
-				height: 100%;
-				overflow: hidden;
-				background-size: 150%;
-				transition: all 0.7s ease;
-				-webkit-transition: all 0.7s ease;
-				@media (max-width: 1024px) {
-					width: 100%;
-					height: 20vh;
-				}
-			}
-			&:hover:before {
-				background-size: 300%;
-				cursor: pointer;
-				filter: sepia(0%);
-			}
-		}
-		// Right Component
-		.content.right {
-			.timeline {
-				transform: scale(0.75);
-			}
-			@media (max-width: 1024px) {
-				display: none;
-			}
-		}
-	}
+      @media (max-width: 1024px) {
+        width: 200px;
+      }
+    }
+  }
 }
