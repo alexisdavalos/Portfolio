@@ -1,4 +1,4 @@
-# React Portfolio
+# Web Portfolio
 
 ---
 #### Author: Alexis Davalos
