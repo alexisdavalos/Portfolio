@@ -6,6 +6,7 @@
 ---
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/581dfdca-198c-428c-83d3-459503c4c06d/deploy-status)](https://app.netlify.com/sites/alexisdavalos/deploys)
 <a href="https://codeclimate.com/github/alexisdavalos/portfolio/maintainability"><img src="https://api.codeclimate.com/v1/badges/a372d9d669e3aafd140a/maintainability" /></a>
 
 # Notes:
