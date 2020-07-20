@@ -1,244 +1,240 @@
 //Wrapper for About Page
 .wrapper.about {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: row;
-	padding-top: 56px;
-	width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  padding-top: 56px;
+  width: 100%;
 
-	.box {
-		width: 70%;
-		height: 100%;
-		padding: 0;
-		background: none;
-		box-shadow: none;
-		margin: 0;
-		display: flex;
-		justify-content: space-evenly;
-		align-items: center;
-		text-align: left;
+  .box {
+    width: 70%;
+    height: 100%;
+    padding: 0;
+    background: none;
+    box-shadow: none;
+    margin: 0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: left;
 
-		.about {
-			width: 45%;
-			margin: -5% 5% 5% 5%;
+    .about {
+      width: 45%;
+      margin: -5% 5% 5% 5%;
 
-			.select {
-				margin-top: 5%;
-				width: 100%;
+      .select {
+        margin-top: 5%;
+        width: 100%;
 
-				select {
-					width: 100%;
-				}
-			}
+        select {
+          width: 100%;
+        }
+      }
 
-			.skills {
-				margin-top: 2.5%;
+      .skills {
+        margin-top: 2.5%;
 
-				.skills-container {
-					display: flex;
-					flex-wrap: wrap;
-					justify-content: flex-start;
+        .skills-container {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: flex-start;
 
-					.tags {
-						margin-right: 5px;
-					}
-				}
-			}
+          .tags {
+            margin-right: 5px;
+          }
+        }
+      }
 
-			@media (max-width: 1024px) {
-				width: 100%;
-			}
-		}
+      @media (max-width: 1024px) {
+        width: 100%;
+      }
+    }
 
-		h1 {
-			width: 100%;
-		}
+    h1 {
+      width: 100%;
+    }
 
-		@media (max-width: 1024px) {
-			align-items: flex-start;
-			margin-top: -7.5%;
-		}
-	}
+    @media (max-width: 1024px) {
+      align-items: flex-start;
+      margin-top: -7.5%;
+    }
+  }
 
-	.box.w-30 {
-		width: 30%;
+  .box.w-30 {
+    width: 30%;
 
-		@media (max-width: 768px) {
-			margin-top: 20%;
-		}
-	}
+    @media (max-width: 768px) {
+      margin-top: 20%;
+    }
+  }
 
-	@media (max-width: 1024px) {
-		flex-direction: column;
-		margin-top: 20%;
-	}
+  @media (max-width: 1024px) {
+    flex-direction: column;
+    margin-top: 20%;
+  }
 }
 
 // About Section: Home Page
 
 .about-section {
-	display: flex;
-	width: 100%;
-	height: 50%;
-	.modal {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		.modal-background {
-			z-index: -1;
-			opacity: 0.75;
-		}
-		.modal-card {
-			width: 70%;
-			height: 100vh;
-			@media (max-width: 1024px) {
-				width: 90%;
-			}
-			.modal-card-head {
-				font-family: "Permanent Marker", cursive;
-			}
-			.modal-card-body {
-				opacity: 0.95;
-				padding: 5%;
-				justify-content: center;
-				align-items: center;
-				flex-direction: column;
-				overflow: hidden;
-				font-family: "Courier New", Courier, monospace;
-				@media (min-width: 2000px) {
-					padding: 2.5%;
-				}
-				.summary {
-					margin-bottom: 2.5%;
-				}
-			}
-			.modal-card-foot {
-				p {
-					padding: 5px;
-					font-weight: 600;
-					transition: all 0.25s ease-in-out;
-					font-family: "Permanent Marker", cursive;
-					svg:hover {
-						transform: scale(1.25);
-						cursor: pointer;
-					}
-				}
-				display: flex;
-				justify-content: space-evenly;
-				align-items: center;
-				flex-direction: column;
-			}
-		}
-	}
-	.is-dark {
-		background: #333;
-	}
-	box-shadow: 0px -12px 20px 0px #00000087;
-	@media (max-width: 1024px) {
-		flex-direction: column;
-	}
-	.content {
-		margin: 0;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-	}
+  display: flex;
+  width: 100%;
+  height: 50%;
+  .modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .modal-background {
+      z-index: -1;
+      opacity: 0.75;
+    }
+    .modal-card {
+      width: 70%;
+      height: 100vh;
+      @media (max-width: 1024px) {
+        width: 90%;
+      }
+      .modal-card-head {
+        font-family: "Permanent Marker", cursive;
+      }
+      .modal-card-body {
+        opacity: 0.95;
+        padding: 5%;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        overflow: hidden;
+        font-family: "Courier New", Courier, monospace;
+        @media (min-width: 2000px) {
+          padding: 2.5%;
+        }
+        .summary {
+          margin-bottom: 2.5%;
+        }
+      }
+      .modal-card-foot {
+        p {
+          padding: 5px;
+          font-weight: 600;
+          transition: all 0.25s ease-in-out;
+          font-family: "Permanent Marker", cursive;
+          svg:hover {
+            transform: scale(1.25);
+            cursor: pointer;
+          }
+        }
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: column;
+      }
+    }
+  }
+  .is-dark {
+    background: #333;
+  }
+  box-shadow: 0px -12px 20px 0px #00000087;
+  @media (max-width: 1024px) {
+    flex-direction: column;
+  }
+  .content {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
-	// Full Width Component
-	.content.full {
-		width: 100%;
-		height: 20vh;
-		background: url(../assetts/images/background-xl.png);
-		background-size: cover;
-		background-repeat: no-repeat;
-		color: #333;
-		@media (max-width: 1024px) {
-			width: 100%;
-			height: 20vh;
-		}
-		.is-dark {
-			background: #333;
-			color: white;
-		}
-		.img {
-			width: 25%;
-			z-index: 1;
-			transition: all 0.7s ease;
-			-webkit-transition: all 0.7s ease;
-			@media (max-width: 1024px) {
-				width: 50%;
-			}
-		}
-		h3 {
-			z-index: 2;
-			font-size: 3.5rem;
-			color: white;
-			opacity: 0;
-			position: absolute;
-			margin: 0;
-			text-transform: uppercase;
-			font-family: "Permanent Marker", cursive;
-			transition: all 0.7s ease;
-			-webkit-transition: all 0.7s ease;
-			width: 100%;
-			// font-style: italic;
-			background: #00000069;
-			cursor: pointer;
-			@media (max-width: 1024px) {
-				font-size: 2.5rem;
-			}
-		}
-		&:hover {
-			.img {
-				transform: rotateZ(15deg);
-				width: 40%;
-				cursor: pointer;
-				@media (min-width: 2000px) {
-					width: 35%;
-				}
-				@media (max-width: 1024px) {
-					width: 75%;
-				}
-			}
-			h3 {
-				text-decoration: none;
-				opacity: 1;
-			}
-		}
-		&:before {
-			content: "";
-			position: absolute;
-			opacity: 0.25;
-			background-color: #fff0;
-			background-image: url(../assetts/images/Parabolic-Ellipse2.svg);
-			background-position: center;
-			background-repeat: no-repeat;
-			filter: sepia(50%);
-			width: 100%;
-			height: 100%;
-			overflow: hidden;
-			background-size: 150%;
-			transition: all 0.7s ease;
-			-webkit-transition: all 0.7s ease;
-			@media (max-width: 1024px) {
-				width: 100%;
-				height: 20vh;
-			}
-		}
-		&:hover:before {
-			background-size: 300%;
-			cursor: pointer;
-			filter: sepia(0%);
-		}
-	}
-	// Right Component
-	.content.right {
-		.timeline {
-			transform: scale(0.75);
-		}
-		@media (max-width: 1024px) {
-			display: none;
-		}
-	}
+  // Full Width Component
+  .content.full {
+    width: 100%;
+    height: 20vh;
+    background: url(../assetts/images/background-xl.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #333;
+    @media (max-width: 1024px) {
+      width: 100%;
+      height: 20vh;
+    }
+    .is-dark {
+      background: #333;
+      color: white;
+    }
+    .img {
+      width: 30%;
+      z-index: 1;
+      transition: all 0.7s ease;
+      -webkit-transition: all 0.7s ease;
+      @media (max-width: 1024px) {
+        width: 50%;
+      }
+    }
+    h3 {
+      z-index: 2;
+      font-size: 3.5rem;
+      color: white;
+      opacity: 1;
+      position: absolute;
+      margin: 0;
+      text-transform: uppercase;
+      font-family: "Permanent Marker", cursive;
+      transition: all 0.7s ease;
+      -webkit-transition: all 0.7s ease;
+      width: 100%;
+      // font-style: italic;
+      background: #00000069;
+      cursor: pointer;
+      @media (max-width: 1024px) {
+        font-size: 2.5rem;
+      }
+    }
+    &:hover {
+      .img {
+        transform: rotateZ(15deg);
+        width: 40%;
+        cursor: pointer;
+        @media (min-width: 2000px) {
+          width: 35%;
+        }
+        @media (max-width: 1024px) {
+          width: 75%;
+        }
+      }
+    }
+    &:before {
+      content: "";
+      position: absolute;
+      opacity: 0.25;
+      background-color: #fff0;
+      background-image: url(../assetts/images/Parabolic-Ellipse2.svg);
+      background-position: center;
+      background-repeat: no-repeat;
+      filter: sepia(50%);
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background-size: 150%;
+      transition: all 0.7s ease;
+      -webkit-transition: all 0.7s ease;
+      @media (max-width: 1024px) {
+        width: 100%;
+        height: 20vh;
+      }
+    }
+    &:hover:before {
+      background-size: 300%;
+      cursor: pointer;
+      filter: sepia(0%);
+    }
+  }
+  // Right Component
+  .content.right {
+    .timeline {
+      transform: scale(0.75);
+    }
+    @media (max-width: 1024px) {
+      display: none;
+    }
+  }
 }
