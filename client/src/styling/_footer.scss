@@ -2,6 +2,24 @@
 //Footer
 .footer {
   @include flex(flex, center);
+  width: 100%;
+  padding: 2.5%;
+  height: 35vh;
+  .container {
+    @include flex(flex, center);
+    flex-direction: column;
+    justify-content: space-evenly;
+    .social-icons {
+      a {
+        margin: 0 0.8rem;
+      }
+    }
+    .logo-container {
+      .footer-logo {
+        width: 128px;
+      }
+    }
+  }
   p {
     @include flex(flex, center);
     align-items: center;
