@@ -10,6 +10,19 @@ import resume from "../../assetts/portfolio/Alexis_Davalos_Resume.pdf";
 
 const Nav = ({ darkMode, setDarkMode }) => {
   const [mobileNav, setMobileNav] = useState(false);
+  // Toggle Burger Menu Logic
+  const mobileToggle = () => {
+    let mobileMenu = document.querySelector(".navbar-burger");
+    // Check state of Mobile Menu
+    if (mobileNav) {
+      mobileMenu.classList.remove("is-active");
+    } else {
+      mobileMenu.classList.add("is-active");
+    }
+    // Toggle Mobile Nav Component
+    setMobileNav(!mobileNav);
+  };
+  // Smooth Scroll Logic
   const scrollToSection = (query) => {
     //Check if Mobile
     if (mobileNav) {
@@ -37,12 +50,11 @@ const Nav = ({ darkMode, setDarkMode }) => {
 
         <Link
           to="/"
-          onClick={() => setMobileNav(!mobileNav)}
+          onClick={() => mobileToggle()}
           role="button"
           className="navbar-burger burger"
           aria-label="menu"
-          aria-expanded="false"
-          data-target="navbarBasicExample"
+          aria-expanded={mobileNav ? "true" : "false"}
         >
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
