@@ -13,6 +13,7 @@ import AboutModal from "../About/AboutModal.js";
 import Typed from "react-typed";
 import Projects from "../Projects/Projects.js";
 import Skills from "../About/Skills.js";
+import Footer from "../Footer/Footer.js";
 
 // icons
 import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
@@ -107,19 +108,15 @@ const Home = ({ darkMode }) => {
           <div className="box">
             <Cube />
           </div>
-          <div>
+          <div className="skills-wrapper">
             <Skills darkMode={darkMode} />
           </div>
         </div>
       </section>
-      {/* Parallax Section End */}
+      {/* Projects Section */}
       <Projects darkMode={darkMode} />
-      <div
-        className="has-background-black footer"
-        style={{ width: "100%", padding: "2%" }}
-      >
-        <p>Copyright © 2020 | Alexis Davalos</p>
-      </div>
+      {/* Footer Section */}
+      <Footer darkMode={darkMode} />
     </>
   );
 };
