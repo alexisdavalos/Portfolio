@@ -1,5 +1,4 @@
 const LoaderToggle = async (e) => {
-  console.log("toggling loader");
   //selects loader to toggle hidden class
   const loader = document.querySelector(".loaderWrapper");
   //if client event toggles Loader, avoids loader getting stuck inside of timer()

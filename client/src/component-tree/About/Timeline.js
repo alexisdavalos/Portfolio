@@ -1,7 +1,6 @@
 import React from "react";
 import { events } from "./data/Events.js";
 const Timeline = ({ darkMode }) => {
-  console.log("darkMode in Timeline:", darkMode);
   return (
     <div className="timeline is-centered">
       <header className="timeline-header">
