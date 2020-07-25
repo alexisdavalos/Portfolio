@@ -26,6 +26,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "postbuild": "cd src/assetts/ && gzip *.png && gzip *.jpg",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "update:packages": "node wipe-dependencies.js && rm -rf nod_modules && npm update --save-dev && npm update --save"
