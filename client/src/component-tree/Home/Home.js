@@ -9,7 +9,6 @@ import mk3 from "../../assetts/images/mk-3.png";
 import Cube from "../About/Cube.js";
 import Particles from "react-particles-js";
 import AboutModal from "../About/AboutModal.js";
-// import Timeline from "../About/Timeline.js";
 import Typed from "react-typed";
 import Projects from "../Projects/Projects.js";
 import Skills from "../About/Skills.js";
