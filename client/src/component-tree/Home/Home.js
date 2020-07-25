@@ -1,41 +1,30 @@
-import React, { useState } from "react";
+import React, { lazy, Suspense } from "react";
+import Typed from "react-typed";
 
-// images
+// Particles Component
+import Particles from "react-particles-js";
+
+// Particle Config Function
+import setUpConfig from "./particle-config/particleConfig.js";
+
+// Images
 import logo from "../../assetts/images/logo.png";
 import lightLogo from "../../assetts/images/logo-light.png";
-import mk3 from "../../assetts/images/mk-3.png";
 
-// components
-import Cube from "../About/Cube.js";
-import Particles from "react-particles-js";
-import AboutModal from "../About/AboutModal.js";
-// import Timeline from "../About/Timeline.js";
-import Typed from "react-typed";
-import Projects from "../Projects/Projects.js";
-import Skills from "../About/Skills.js";
-import Footer from "../Footer/Footer.js";
-
-// icons
+// Icons
 import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 
-// particle configs
-import setUpConfig from "./config/particleConfig.js";
+// Lazy Load Sections
+const AboutSection = lazy(() => import("./AboutSection.js"));
+const Projects = lazy(() => import("../Projects/Projects.js"));
+const Footer = lazy(() => import("../Footer/Footer.js"));
+const ParallaxSection = lazy(() => import("./ParallaxSection.js"));
+
+// Dynamically change color of particles
+const configDark = setUpConfig("#ffffff");
+const configLight = setUpConfig("#000000");
 
 const Home = ({ darkMode }) => {
-  // Popup Modal Toggle
-  const [toggle, setToggle] = useState(false);
-  // Scroll To Projects Section and Toggle Modal
-  const viewProjects = () => {
-    // Select Projects Element
-    let projects = document.querySelector(".projects");
-    // Toggle Modal
-    setToggle(!toggle);
-    // Scroll To Projects
-    projects.scrollIntoView({ behavior: "smooth" });
-  };
-  // Dynamically change color of particles
-  const configDark = setUpConfig("#ffffff");
-  const configLight = setUpConfig("#000000");
   return (
     <>
       <div className="wrapper hue-rotate">
@@ -82,41 +71,16 @@ const Home = ({ darkMode }) => {
         )}
         {/* Particles Component End */}
       </div>
-      {/* About Section */}
-      <section className={darkMode ? "about-section is-dark" : "about-section"}>
-        <AboutModal
-          toggle={toggle}
-          setToggle={setToggle}
-          darkMode={darkMode}
-          viewProjects={viewProjects}
-        />
-        <div className="content full hue-rotate">
-          {/* Image Component */}
-          <img
-            className="img"
-            src={mk3}
-            onClick={() => setToggle(!toggle)}
-            alt="layered screens design"
-          />
-          {/* Overlayed Subtitle <h3> */}
-          <h3 onClick={() => setToggle(!toggle)}>About Me</h3>
-        </div>
-      </section>
-      {/* Parallax Section */}
-      <section className="section-parallax">
-        <div className="content">
-          <div className="box">
-            <Cube />
-          </div>
-          <div className="skills-wrapper">
-            <Skills darkMode={darkMode} />
-          </div>
-        </div>
-      </section>
-      {/* Projects Section */}
-      <Projects darkMode={darkMode} />
-      {/* Footer Section */}
-      <Footer darkMode={darkMode} />
+      <Suspense fallback={<div>Loading...</div>}>
+        {/* About Section */}
+        <AboutSection darkMode={darkMode} />
+        {/* Parallax Section */}
+        <ParallaxSection darkMode={darkMode} />
+        {/* Projects Section */}
+        <Projects darkMode={darkMode} />
+        {/* Footer Section */}
+        <Footer darkMode={darkMode} />
+      </Suspense>
     </>
   );
 };
