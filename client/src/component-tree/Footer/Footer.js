@@ -17,8 +17,18 @@ const Footer = ({ darkMode }) => {
               : "title is-size-5 has-text-dark is-family-monospace"
           }
         >
-          "Discipline is nothing more but the habit of consistency"
+          “The question is not what you look at, but what you see.”
         </h2>
+        <h4
+          className={
+            darkMode
+              ? "title is-size-6 has-text-light is-family-monospace"
+              : "title is-size-6 has-text-dark is-family-monospace"
+          }
+        >
+          ― Henry David Thoreau
+        </h4>
+
         <div className="social-icons is-centered">
           <a href="https://github.com/alexisdavalos" target="_empty">
             <FaGithub color={darkMode ? "white" : "#333"} size="3em" />

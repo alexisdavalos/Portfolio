@@ -4,7 +4,7 @@
   @include flex(flex, center);
   width: 100%;
   padding: 2.5%;
-  height: 35vh;
+  height: 500px;
   .container {
     @include flex(flex, center);
     flex-direction: column;
@@ -20,8 +20,14 @@
       }
     }
   }
+  h1,
+  h2,
+  h3 {
+    margin: 2.5%;
+  }
   p {
     @include flex(flex, center);
     align-items: center;
+    margin: 2.5%;
   }
 }
