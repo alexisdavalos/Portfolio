@@ -4,6 +4,7 @@ nav {
   -webkit-transition: background-color 0.15s;
   width: 100%;
   position: fixed !important;
+  padding: 5px;
   box-shadow: 0px -12px 20px 7px #0000008a;
   //Mobile Field Switch
   .navbar-brand {
@@ -22,34 +23,6 @@ nav {
       background: #333;
       // Bulma Override
       color: whitesmoke !important;
-    }
-    .field.switch-wrapper {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-top: 2.5%;
-      .switch {
-        &[type="checkbox"] + label {
-          padding-top: 0 !important;
-
-          &:focus + label::before {
-            outline: 0;
-          }
-        }
-        // Turns off check box component
-        &[type="checkbox"]:focus + label::before,
-        &[type="checkbox"]:focus + label::after {
-          outline: none !important;
-        }
-
-        b {
-          vertical-align: middle;
-        }
-      }
-
-      label {
-        padding-right: 25px;
-      }
     }
   }
   .navbar-start {
@@ -99,33 +72,11 @@ nav {
       }
     }
   }
-
-  .buttons {
-    align-items: baseline;
-
-    .switch-wrapper {
-      .switch {
-        &[type="checkbox"] + label {
-          padding-top: 0 !important;
-
-          &:focus + label::before {
-            outline: 0;
-          }
-        }
-
-        &[type="checkbox"]:focus + label::before,
-        &[type="checkbox"]:focus + label::after {
-          outline: none !important;
-        }
-
-        b {
-          vertical-align: middle;
-        }
-      }
-
-      label {
-        padding-right: 25px;
-      }
+  .navbar-end {
+    .navbar-item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
   }
 }

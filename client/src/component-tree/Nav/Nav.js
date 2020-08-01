@@ -9,7 +9,22 @@ import navLogoLight from "../../assetts/images/nav-logo-light.png";
 import resume from "../../assetts/portfolio/Alexis_Davalos_Resume.pdf";
 
 const Nav = ({ darkMode, setDarkMode }) => {
+  // State and Class Variables Initialization
   const [mobileNav, setMobileNav] = useState(false);
+  let darkModeButtonColor = darkMode ? "white" : "#333";
+  let logo = darkMode ? navLogoLight : navLogoDark;
+  let textClass = darkMode ? "has-text-dark" : "has-text-light";
+  let navbarClass = darkMode ? "navbar is-dark" : "navbar is-light";
+  let mobileNavClass = darkMode
+    ? "navbar-menu is-active has-background-light"
+    : "navbar-menu is-active has-background-dark";
+  let navBarItemClass = darkMode
+    ? "navbar-item has-text-dark"
+    : "navbar-item has-text-light";
+  let roundButtonClass = darkMode
+    ? "button is-white is-rounded"
+    : "button is-dark is-rounded";
+
   // Toggle Burger Menu Logic
   const mobileToggle = () => {
     let mobileMenu = document.querySelector(".navbar-burger");
@@ -34,18 +49,14 @@ const Nav = ({ darkMode, setDarkMode }) => {
     section.scrollIntoView({ block: "center", behavior: "smooth" });
   };
   return (
-    <nav
-      className={darkMode === true ? "navbar is-dark" : "navbar is-light"}
-      role="navigation"
-      aria-label="main navigation"
-    >
+    <nav className={navbarClass} role="navigation" aria-label="main navigation">
       <div className="navbar-brand">
         <Link
           onClick={() => scrollToSection(".center-section")}
           to="/"
           className="navbar-item"
         >
-          <img src={!darkMode ? navLogoDark : navLogoLight} alt="logo" />
+          <img src={logo} alt="logo" />
         </Link>
 
         <Link
@@ -63,7 +74,6 @@ const Nav = ({ darkMode, setDarkMode }) => {
       </div>
       {!mobileNav ? (
         // Desktop & Mobile Turnary Component
-
         <div className="navbar-menu is-family-monospace">
           <div className="navbar-start">
             <Link
@@ -86,107 +96,50 @@ const Nav = ({ darkMode, setDarkMode }) => {
               <span className="typed-cursor typed-cursor--blink">|</span>
               <span>Projects</span>
             </Link>
-
-            {/* <div className="navbar-item has-dropdown is-hoverable">
-							<Link to="#top" className="navbar-link">
-								<span className="typed-cursor typed-cursor--blink">|</span>More
-							</Link>
-
-							<div className="navbar-dropdown">
-								<Link to="#top" className="navbar-item">
-									Contact
-								</Link>
-								<hr className="navbar-divider" />
-								<Link to="#top" className="navbar-item">
-									Report an issue
-								</Link>
-							</div>
-						</div> */}
           </div>
 
           <div className="navbar-end">
             <div className="navbar-item">
-              <div className="buttons">
-                <div className="field switch-wrapper">
-                  <input
-                    onClick={() => setDarkMode(!darkMode)}
-                    id="switchThinColorDefault"
-                    type="checkbox"
-                    className="switch is-black is-rounded"
-                    defaultChecked={darkMode ? true : false}
-                  />
-                  <label htmlFor="switchThinColorDefault">
-                    <b>
-                      {darkMode ? <FaMoon size="1em" /> : <FaSun size="1em" />}
-                    </b>
-                  </label>
-                </div>
-                <a
-                  href={resume}
-                  className={
-                    darkMode
-                      ? "button is-white is-rounded"
-                      : "button is-black is-rounded"
-                  }
-                  download
-                >
-                  <strong>Resume</strong>
-                </a>
-                {/* <Link
-									to="#top"
-									className={
-										darkMode
-											? "button is-light is-rounded is-outlined"
-											: "button is-dark is-rounded is-outlined"
-									}
-								>
-									Contact
-								</Link> */}
-              </div>
+              <Link
+                onClick={() => setDarkMode(!darkMode)}
+                to="/"
+                className="dark-mode-toggle"
+              >
+                {darkMode ? (
+                  <FaMoon color={darkModeButtonColor} size="1.5em" />
+                ) : (
+                  <FaSun color={darkModeButtonColor} size="1.5em" />
+                )}
+              </Link>
+            </div>
+            <div className="navbar-item">
+              <Link href={resume} className={roundButtonClass} download>
+                <strong>Resume</strong>
+              </Link>
             </div>
           </div>
         </div>
       ) : (
         // Mobile Nav Bar
-
-        <div
-          className={
-            darkMode
-              ? "navbar-menu is-active has-background-light"
-              : "navbar-menu is-active has-background-dark"
-          }
-          id="navMenu"
-        >
+        <div className={mobileNavClass} id="navMenu">
           <Link
             onClick={() => scrollToSection(".center-section")}
             to="/"
-            className={
-              darkMode
-                ? "navbar-item has-text-dark"
-                : "navbar-item has-text-light"
-            }
+            className={navBarItemClass}
           >
             <span>Home</span>
           </Link>
           <Link
             onClick={() => scrollToSection(".about-section")}
             to="/"
-            className={
-              darkMode
-                ? "navbar-item has-text-dark"
-                : "navbar-item has-text-light"
-            }
+            className={navBarItemClass}
           >
             <span>About</span>
           </Link>
           <Link
             onClick={() => scrollToSection(".projects")}
             to="/"
-            className={
-              darkMode
-                ? "navbar-item has-text-dark"
-                : "navbar-item has-text-light"
-            }
+            className={navBarItemClass}
           >
             <span>Projects</span>
           </Link>
@@ -200,7 +153,7 @@ const Nav = ({ darkMode, setDarkMode }) => {
                 defaultChecked={darkMode ? true : false}
               />
               <label htmlFor="switchThinColorDefault">
-                <b className={darkMode ? "has-text-dark" : "has-text-light"}>
+                <b className={textClass}>
                   {darkMode ? "DarkMode: ON" : "DarkMode: OFF"}
                 </b>
               </label>

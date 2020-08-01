@@ -14,7 +14,7 @@ export const events = [
   },
   {
     type: "color",
-    date: "September 2017",
+    date: "Sep 2017",
     company: "Self Employed",
     role: "Freelancer",
     markerClass: "timeline-marker is-primary", //classname of marker
@@ -22,15 +22,15 @@ export const events = [
   },
   {
     type: "dark",
-    date: "December 2017",
+    date: "Dec 2017",
     company: "Herbal Healers",
-    role: "FrontEnd Developer/Graphic Designer",
+    role: "FrontEnd Developer",
     markerClass: "timeline-marker is-primary", //classname of marker
     img: herbalHealers,
   },
   {
     type: "color",
-    date: "February 2019",
+    date: "Feb 2019",
     company: "Ecom Educational",
     role: "Ecommerce Mentor",
     markerClass: "timeline-marker is-dark is-image is-32x32", //classname of marker
@@ -38,7 +38,7 @@ export const events = [
   },
   {
     type: "dark",
-    date: "October 2019",
+    date: "Oct 2019",
     company: "Lambda School",
     role: "Full Stack Curriculum",
     markerClass: "timeline-marker is-dark is-image is-32x32", //classname of marker

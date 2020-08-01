@@ -1,69 +1,48 @@
 import React from "react";
 import { events } from "./data/Events.js";
 const Timeline = ({ darkMode }) => {
+  // color variables
+  let textColor = darkMode ? "has-text-light" : "has-text-dark";
+  let color = darkMode ? "light" : "dark";
   return (
-    <div className="timeline is-centered">
-      <header className="timeline-header">
-        <span className="tag start is-medium is-primary">Start</span>
-      </header>
-      {events ? (
-        events.map((event, index) => {
-          if (event.type === "dark") {
+    <>
+      <ul className="steps has-content-centered is-small has-gaps">
+        {events ? (
+          events.map((event) => {
             return (
-              <div
-                className={
-                  darkMode
-                    ? "timeline-item is-warning"
-                    : "timeline-item is-warning"
-                }
-                key={Math.random()}
-              >
-                <div className="timeline-marker is-dark is-image is-32x32">
-                  <img src={event.img} alt={event.role} />
+              <li className={`steps-segment ${color}`}>
+                {event.type === "dark" ? (
+                  <span className="steps-marker">
+                    <span class="icon">
+                      <img src={event.img} alt={event.role} />
+                    </span>
+                  </span>
+                ) : (
+                  <span class={`steps-marker is-hollow ${color}`}></span>
+                )}
+
+                <div className="steps-content">
+                  <p className={`heading is-size-6  ${textColor}`}>
+                    {event.date}
+                  </p>
+                  <b>
+                    <p className={`heading is-size-7  ${textColor}`}>
+                      {event.company}
+                    </p>
+                  </b>
+                  <p className={`heading is-size-8  ${textColor}`}>
+                    {event.role}
+                  </p>
                 </div>
-                <div
-                  className={
-                    darkMode
-                      ? "timeline-content has-text-light"
-                      : "timeline-content has-text-dark"
-                  }
-                >
-                  <p className="heading">{event.date}</p>
-                  <p>{event.company}</p>
-                  <p>{event.role}</p>
-                </div>
-              </div>
+              </li>
             );
-          } else if (event.type === "color") {
-            return (
-              <div className="timeline-item is-primary" key={index}>
-                <div className="timeline-marker is-primary">
-                  <i className={event.img}></i>
-                </div>
-                <div
-                  className={
-                    darkMode
-                      ? "timeline-content has-text-light"
-                      : "timeline-content has-text-dark"
-                  }
-                >
-                  <p className="heading">{event.date}</p>
-                  <p>{event.company}</p>
-                  <p>{event.role}</p>
-                </div>
-              </div>
-            );
-          } else {
-            return <></>;
-          }
-        })
-      ) : (
-        <></>
-      )}
-      <header className="timeline-header">
-        <span className="tag end is-medium is-danger">2020</span>
-      </header>
-    </div>
+            // }
+          })
+        ) : (
+          <></>
+        )}
+      </ul>
+    </>
   );
 };
 

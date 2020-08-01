@@ -1,9 +1,9 @@
 // Bulma Styles
 @import "bulma";
+@import "../../node_modules/bulma-steps-component/bulma-steps.sass";
 @import "../../node_modules/bulma-extensions/bulma-switch/src/sass/index.sass";
 @import "../../node_modules/bulma-dashboard/src/bulma-dashboard.sass";
 @import "../../node_modules/bulma-extensions/bulma-timeline/src/sass/index.sass";
-
 //Google Fonts
 @import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap");
 
@@ -19,6 +19,7 @@
 @import "./projectCard";
 @import "./search";
 @import "./skills";
+@import "./steps";
 @import "./timeline";
 @import "./utils";
 @import "./home";
