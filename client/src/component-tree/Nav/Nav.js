@@ -38,15 +38,15 @@ const Nav = ({ darkMode, setDarkMode }) => {
     setMobileNav(!mobileNav);
   };
   // Smooth Scroll Logic
-  const scrollToSection = (query) => {
+  const scrollToSection = (section) => {
     //Check if Mobile
     if (mobileNav) {
       setMobileNav(false);
     }
-    // Select Projects Element
-    let section = document.querySelector(query);
+    // Select Element
+    let element = document.querySelector(section);
     // Scroll To Projects
-    section.scrollIntoView({ block: "center", behavior: "smooth" });
+    element.scrollIntoView({ block: "center", behavior: "smooth" });
   };
   return (
     <nav className={navbarClass} role="navigation" aria-label="main navigation">
@@ -67,8 +67,6 @@ const Nav = ({ darkMode, setDarkMode }) => {
           aria-label="menu"
           aria-expanded={mobileNav ? "true" : "false"}
         >
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
         </Link>
       </div>
@@ -113,9 +111,9 @@ const Nav = ({ darkMode, setDarkMode }) => {
               </Link>
             </div>
             <div className="navbar-item">
-              <Link href={resume} className={roundButtonClass} download>
+              <a href={resume} className={roundButtonClass} download>
                 <strong>Resume</strong>
-              </Link>
+              </a>
             </div>
           </div>
         </div>

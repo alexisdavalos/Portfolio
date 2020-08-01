@@ -20,7 +20,7 @@ function App() {
 
   return (
     <div className="app-container is-dark">
-      <Suspense fallback={Loader}>
+      <Suspense fallback={() => Loader()}>
         <Switch>
           <Route exact path="/">
             <Loader />
