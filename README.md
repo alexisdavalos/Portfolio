@@ -15,10 +15,6 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 * Data loaded client side for now
 * Feedback is welcome
 
-# TODO
-* Create Express Server
-* Resize/Optimize Assetts
-
 ## Available Scripts
 
 In the project directory, you can run:
