@@ -17,7 +17,7 @@ const Card = ({ project, darkMode }) => {
       {/* Card Component */}
       <div className="card" onClick={() => setModal(!modal)}>
         <div className="card-image is-square">
-          <button class="button is-light is-rounded is-outlined">
+          <button className="button is-light is-rounded is-outlined">
             Learn More
           </button>
           <img src={project.img} alt={project.description} />
