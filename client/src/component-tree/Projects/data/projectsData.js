@@ -33,7 +33,7 @@ export const projectsData = [
       "Graphic Design",
       "Wordpress",
     ],
-    url: "http://www.herbalhealerscbd.com/",
+    url: "https://herbalhealershemp.com/",
   },
   {
     id: 3,

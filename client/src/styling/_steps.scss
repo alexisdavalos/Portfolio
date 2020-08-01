@@ -1,0 +1,36 @@
+// Remove background form non hollow steps
+.steps:not(.is-hollow) .steps-marker:not(.is-hollow) {
+  background: none;
+}
+// Steps Parents
+.steps {
+  transform: scale(0.85);
+  // Light and Dark Mode
+  .steps-segment.dark {
+    &::after {
+      background: #333;
+    }
+  }
+  .steps-segment.light {
+    &::after {
+      background: whitesmoke;
+    }
+  }
+  // Step Segment Lines
+  .steps-segment {
+    .steps-marker.is-hollow.dark {
+      border: 0.3em solid #333;
+    }
+    .steps-marker.is-hollow.light {
+      border: 0.3em solid whitesmoke;
+    }
+    // Step Markers
+    .steps-marker {
+      .icon {
+        img {
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+}
