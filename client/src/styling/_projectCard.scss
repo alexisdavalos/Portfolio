@@ -106,15 +106,6 @@
         width: 0%;
         height: 100%;
         overflow: hidden;
-        // Animation Rules
-        animation-name: hue-filter;
-        -webkit-animation-name: hue-filter;
-        animation-duration: 30s;
-        -webkit-animation-duration: 30s;
-        animation-timing-function: linear;
-        -webkit-animation-timing-function: linear;
-        animation-iteration-count: infinite;
-        -webkit-animation-iteration-count: infinite;
       }
       img {
         object-fit: cover;
