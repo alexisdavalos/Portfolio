@@ -3,22 +3,22 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "axios": "*",
+    "axios": "^0.20.0",
     "bulma": "*",
     "bulma-dashboard": "*",
     "bulma-extensions": "*",
     "bulma-steps-component": "^0.5.3",
     "core-js": "*",
-    "markdown-to-jsx": "*",
+    "markdown-to-jsx": "^7.0.0",
     "node-sass": "*",
     "react": "*",
     "react-dom": "*",
-    "react-icons": "*",
+    "react-icons": "^3.11.0",
     "react-loader-spinner": "*",
-    "react-particles-js": "*",
-    "react-redux": "*",
+    "react-particles-js": "^3.3.0",
+    "react-redux": "^7.2.1",
     "react-router-dom": "*",
-    "react-scripts": "*",
+    "react-scripts": "^3.4.3",
     "react-typed": "*",
     "redux": "*",
     "redux-logger": "*",
@@ -44,16 +44,8 @@
     ]
   },
   "devDependencies": {
-    "eslint": "*",
-    "eslint-config-google": "*",
-    "eslint-config-standard": "*",
-    "eslint-plugin-import": "*",
-    "eslint-plugin-node": "*",
-    "eslint-plugin-promise": "*",
-    "eslint-plugin-react": "*",
-    "eslint-plugin-standard": "*",
-    "@testing-library/jest-dom": "*",
-    "@testing-library/react": "*",
-    "@testing-library/user-event": "*"
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.0.2",
+    "@testing-library/user-event": "^12.1.3"
   }
 }

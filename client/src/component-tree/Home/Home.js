@@ -89,7 +89,7 @@ const Home = ({ darkMode }) => {
           darkMode={darkMode}
           viewProjects={viewProjects}
         />
-        <div className="content full hue-rotate">
+        <div className="content full">
           {/* Image Component */}
           <img
             className="img"
