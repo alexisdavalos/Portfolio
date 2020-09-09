@@ -59,7 +59,7 @@ const Nav = ({ darkMode, setDarkMode }) => {
           <img src={logo} alt="logo" />
         </Link>
 
-        <a
+        <Link
           to="/"
           onClick={() => mobileToggle()}
           role="button"
@@ -70,7 +70,7 @@ const Nav = ({ darkMode, setDarkMode }) => {
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
-        </a>
+        </Link>
       </div>
       {!mobileNav ? (
         // Desktop & Mobile Turnary Component
